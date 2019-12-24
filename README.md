@@ -1,9 +1,9 @@
 # RWA Project (Laravel v6.0)
 
 **Used**
--Xampp
--Composer
--NPM
+- Xampp
+- Composer
+- NPM
 
 ##### Create database on localhost/phpmyadmin
 
@@ -25,7 +25,7 @@
 
 # Project functionalities
 
-### User management
+#### User management
 **Functionalities made**
 - edit user details
 - delete an user
@@ -33,7 +33,7 @@
 **Things to make**
 - Moderator can't see the admin checkbox in the edit user option
 
-### Product management
+#### Product management
 **Things to make**
 - products that contain name, price, details and image
 - functionalities to add, edit and remove products
