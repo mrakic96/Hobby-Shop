@@ -13,9 +13,15 @@ class UsersController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    public function __construct()
+    {
+        $this->middleware ('auth');
+    }
     public function index()
     {
-        return 'User index page';
+        $users = User::all();
+        return view('admin.users.index')->with('users', $users);
     }
 
     /**
