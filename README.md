@@ -5,7 +5,7 @@
 -Composer
 -NPM
 
-##### Create database on localhost/phpmyadmin
+### Create database on localhost/phpmyadmin
 
 #### Create project
 `composer create-project --prefer-dist laravel/laravel HobbyShop`
