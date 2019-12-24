@@ -1,11 +1,11 @@
 # RWA Project (Laravel v6.0)
 
 **Used**
--Xampp
--Composer
--NPM
+- Xampp
+- Composer
+- NPM
 
-### Create database on localhost/phpmyadmin
+##### Create database on localhost/phpmyadmin
 
 #### Create project
 `composer create-project --prefer-dist laravel/laravel HobbyShop`
@@ -23,8 +23,17 @@
 #### NPM
 `npm install && npm run dev`
 
-#### Create controller for admin
-`php artisan make:controller \\Admin\\UsersController -r -mUser`
+# Project functionalities
 
+#### User management
+**Functionalities made**
+- edit user details
+- delete an user
 
+**Things to make**
+- Moderator can't see the admin checkbox in the edit user option
 
+#### Product management
+**Things to make**
+- products that contain name, price, details and image
+- functionalities to add, edit and remove products
