@@ -34,6 +34,10 @@
 - Moderator can't see the admin checkbox in the edit user option
 
 #### Product management
+**Functionalities made**
+- edit product details
+- delete a product
+
 **Things to make**
 - products that contain name, price, details and image
-- functionalities to add, edit and remove products
+- functionality to add products
