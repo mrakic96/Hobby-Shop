@@ -12,6 +12,8 @@ class ProductsTableSeeder extends Seeder
      */
     public function run()
     {
+        Product::truncate();
+
         Product::create([
             'name' => 'Olovka HB',
             'slug' => 'olovka-hb',

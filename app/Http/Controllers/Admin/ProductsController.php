@@ -60,7 +60,7 @@ class ProductsController extends Controller
      */
     public function edit(Product $product)
     {
-        //
+        return "Edit product";
     }
 
     /**
