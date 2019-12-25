@@ -27,7 +27,7 @@ class ProductsController extends Controller
      */
     public function create()
     {
-        //
+        
     }
 
     /**
@@ -83,6 +83,8 @@ class ProductsController extends Controller
      */
     public function destroy(Product $product)
     {
-        //
+        $product->delete();
+
+        return redirect()->route('admin.products.index');
     }
 }

@@ -11,8 +11,13 @@
                   <h5 class="card-title">{{ $product-> name}}</h5>
                   <h6 class="card-title">{{ $product-> price}}</h6>
                   <p class="card-text">{{ $product-> details}}</p>
+
                   <a href="{{ route('admin.products.edit', $product->id) }}"><button type="button" class="btn btn-primary float-lg-left">Edit</button></a>
-                  <a href="{{ route('admin.products.destroy', $product->id) }}"><button type="button" class="btn btn-warning float-lg-left">Delete</button></a>
+                  <form action="{{ route('admin.products.destroy', $product) }}" method="POST" class="float-left">
+                        @csrf
+                        {{ method_field('DELETE') }}
+                        <button type="submit" class="btn btn-warning">Delete</button>
+                  </form>
                 </div>
             </div>                
             @endforeach
