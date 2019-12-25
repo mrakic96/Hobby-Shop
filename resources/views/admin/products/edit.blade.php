@@ -10,6 +10,9 @@
                 <div class="card-body">
                     <form action="{{ route('admin.products.update', $product) }}" method="POST">
 
+                        @csrf
+                        {{ method_field('PUT') }}
+                        
                         <div class="form-group row">
                             <label for="name" class="col-md-2 col-form-label text-md-right">Name</label>
 

@@ -72,7 +72,14 @@ class ProductsController extends Controller
      */
     public function update(Request $request, Product $product)
     {
-        //
+        $product->name = $request->name;
+        $product->details = $request->details;
+        $product->price = $request->price;
+        $product->description = $request->description;
+
+        $product->save();
+
+        return redirect()->route('admin.products.index');
     }
 
     /**
