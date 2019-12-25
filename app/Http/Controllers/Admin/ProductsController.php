@@ -77,7 +77,12 @@ class ProductsController extends Controller
         $product->price = $request->price;
         $product->description = $request->description;
 
-        $product->save();
+        // $product->save();
+        if($product->save()){
+            $request->session()->flash('success', $product->name. ' has been updated');
+        }else{
+            $request->session()->flash('error', 'There was an error updating product');
+        }
 
         return redirect()->route('admin.products.index');
     }

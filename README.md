@@ -28,9 +28,10 @@
 #### User management
 **Functionalities made**
 - edit user details
-- delete an user
+- assign a role to user
+- delete a user
 
-**Things to make**
+**TO-DO**
 - Moderator can't see the admin checkbox in the edit user option
 
 #### Product management

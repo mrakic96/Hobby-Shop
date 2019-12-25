@@ -61,11 +61,11 @@
                                             User Management
                                         </a>
                                     @endcan
-
+                                    @can('manage-products')
                                     <a class="dropdown-item" href="{{ route('admin.products.index') }}">
                                         Products Management
                                     </a>
-
+                                    @endcan
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
