@@ -1,13 +1,6 @@
 # RWA Project (Laravel v6.0)
 
-<<<<<<< HEAD
-**Used**
-- Xampp
-- Composer
-- NPM
-=======
 **How to use this project on your machine**
->>>>>>> Products
 
 - Clone this project from github
 - Rename `.env.example` file to `.env` inside your project root and fill the database information.
@@ -23,6 +16,8 @@
 # Project functionalities
 
 ## Admin dashboard
+
+# Project functionalities
 
 #### User management
 **Functionalities made**
@@ -56,3 +51,4 @@
 - option to add products to cart with sum displayed
 
 - FRONTEND
+
