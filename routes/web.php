@@ -31,3 +31,6 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->middleware('can:mana
 Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function(){
     Route::resource('/products', 'ProductsController');
 });
+Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function(){
+    Route::resource('/categories', 'CategoriesController');
+});
