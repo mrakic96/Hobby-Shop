@@ -2,8 +2,15 @@
 
 @section('content')
 <div class="container">
+    <br>
+    <div class="row justify-content-center">
+        <a href="{{ route('admin.categories.create') }}"><button type="button" class="btn btn-primary float-lg-left">Add a new category</button></a>
+    </div>
+    <br>
+    <hr>
     <div class="row justify-content-center">
         <div class="col-md-8">
+            <br>
             <div class="card">
                 <div class="card-header">Categories</div>
 
