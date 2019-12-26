@@ -96,7 +96,7 @@ class ProductsController extends Controller
         $product->details = $request->details;
         $product->price = $request->price;
         $product->description = $request->description;
-        $product->category_id = $request->category_id;
+        // $product->category_id = $request->category_id;
         
 
         // $product->save();
