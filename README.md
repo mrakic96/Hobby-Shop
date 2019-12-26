@@ -1,29 +1,21 @@
 # RWA Project (Laravel v6.0)
 
-**Used**
-- Xampp
-- Composer
-- NPM
+**How to use this project on your machine**
 
-##### Create database on localhost/phpmyadmin
+- Clone this project from github
+- Rename `.env.example` file to `.env` inside your project root and fill the database information.
+- Open the console and cd your project root directory
+- Run `composer install`
+- Run `php artisan key:generate` 
+- Before you migrate you should create a database with the name set in your `.env` file
+- Run `php artisan migrate`
+- Run `php artisan db:seed` to run seeders
+- Run `php artisan serve`
 
-#### Create project
-`composer create-project --prefer-dist laravel/laravel HobbyShop`
-
-#### Update .env file
-`DB_DATABASE=hobby_shop // Database name`
-
-#### Create laravel AUTH and migrate tables
-`composer require laravel/ui`
-
-`php artisan ui vue --auth`
-
-`php artisan migrate`
-
-#### NPM
-`npm install && npm run dev`
 
 # Project functionalities
+
+## Admin dashboard
 
 #### User management
 **Functionalities made**
@@ -32,8 +24,6 @@
 - delete a user
 - moderator can edit only name and email (can't see roles)
 
-**TO-DO**
-
 #### Product management
 **Functionalities made**
 - edit product details
@@ -41,11 +31,21 @@
 - products that contain name, price, details and image
 - functionality to add products
 
-**TO-DO**
-
 #### Category management
 **Functionalities made**
 - edit category name
-
-**Things to make**
 - add new category
+
+
+**TO-DO**
+`//Product management`
+- display current category in `admin.products.edit`
+
+`//Product display`
+- display products by their category in `products.blade.php`
+
+`//Cart`
+- create a cart
+- option to add products to cart with sum displayed
+
+- FRONTEND
