@@ -30,9 +30,9 @@
 - edit user details
 - assign a role to user
 - delete a user
+- moderator can edit only name and email (can't see roles)
 
 **TO-DO**
-- Moderator can't see the admin checkbox in the edit user option
 
 #### Product management
 **Functionalities made**

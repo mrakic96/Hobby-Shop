@@ -40,6 +40,7 @@
 
                         @csrf
                         {{ method_field('PUT') }}
+                        @can('edit-roles')
                         <div class="form-group row">
                             <label for="roles" class="col-md-2 col-form-label text-md-right">Roles</label>
 
@@ -53,6 +54,7 @@
                                 @endforeach
                             </div>
                         </div>
+                        @endcan
                         <button type="submit" class="btn btn-primary">
                             Update
                         </button>

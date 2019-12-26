@@ -29,7 +29,7 @@
                                     <a href="{{ route('admin.categories.edit', $category->id) }}"><button type="button" class="btn btn-primary float-left">Edit</button></a>
                                     @endcan
                                     {{-- @can('delete-users')
-                                    <form action="{{ route('admin.users.destroy', $user) }}" method="POST" class="float-left">
+                                    <form action="{{ route('admin.categories.destroy', $category) }}" method="POST" class="float-left">
                                         @csrf
                                         {{ method_field('DELETE') }}
                                         <button type="submit" class="btn btn-warning">Delete</button>
