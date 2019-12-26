@@ -38,7 +38,8 @@
 **Functionalities made**
 - edit product details
 - delete a product
-
-**Things to make**
 - products that contain name, price, details and image
 - functionality to add products
+
+**Things to make**
+- categories
