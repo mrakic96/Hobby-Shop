@@ -57,20 +57,6 @@
                                 @enderror
                             </div>
                         </div>
-                        
-                        <div class="form-group row">
-                            <label for="price" class="col-md-2 col-form-label text-md-right">Price</label>
-
-                            <div class="col-md-6">
-                                <input id="price" type="number" class="form-control @error('price') is-invalid @enderror" name="price" value="{{ $product->price }}" required autofocus>
-
-                                @error('price')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
 
                         <div class="form-group row">
                             <label for="description" class="col-md-2 col-form-label text-md-right">Description</label>
@@ -86,6 +72,28 @@
                             </div>
                         </div>
 
+                        <div class="form-group row">
+                            <label for="price" class="col-md-2 col-form-label text-md-right">Price</label>
+
+                            <div class="col-md-6">
+                                <input id="price" type="number" class="form-control @error('price') is-invalid @enderror" name="price" value="{{ $product->price }}" required autofocus>
+
+                                @error('price')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+                        {{-- CHANGE CATEGORY --}}
+                        {{-- {{ $product -> category_id }}
+                        <div class="form-group row">
+                                {{ Form::label('category_id', 'Category', ['class' => 'col-md-2 col-form-label text-md-right']) }}
+                            <div class="col-md-6">
+                                {{ Form::select('category_id', $categories, null, ['class' => 'form-control', 'placeholder'=>'Select']) }}
+                            </div>
+                        </div> --}}
+                        
                         <button type="submit" class="btn btn-primary">
                             Update
                         </button>

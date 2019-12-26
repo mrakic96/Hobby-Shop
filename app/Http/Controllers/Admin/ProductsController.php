@@ -78,7 +78,9 @@ class ProductsController extends Controller
      */
     public function edit(Product $product)
     {
-        return view('admin.products.edit')->with('product', $product);
+        
+        $categories = Category::pluck('name', 'id');
+        return view('admin.products.edit', compact('categories'))->with('product', $product);
     }
 
     /**
@@ -94,6 +96,8 @@ class ProductsController extends Controller
         $product->details = $request->details;
         $product->price = $request->price;
         $product->description = $request->description;
+        $product->category_id = $request->category_id;
+        
 
         // $product->save();
         if($product->save()){
