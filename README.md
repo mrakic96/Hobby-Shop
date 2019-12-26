@@ -12,12 +12,9 @@
 - Run `php artisan db:seed` to run seeders
 - Run `php artisan serve`
 
-
-# Project functionalities
-
 ## Admin dashboard
 
-# Project functionalities
+### Project functionalities
 
 #### User management
 **Functionalities made**
@@ -40,6 +37,7 @@
 
 
 **TO-DO**
+
 `//Product management`
 - display current category in `admin.products.edit`
 
