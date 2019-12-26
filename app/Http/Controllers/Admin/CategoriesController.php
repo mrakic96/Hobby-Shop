@@ -57,9 +57,9 @@ class CategoriesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Category $category)
     {
-        //
+        return view('admin.categories.edit')->with('category', $category);
     }
 
     /**
@@ -69,9 +69,17 @@ class CategoriesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Category $category)
     {
-        //
+        $category->name = $request->name;
+
+        if($category->save()){
+            $request->session()->flash('success', $category->name. ' has been updated');
+        }else{
+            $request->session()->flash('error', 'There was an error updating product');
+        }
+
+        return redirect()->route('admin.categories.index');
     }
 
     /**
