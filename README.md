@@ -41,5 +41,11 @@
 - products that contain name, price, details and image
 - functionality to add products
 
+**TO-DO**
+
+#### Category management
+**Functionalities made**
+- edit category name
+
 **Things to make**
-- categories
+- add new category
