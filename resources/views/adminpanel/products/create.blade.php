@@ -6,7 +6,7 @@
 
 <div class="row">
     <div class="col-md-8 col-md-offset-3">
-        {!! Form::open(['route' => 'admin.products.store', 'method' => 'post', 'files' => true]) !!}
+        {!! Form::open(['route' => 'adminpanel.products.store', 'method' => 'post', 'files' => true]) !!}
 
         <div class="form-group">
             {{ Form::label('name', 'Name') }}

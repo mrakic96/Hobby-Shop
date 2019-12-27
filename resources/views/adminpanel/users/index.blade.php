@@ -5,9 +5,10 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <br>
-            <div class="card">
-                <div class="card-header">Korisnici</div>
-
+            <div class="card" style="margin:40px 0px 0px 60px">
+                <br>
+                <div class="card-header" style="font-size:26px;">Korisnici</div>
+                <br>
                 <div class="card-body">
                     
                     <table class="table">
@@ -17,9 +18,7 @@
                             <th scope="col">Ime</th>
                             <th scope="col">Email</th>
                             <th scope="col">Role</th>
-                        @can('edit-users')
                             <th scope="col">Akcije</th>
-                        @endcan
                           </tr>
                         </thead>
                         <tbody>
@@ -33,11 +32,13 @@
                                     @can('edit-users')
                                     <a href="{{ route('adminpanel.users.edit', $user->id) }}"><button type="button" class="btn btn-primary float-left">Izmjena</button></a>
                                     @endcan
+                                </td>
+                                <td>
                                     @can('delete-users')
                                     <form action="{{ route('adminpanel.users.destroy', $user) }}" method="POST" class="float-left">
                                         @csrf
                                         {{ method_field('DELETE') }}
-                                        <button type="submit" class="btn btn-warning">Izbiši</button>
+                                        <button type="submit" class="btn btn-warning">Izbriši</button>
                                     </form>
                                     @endcan
                                 </td>

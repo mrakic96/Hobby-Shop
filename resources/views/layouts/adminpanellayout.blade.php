@@ -34,7 +34,7 @@
 			<nav id="fh5co-main-menu" role="navigation">
 				<ul>
 					<li><a href="{{ route('adminpanel.users.index') }}">Korisnici</a></li>
-					<li><a href="{{ route('adminpanel.products.index') }}">Produkt</a></li>
+					<li><a href="{{ route('adminpanel.products.index') }}">Proizvodi</a></li>
 					<li><a href="{{ route('adminpanel.categories.index') }}">Kategorije</a></li>
 					<li><a href="about.html">Dashboard</a></li>
 				</ul>

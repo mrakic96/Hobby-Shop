@@ -8,7 +8,7 @@
             <div class="card-header">Edit product {{ $product->name }}</div>
 
                 <div class="card-body">
-                    <form action="{{ route('admin.products.update', $product) }}" method="POST">
+                    <form action="{{ route('adminpanel.products.update', $product) }}" method="POST">
 
                         @csrf
                         {{ method_field('PUT') }}
