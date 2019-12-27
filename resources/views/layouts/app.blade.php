@@ -15,7 +15,6 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
@@ -71,6 +70,11 @@
                                         Product Management
                                     </a>
                                     @endcan
+									 @can('manage-products')
+                                    <a class="dropdown-item" href="{{ route('adminpanel.products.index') }}" target="_blank">
+                                        Admin panel
+                                    </a>
+                                    @endcan
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -95,5 +99,6 @@
             </div>
         </main>
     </div>
+
 </body>
 </html>
