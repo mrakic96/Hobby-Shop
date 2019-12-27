@@ -1,12 +1,12 @@
 
 <!DOCTYPE html>
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+	<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Admin panel</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="shortcut icon" type="image/x-icon" href="{{ asset('images/adminpanellogo.ico') }}" />
+	<link rel="shortcut icon" type="image/x-icon" href="{{ asset('images/adminpanellogo.ico') }}" />
 
 	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
 	
@@ -22,7 +22,7 @@
 	<link href="{{ asset('css/adminpanel/style.css') }}" rel="stylesheet">
 
 	<!-- Modernizr JS -->
-<script src="{{ asset('js/adminpanel/modernizr-2.6.2.min.js') }}" defer></script>
+	<script src="{{ asset('js/adminpanel/modernizr-2.6.2.min.js') }}" defer></script>
 
 	</head>
 	<body>
@@ -39,17 +39,15 @@
 					<li><a href="about.html">Dashboard</a></li>
 				</ul>
 			</nav>
-		</aside>
-
-		
-		
+		</aside>	
 	</div>
-        <main class="py-4">
-            <div class="container">
+
+    <main class="py-4">
+        <div class="container">
             @include('partials.alerts')
             @yield('content')
-            </div>
-        </main>
+        </div>
+    </main>
 	<!-- jQuery -->
 	<script src="{{ asset('js/adminpanel/jquery.min.js') }}" defer></script>
 	<!-- jQuery Easing -->
