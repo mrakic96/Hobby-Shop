@@ -4,9 +4,9 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
-            <div class="card-header">Edit product {{ $product->name }}</div>
-
+            <div class="card" style="margin: 40px 0px 0px 60px;">
+            <div class="card-header" style="font-size:26px;">Izmijeni proizvod '{{ $product->name }}'</div>
+                <br>
                 <div class="card-body">
                     <form action="{{ route('adminpanel.products.update', $product) }}" method="POST">
 
@@ -14,7 +14,7 @@
                         {{ method_field('PUT') }}
                         
                         <div class="form-group row">
-                            <label for="name" class="col-md-2 col-form-label text-md-right">Name</label>
+                            <label for="name" class="col-md-2 col-form-label text-md-right">Naziv</label>
 
                             <div class="col-md-6">
                                 <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ $product->name }}" required autofocus>
@@ -45,7 +45,7 @@
                         </div> --}}
 
                         <div class="form-group row">
-                            <label for="details" class="col-md-2 col-form-label text-md-right">Details</label>
+                            <label for="details" class="col-md-2 col-form-label text-md-right">Detalji</label>
 
                             <div class="col-md-6">
                                 <textarea id="details" class="form-control @error('details') is-invalid @enderror" name="details" required autofocus>{{ $product->details }}</textarea>
@@ -59,7 +59,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="description" class="col-md-2 col-form-label text-md-right">Description</label>
+                            <label for="description" class="col-md-2 col-form-label text-md-right">Opis</label>
 
                             <div class="col-md-6">
                                 <textarea id="description" class="form-control @error('description') is-invalid @enderror" name="description" required autofocus>{{ $product->description }}</textarea>
@@ -73,7 +73,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="price" class="col-md-2 col-form-label text-md-right">Price</label>
+                            <label for="price" class="col-md-2 col-form-label text-md-right">Cijena</label>
 
                             <div class="col-md-6">
                                 <input id="price" type="number" class="form-control @error('price') is-invalid @enderror" name="price" value="{{ $product->price }}" required autofocus>
@@ -93,9 +93,9 @@
                                 {{ Form::select('category_id', $categories, null, ['class' => 'form-control', 'placeholder'=>'Select']) }}
                             </div>
                         </div> --}}
-                        
+                        <br>
                         <button type="submit" class="btn btn-primary">
-                            Update
+                            Potvrdi
                         </button>
                     </form>
                 </div>

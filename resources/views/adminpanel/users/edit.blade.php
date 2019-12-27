@@ -4,9 +4,9 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
-            <div class="card-header">Edit user {{ $user->name }}</div>
-
+            <div class="card" style="margin: 40px 0px 0px 60px;">
+            <div class="card-header" style="font-size:26px;">Izmijeni korisnika '{{ $user->name }}'</div>
+                <br>
                 <div class="card-body">
                     <form action="{{ route('adminpanel.users.update', $user) }}" method="POST">
 
@@ -25,7 +25,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="name" class="col-md-2 col-form-label text-md-right">Name</label>
+                            <label for="name" class="col-md-2 col-form-label text-md-right">Ime</label>
 
                             <div class="col-md-6">
                                 <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ $user->name }}" required autofocus>
@@ -55,8 +55,9 @@
                             </div>
                         </div>
                         @endcan
+                        <br>
                         <button type="submit" class="btn btn-primary">
-                            Update
+                            Potvrdi
                         </button>
                     </form>
                 </div>
