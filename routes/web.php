@@ -15,9 +15,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/products', 'PagesController@products');
+Route::get('/products', 'PagesController@products')->name('products');
 
-Route::get('/about', 'PagesController@about');
+Route::get('/about', 'PagesController@about')->name('about');
 
 Auth::routes();
 
