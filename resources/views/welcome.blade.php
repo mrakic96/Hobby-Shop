@@ -81,7 +81,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Hobby Shop
+                    <img src="{{ asset('images/hobbylogo.png') }}"style="height:200px">
                 </div>
 
                 <div class="links">
