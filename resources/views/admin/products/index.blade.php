@@ -19,7 +19,7 @@
                   <hr>
                   <p class="card-text">{{ $product-> details}}</p>
 
-                  <a href="{{ route('admin.products.edit', $product->id) }}"><button type="button" class="btn btn-primary float-lg-left">Edit</button></a>
+                  <a href="{{ route('admin.products.edit', $product->id) }}"><button type="button" class="btn btn-primary float-lg-left" style="margin-right:10px">Edit</button></a>
                   <form action="{{ route('admin.products.destroy', $product) }}" method="POST" class="float-left">
                         @csrf
                         {{ method_field('DELETE') }}
