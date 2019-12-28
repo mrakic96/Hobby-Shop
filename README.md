@@ -1,4 +1,4 @@
-# RWA Project (Laravel v6.0)
+# RWA Project (Laravel v6.2)
 
 **How to use this project on your machine**
 
@@ -12,41 +12,112 @@
 - Run `php artisan db:seed` to run seeders
 - Run `php artisan serve`
 
-## Admin dashboard
-
-### Project functionalities
+## Admin panel
 
 #### User management
-**Functionalities made**
-- edit user details
-- assign a role to user
-- delete a user
-- moderator can edit only name and email (can't see roles)
+
+1. Display users
+  `Both admin and moderator can see:`
+    - id
+    - name
+    - email
+    - role
+    - action button/s
+
+2. Edit user details
+
+  `Admin has permission to edit:`
+    - email
+    - name
+    - assigned roles
+
+  `Moderator has permission to edit:`
+    - email
+    - name
+
+3. Delete a user
+
+  `Admin can delete a user.`
+  `Moderator *can't* delete a user.`
+
 
 #### Product management
-**Functionalities made**
-- edit product details
-- delete a product
-- products that contain name, price, details and image
-- functionality to add products
+
+1. Display products
+  `Both admin and moderator can see:`
+    - id
+    - name
+    - price
+    - image
+    - action buttons
+
+2. Edit product details
+
+  `Both admin and moderator have permission to edit:`
+    - name
+    - details
+    - description
+    - price
+
+3. Delete a product
+  `Both admin and moderator can delete a product.`
+
+4. Add a new product
+  `Both admin and moderator can add a new product with:`
+    - name
+    - details
+    - description
+    - price
+    - category
+    - image
 
 #### Category management
-**Functionalities made**
-- edit category name
-- add new category
 
+1. Display categories
+  `Both admin and moderator can see:`
+    - id
+    - name
+    - action button
+
+2. edit category name
+  `Both admin and moderator can edit:`
+    - name
+
+3. add new category
+  `Both admin and moderator can add a new category with:`
+    - name
+
+## Application
+
+#### 'products' view
+
+- All products from DB are displayed 
+- Category links
+
+#### 'olovke', 'kistovi' and 'platna' views
+
+- Products displayed by their category
+
+#### 'view_product' view
+
+- A single product details are displayed
 
 **TO-DO**
 
 `//Product management`
 - display current category in `admin.products.edit`
 
-`//Product display`
-- display products by their category in `products.blade.php`
-
 `//Cart`
-- create a cart
-- option to add products to cart with sum displayed
+1. Create a cart view
+    - option to add products to cart
+    - option to increment and decrement single product amount
+    - option to remove a product from cart
+    - option to empty cart
+    - display a total sum a single product
+    - display a total sum of products
 
-- FRONTEND
+`//'checkout' view`
+1. Create a checkout view
+    - logged in user is getting a checkout view after buying products
+    - guest is redirected to /login after trying to buy products
 
