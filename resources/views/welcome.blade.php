@@ -68,12 +68,12 @@
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
-                        <a href="{{ url('/home') }}">Home</a>
+                        <a href="{{ url('/home') }}" style="font-size:18px">Home</a>
                     @else
-                        <a href="{{ route('login') }}">Login</a>
+                        <a href="{{ route('login') }}" style="font-size:18px">Login</a>
 
                         @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
+                            <a href="{{ route('register') }}" style="font-size:18px">Register</a>
                         @endif
                     @endauth
                 </div>
@@ -81,12 +81,12 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    <img src="{{ asset('images/hobbylogo.png') }}"style="height:200px">
+                    <img src="{{ asset('images/hobbylogo.png') }}"style="height:180px; width:500px;">
                 </div>
 
                 <div class="links">
-                    <a href="{{ url('/products') }}">Proizvodi</a>
-                    <a href="{{ url('/about') }}">O nama</a>
+                    <a href="{{ url('/products') }}" style="font-size:18px">Proizvodi</a>
+                    <a href="{{ url('/about') }}" style="font-size:18px">O nama</a>
                 </div>
             </div>
         </div>
