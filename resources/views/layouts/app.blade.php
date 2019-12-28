@@ -55,6 +55,11 @@
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                     <h6 class="dropdown-header">Options</h6>
+                                    @can('manage-products')
+                                    <a class="dropdown-item" href="{{ route('adminpanel.products.index') }}" target="_blank">
+                                        Admin panel
+                                    </a>
+                                    @endcan
                                     @can('manage-users')
                                         <a class="dropdown-item" href="{{ route('admin.users.index') }}">
                                             User Management
@@ -68,11 +73,6 @@
                                     @can('manage-products')
                                     <a class="dropdown-item" href="{{ route('admin.products.index') }}">
                                         Product Management
-                                    </a>
-                                    @endcan
-									 @can('manage-products')
-                                    <a class="dropdown-item" href="{{ route('adminpanel.products.index') }}" target="_blank">
-                                        Admin panel
                                     </a>
                                     @endcan
                                     <a class="dropdown-item" href="{{ route('logout') }}"

@@ -13,6 +13,11 @@ class PagesController extends Controller
         return view('products')->with('products', $products);
     }
 
+    public function product($id){
+        $product = Product::find($id);
+        return view('view_product', compact('product'));
+    }
+
     public function olovke(){
         $products = Product::all()->where('category_id', 1);
         return view('olovke')->with('products', $products);
