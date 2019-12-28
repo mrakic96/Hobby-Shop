@@ -14,6 +14,8 @@ class CategoriesTableSeeder extends Seeder
     {
         Category::truncate();
 
-        Category::create(['name' => 'Olovka']);
+        Category::create(['name' => 'Olovke']);
+        Category::create(['name' => 'Kistovi']);
+        Category::create(['name' => 'Platna']);
     }
 }
