@@ -16,8 +16,7 @@
 
 #### User management
 
-1. Display users
-
+1. Display users:
   `Both admin and moderator can see:`
     - id
     - name
@@ -25,27 +24,22 @@
     - role
     - action button/s
 
-2. Edit user details
-
+2. Edit user details:
   `Admin has permission to edit:`
     - email
     - name
     - assigned roles
-
   `Moderator has permission to edit:`
     - email
     - name
-
-3. Delete a user
-
+3. Delete a user:
   `Admin can delete a user.`
   `Moderator *can't* delete a user.`
 
 
 #### Product management
 
-1. Display products
-
+1. Display products:
   `Both admin and moderator can see:`
     - id
     - name
@@ -53,20 +47,17 @@
     - image
     - action buttons
 
-2. Edit product details
-
+2. Edit product details:
   `Both admin and moderator have permission to edit:`
     - name
     - details
     - description
     - price
 
-3. Delete a product
-
+3. Delete a product:
   `Both admin and moderator can delete a product.`
 
-4. Add a new product
-
+4. Add a new product:
   `Both admin and moderator can add a new product with:`
     - name
     - details
@@ -77,20 +68,17 @@
 
 #### Category management
 
-1. Display categories
-
+1. Display categories:
   `Both admin and moderator can see:`
     - id
     - name
     - action button
 
-2. edit category name
-
+2. edit category name:
   `Both admin and moderator can edit:`
     - name
 
-3. add new category
-
+3. add new category:
   `Both admin and moderator can add a new category with:`
     - name
 
