@@ -18,6 +18,9 @@ Route::get('/', function () {
 });
 
 Route::get('/products', 'PagesController@products')->name('products');
+Route::get('/olovke', 'PagesController@olovke')->name('olovke');
+Route::get('/kistovi', 'PagesController@kistovi')->name('kistovi');
+Route::get('/platna', 'PagesController@platna')->name('platna');
 
 Route::get('/about', 'PagesController@about')->name('about');
 

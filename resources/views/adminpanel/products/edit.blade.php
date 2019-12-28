@@ -76,7 +76,7 @@
                             <label for="price" class="col-md-2 col-form-label text-md-right">Cijena</label>
 
                             <div class="col-md-6">
-                                <input id="price" type="number" class="form-control @error('price') is-invalid @enderror" name="price" value="{{ $product->price }}" required autofocus>
+                                <input id="price" type="number" step="0.01" class="form-control @error('price') is-invalid @enderror" name="price" value="{{ $product->price }}" required autofocus>
 
                                 @error('price')
                                     <span class="invalid-feedback" role="alert">
