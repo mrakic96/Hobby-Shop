@@ -15,7 +15,7 @@
                 </div>
             </div>                
             @endforeach
-            
+            @extends('layouts.kategorije')
         </div>
     </div>
 </div>
