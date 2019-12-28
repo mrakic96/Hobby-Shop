@@ -17,6 +17,7 @@
 #### User management
 
 1. Display users
+
   `Both admin and moderator can see:`
     - id
     - name
@@ -44,6 +45,7 @@
 #### Product management
 
 1. Display products
+
   `Both admin and moderator can see:`
     - id
     - name
@@ -60,9 +62,11 @@
     - price
 
 3. Delete a product
+
   `Both admin and moderator can delete a product.`
 
 4. Add a new product
+
   `Both admin and moderator can add a new product with:`
     - name
     - details
@@ -74,16 +78,19 @@
 #### Category management
 
 1. Display categories
+
   `Both admin and moderator can see:`
     - id
     - name
     - action button
 
 2. edit category name
+
   `Both admin and moderator can edit:`
     - name
 
 3. add new category
+
   `Both admin and moderator can add a new category with:`
     - name
 
