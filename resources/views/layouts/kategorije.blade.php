@@ -30,7 +30,7 @@ font-size:70px;}
 </style>
 <div class="sidenav">
   <a href="{{ url('/products') }}"><font size="6">Proizvodi</a></font>
-  <a href="{{ url('/kistovi') }}">Kistovi</a>
   <a href="{{ url('/olovke') }}">Olovke</a>
+  <a href="{{ url('/kistovi') }}">Kistovi</a>
   <a href="{{ url('/platna') }}">Platna</a>
 </div>
