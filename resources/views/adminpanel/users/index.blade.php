@@ -52,4 +52,9 @@
         </div>
     </div>
 </div>
+<div class="row">
+    <div class="col-12 d-flex justify-content-center pt4" style="margin-left:270px;">
+      {{ $users->links() }}
+    </div>
+</div>
 @endsection
