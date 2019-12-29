@@ -17,6 +17,7 @@
           <h6 class="card-title">Cijena: {{ $product-> price}} KM</h6>
           <hr>
           <p class="card-text">{{ $product->description }}</p>
+          <a href="#"><button class="btn btn-primary">Dodaj u košaricu</button></a>
           <hr>
           <p class="card-text"><small class="text-muted">Zadnji put ažurirano: {{ $product->updated_at }}</small></p>
         </div>

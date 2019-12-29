@@ -11,7 +11,7 @@
                   <h6 class="card-title">Cijena: {{ $product-> price}} KM</h6>
                   <hr>
                   <p class="card-text">{{ $product-> details}}</p>
-                  </form>
+                  <a href="#"><button class="btn btn-primary">Dodaj u košaricu</button></a>
                 </div>
             </div>                
             @endforeach
