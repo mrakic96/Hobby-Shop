@@ -56,4 +56,6 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->middleware('can:mana
 Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function(){
     Route::resource('/categories', 'CategoriesController');
 });
-
+// SEARCH
+Route::get('search', 'AutoCompleteController@index');
+ Route::get('autocomplete', 'AutoCompleteController@search');
