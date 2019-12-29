@@ -30,7 +30,7 @@
 		<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
 		<aside id="fh5co-aside" role="complementary" class="border js-fullheight">
 
-			<h1 id="fh5co-logo"><img src="{{ asset('images/adminpanellogo.png') }}"style="height:100px;"></h1>
+			<h1 id="fh5co-logo"><a href="{{ route('adminpanel.users.index') }}"><img src="{{ asset('images/adminpanellogo.png') }}"style="height:100px;"></a></h1>
 			<nav id="fh5co-main-menu" role="navigation">
 				<ul>
 					<li><a href="{{ route('adminpanel.users.index') }}">Korisnici</a></li>
