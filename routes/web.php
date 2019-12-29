@@ -38,8 +38,12 @@ Route::namespace('Adminpanel')->prefix('adminpanel')->name('adminpanel.')->middl
 });
 
 Route::namespace('Adminpanel')->prefix('adminpanel')->name('adminpanel.')->middleware('can:manage-products')->group(function(){
+    Route::get('/products/olovke', 'ProductsController@olovke')->name('products.olovke');
+    Route::get('/products/kistovi', 'ProductsController@kistovi')->name('products.kistovi');
+    Route::get('/products/platna', 'ProductsController@platna')->name('products.platna');
     Route::resource('/products', 'ProductsController');
 });
+
 Route::namespace('Adminpanel')->prefix('adminpanel')->name('adminpanel.')->group(function(){
     Route::resource('/categories', 'CategoriesController');
 });

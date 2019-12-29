@@ -17,8 +17,23 @@ class ProductsController extends Controller
      */
     public function index()
     {
-        $products = Product::all();
+        $products = Product::paginate(6);
         return view('adminpanel.products.index')->with('products', $products);
+    }
+
+    public function olovke(){
+        $products = Product::where('category_id', 1)->paginate(6);
+        return view('adminpanel.products.olovke')->with('products', $products);
+    }
+
+    public function kistovi(){
+        $products = Product::where('category_id', 2)->paginate(6);
+        return view('adminpanel.products.kistovi')->with('products', $products);
+    }
+
+    public function platna(){
+        $products = Product::where('category_id', 3)->paginate(6);
+        return view('adminpanel.products.platna')->with('products', $products);
     }
     /**
      * Show the form for creating a new resource.

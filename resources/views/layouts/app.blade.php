@@ -164,9 +164,9 @@
             <div class="ftco-footer-widget mb-4 ml-md-5">
               <h2 class="ftco-heading-2">Izbornik</h2>
               <ul class="list-unstyled">
-                <li><a href="{{ url('/products') }}" class="py-2 d-block">Trgovina</a></li>
-                <li><a href="#" class="py-2 d-block">Košarica</a></li>
-                <li><a href="{{ url('/about') }}" class="py-2 d-block">O nama</a></li>
+                <li><a href="{{ url('/products') }}" class="py-2 d-block text-muted">Trgovina</a></li>
+                <li><a href="#" class="py-2 d-block text-muted">Košarica</a></li>
+                <li><a href="{{ url('/about') }}" class="py-2 d-block text-muted">O nama</a></li>
               </ul>
             </div>
           </div>
@@ -175,8 +175,8 @@
               <h2 class="ftco-heading-2">Dodatno</h2>
               <div class="d-flex">
                   <ul class="list-unstyled mr-l-5 pr-l-3 mr-4">
-                    <li><a href="{{ asset('download/vizija.docx') }}" download class="py-2 d-block">Vizija projekta</a></li>
-                    <li><a href="https://github.com/mrakic96/Hobby-Shop" target="_blank" class="py-2 d-block">Github repozitorij</a></li>
+                    <li><a href="{{ asset('download/vizija.docx') }}" download class="py-2 d-block text-muted">Vizija projekta</a></li>
+                    <li><a href="https://github.com/mrakic96/Hobby-Shop" target="_blank" class="py-2 d-block text-muted">Github repozitorij</a></li>
                     
                   </ul>           
               </div>

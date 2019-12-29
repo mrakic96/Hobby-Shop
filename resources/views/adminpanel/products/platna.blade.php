@@ -49,7 +49,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card" style="margin:0px 0px 0px 60px">
-                <div class="card-header" style="font-size:26px;">Proizvodi</div>
+                <div class="card-header" style="font-size:26px;">Platna</div>
                 <br>
 
                 <div class="card-body">
