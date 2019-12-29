@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card" style="margin: 40px 0px 0px 60px;">
+            <div class="card" style="margin: 40px 0px 0px 200px;">
             <div class="card-header" style="font-size:26px;">Izmijeni proizvod '{{ $product->name }}'</div>
                 <br>
                 <div class="card-body">

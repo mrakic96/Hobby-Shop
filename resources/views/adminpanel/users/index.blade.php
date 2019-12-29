@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <br>
-            <div class="card" style="margin:40px 0px 0px 60px">
+            <div class="card" style="margin:40px 0px 0px 200px">
                 <br>
                 <div class="card-header" style="font-size:26px;">Korisnici</div>
                 <br>

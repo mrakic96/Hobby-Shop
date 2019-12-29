@@ -12,7 +12,7 @@
         <!-- Styles -->
         <style>
             html, body {
-                background-color: #fff;
+                background-color: floralwhite;
                 color: #636b6f;
                 font-family: 'Nunito', sans-serif;
                 font-weight: 200;
@@ -51,7 +51,7 @@
             .links > a {
                 color: #636b6f;
                 padding: 0 25px;
-                font-size: 13px;
+                font-size: 19px;
                 font-weight: 600;
                 letter-spacing: .1rem;
                 text-decoration: none;
@@ -68,12 +68,12 @@
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
-                        <a href="{{ url('/home') }}" style="font-size:18px">Home</a>
+                        <a href="{{ url('/home') }}" style="font-size:15px">Home</a>
                     @else
-                        <a href="{{ route('login') }}" style="font-size:18px">Login</a>
+                        <a href="{{ route('login') }}" style="font-size:15px">Login</a>
 
                         @if (Route::has('register'))
-                            <a href="{{ route('register') }}" style="font-size:18px">Register</a>
+                            <a href="{{ route('register') }}" style="font-size:15px">Register</a>
                         @endif
                     @endauth
                 </div>
@@ -85,8 +85,8 @@
                 </div>
 
                 <div class="links">
-                    <a href="{{ url('/products') }}" style="font-size:18px">Proizvodi</a>
-                    <a href="{{ url('/about') }}" style="font-size:18px">O nama</a>
+                    <a href="{{ url('/products') }}">Proizvodi</a>
+                    <a href="{{ url('/about') }}">O nama</a>
                 </div>
             </div>
         </div>

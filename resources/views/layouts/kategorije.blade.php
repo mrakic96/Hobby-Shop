@@ -7,7 +7,7 @@ font-size:70px;}
   position: fixed;
   z-index: 1;
   top: 150;
-  left: 120;
+  left: 15;
   overflow-x: hidden;
   padding-top: 20px;
 }
@@ -29,7 +29,7 @@ font-size:70px;}
 }
 </style>
 <div class="sidenav">
-  <a href="{{ url('/products') }}"><font size="6">Proizvodi</a></font>
+  <a href="{{ url('/products') }}"><font size="5">Proizvodi</a></font>
   <a href="{{ url('/olovke') }}">Olovke</a>
   <a href="{{ url('/kistovi') }}">Kistovi</a>
   <a href="{{ url('/platna') }}">Platna</a>

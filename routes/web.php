@@ -44,7 +44,7 @@ Route::namespace('Adminpanel')->prefix('adminpanel')->name('adminpanel.')->middl
     Route::resource('/products', 'ProductsController');
 });
 
-Route::namespace('Adminpanel')->prefix('adminpanel')->name('adminpanel.')->group(function(){
+Route::namespace('Adminpanel')->prefix('adminpanel')->name('adminpanel.')->middleware('can:manage-products')->group(function(){
     Route::resource('/categories', 'CategoriesController');
 });
 
@@ -57,7 +57,7 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->middleware('can:mana
 Route::namespace('Admin')->prefix('admin')->name('admin.')->middleware('can:manage-products')->group(function(){
     Route::resource('/products', 'ProductsController');
 });
-Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function(){
+Route::namespace('Admin')->prefix('admin')->name('admin.')->middleware('can:manage-products')->group(function(){
     Route::resource('/categories', 'CategoriesController');
 });
 // SEARCH

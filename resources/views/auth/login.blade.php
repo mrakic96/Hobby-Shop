@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
+            <div class="card border-secondary" style="top:80px; margin-bottom:133px;">
                 <div class="card-header">{{ __('Login') }}</div>
 
                 <div class="card-body">
@@ -70,4 +70,9 @@
         </div>
     </div>
 </div>
+<br>
+<br>
+<br>
+<br>
+<br>
 @endsection

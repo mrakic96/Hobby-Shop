@@ -5,13 +5,13 @@
     <br>
     <br>
     <div class="row justify-content-center">
-        <a href="{{ route('adminpanel.categories.create') }}"><button type="button" class="btn btn-primary float-lg-left" style="margin:0px 0px 0px 65px">Nova kategorija</button></a>
+        <a href="{{ route('adminpanel.categories.create') }}"><button type="button" class="btn btn-primary float-lg-left" style="margin:0px 0px 0px 205px">Nova kategorija</button></a>
     </div>
     <br>
     <hr>
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card" style="margin:0px 0px 0px 60px">
+            <div class="card" style="margin:0px 0px 0px 200px">
                 <div class="card-header" style="font-size:26px;">Kategorije</div>
                 <br>
                 <div class="card-body">

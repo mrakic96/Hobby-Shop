@@ -2,7 +2,7 @@
     .dropdown1 {
       position: relative;
       top: 20px;
-      left:65px;
+      left:205px;
       /* display: inline-block; */
     }
     
@@ -35,7 +35,7 @@
     <br>
     <br>
     <div class="row justify-content-center">
-        <a href="{{ route('adminpanel.products.create') }}"><button type="button" class="btn btn-primary float-lg-left" style="margin:0px 0px 0px 65px">Novi proizvod</button></a>
+        <a href="{{ route('adminpanel.products.create') }}"><button type="button" class="btn btn-primary float-lg-left" style="margin:0px 0px 0px 205px">Novi proizvod</button></a>
         <div class="dropdown1">
             <button class="btn btn-primary float-lg-left">Po kategorijama</button>
             <div class="dropdown-content1">
@@ -48,7 +48,7 @@
     <hr>
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card" style="margin:0px 0px 0px 60px">
+            <div class="card" style="margin:0px 0px 0px 200px">
                 <div class="card-header" style="font-size:26px;">Platna</div>
                 <br>
 
