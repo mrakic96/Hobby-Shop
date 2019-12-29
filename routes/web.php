@@ -15,7 +15,7 @@
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('welcome');
 
 Route::get('/products', 'PagesController@products')->name('products');
 Route::get('/products/{id}', 'PagesController@product')->name('single.product');
