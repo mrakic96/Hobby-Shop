@@ -105,18 +105,18 @@
                                     </a>
                                     @endcan
                                     @can('manage-users')
-                                        <a class="dropdown-item" href="{{ route('admin.users.index') }}">
-                                            User Management
+                                        <a class="dropdown-item disabled" href="{{ route('admin.users.index') }}">
+                                            User Management (off)
                                         </a>
                                     @endcan
                                     @can('manage-products')
-                                    <a class="dropdown-item" href="{{ route('admin.categories.index') }}">
-                                        Category Management
+                                    <a class="dropdown-item disabled" href="{{ route('admin.categories.index') }}">
+                                        Category Management (off)
                                     </a>
                                     @endcan
                                     @can('manage-products')
-                                    <a class="dropdown-item" href="{{ route('admin.products.index') }}">
-                                        Product Management
+                                    <a class="dropdown-item disabled" href="{{ route('admin.products.index') }}">
+                                        Product Management (off)
                                     </a>
                                     @endcan
                                     <a class="dropdown-item" href="{{ route('logout') }}"
