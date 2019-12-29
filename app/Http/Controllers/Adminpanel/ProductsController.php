@@ -20,7 +20,6 @@ class ProductsController extends Controller
         $products = Product::all();
         return view('adminpanel.products.index')->with('products', $products);
     }
-
     /**
      * Show the form for creating a new resource.
      *

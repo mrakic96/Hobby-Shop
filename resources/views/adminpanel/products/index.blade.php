@@ -6,7 +6,7 @@
     <br>
     <div class="row justify-content-center">
         <a href="{{ route('adminpanel.products.create') }}"><button type="button" class="btn btn-primary float-lg-left" style="margin:0px 0px 0px 65px">Novi proizvod</button></a>
-    </div>
+@extends('adminpanel.products.productdropdown')
     <br>
     <hr>
     <div class="row justify-content-center">

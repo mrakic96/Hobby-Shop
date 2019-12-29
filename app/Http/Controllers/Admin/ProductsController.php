@@ -15,12 +15,11 @@ class ProductsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+   public function index()
     {
         $products = Product::all();
         return view('admin.products.index')->with('products', $products);
     }
-
     /**
      * Show the form for creating a new resource.
      *

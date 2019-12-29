@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 class PagesController extends Controller
 {
     public function products(){
-        $products = Product::all();
+        $products = Product::inRandomOrder()->paginate(6);
         return view('products')->with('products', $products);
     }
 
@@ -19,17 +19,17 @@ class PagesController extends Controller
     }
 
     public function olovke(){
-        $products = Product::all()->where('category_id', 1);
+        $products = Product::inRandomOrder()->where('category_id', 1)->paginate(6);
         return view('olovke')->with('products', $products);
     }
 
     public function kistovi(){
-        $products = Product::all()->where('category_id', 2);
+        $products = Product::inRandomOrder()->where('category_id', 2)->paginate(6);
         return view('kistovi')->with('products', $products);
     }
 
     public function platna(){
-        $products = Product::all()->where('category_id', 3);
+        $products = Product::inRandomOrder()->where('category_id', 3)->paginate(6);
         return view('platna')->with('products', $products);
     }
 
