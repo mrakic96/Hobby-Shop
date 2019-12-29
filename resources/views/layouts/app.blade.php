@@ -3,7 +3,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
@@ -99,6 +101,57 @@
             </div>
         </main>
     </div>
-
+    <footer class="ftco-footer bg-white ftco-section">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Hobby Shop</h2>
+              <p>Neki opis trgovine i dodatne informacije o trgovini</p>
+              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4 ml-md-5">
+              <h2 class="ftco-heading-2">Izbornik</h2>
+              <ul class="list-unstyled">
+                <li><a href="{{ url('/products') }}" class="py-2 d-block">Trgovina</a></li>
+                <li><a href="{{ url('/about') }}" class="py-2 d-block">Onama</a></li>
+                <li><a href="{{ asset('download/vizija.docx') }}" download class="py-2 d-block">Vizija</a></li>
+                <li><a href="#" class="py-2 d-block">Kontakt</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-4">
+             <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Pomoć</h2>
+              <div class="d-flex">
+                  <ul class="list-unstyled mr-l-5 pr-l-3 mr-4">
+                    <li><a href="#" class="py-2 d-block">Dostava</a></li>
+                    <li><a href="#" class="py-2 d-block">Povrat</a></li>
+                    <li><a href="#" class="py-2 d-block">Uvjeti trgovanja</a></li>
+                  </ul>
+                </div>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+                <h2 class="ftco-heading-2">Kontakt</h2>
+                <div class="block-23 mb-3">
+<ul class="fa-ul">
+  <li><span class="fa-li"><i class="fa fa-phone"style='font-size:15px'></i></span>+000 111 222</li>
+  <li><span class="fa-li"><i class="fas fa-home"style='font-size:15px'></i></span>nasa lokacija</li>
+  <li><span class="fa-li"><i class="fas fa-envelope"style='font-size:15px'></i></span>nas@email.com</li>
+</ul>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
 </body>
 </html>
