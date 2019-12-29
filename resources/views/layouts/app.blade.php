@@ -143,6 +143,9 @@
             </div>
         </main>
     </div>
+    <br>
+    <br>
+    <br>
     <footer class="ftco-footer bg-white ftco-section">
       <div class="container">
         <div class="row mb-5">
@@ -162,22 +165,22 @@
               <h2 class="ftco-heading-2">Izbornik</h2>
               <ul class="list-unstyled">
                 <li><a href="{{ url('/products') }}" class="py-2 d-block">Trgovina</a></li>
-                <li><a href="{{ url('/about') }}" class="py-2 d-block">Onama</a></li>
-                <li><a href="{{ asset('download/vizija.docx') }}" download class="py-2 d-block">Vizija</a></li>
-                <li><a href="#" class="py-2 d-block">Kontakt</a></li>
+                <li><a href="#" class="py-2 d-block">Košarica</a></li>
+                <li><a href="{{ url('/about') }}" class="py-2 d-block">O nama</a></li>
               </ul>
             </div>
           </div>
           <div class="col-md-4">
              <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">Pomoć</h2>
+              <h2 class="ftco-heading-2">Dodatno</h2>
               <div class="d-flex">
                   <ul class="list-unstyled mr-l-5 pr-l-3 mr-4">
-                    <li><a href="#" class="py-2 d-block">Dostava</a></li>
-                    <li><a href="#" class="py-2 d-block">Povrat</a></li>
-                    <li><a href="#" class="py-2 d-block">Uvjeti trgovanja</a></li>
-                  </ul>
-                </div>
+                    <li><a href="{{ asset('download/vizija.docx') }}" download class="py-2 d-block">Vizija projekta</a></li>
+                    <li><a href="https://github.com/mrakic96/Hobby-Shop" target="_blank" class="py-2 d-block">Github repozitorij</a></li>
+                    
+                  </ul>           
+              </div>
+                    <a href="https://github.com/mrakic96/Hobby-Shop" target="_blank"><i class="fab fa-github"style='font-size:35px;margin-left:38px;margin-top:40px;'></i></a>
             </div>
           </div>
           <div class="col-md">
@@ -186,8 +189,9 @@
                 <div class="block-23 mb-3">
 <ul class="fa-ul">
   <li><span class="fa-li"><i class="fa fa-phone"style='font-size:15px'></i></span>+000 111 222</li>
-  <li><span class="fa-li"><i class="fas fa-home"style='font-size:15px'></i></span>nasa lokacija</li>
-  <li><span class="fa-li"><i class="fas fa-envelope"style='font-size:15px'></i></span>nas@email.com</li>
+  <li><span class="fa-li"><i class="fas fa-home"style='font-size:15px'></i></span>FSRE Mostar</li>
+  <li><span class="fa-li"><i class="fas fa-envelope"style='font-size:15px'></i></span>aviskic@gmail.com</li>
+  <li><span class="fa-li"><i class="fas fa-envelope"style='font-size:15px'></i></span>matej.rakic96@gmail.com</li>
 </ul>
                 </div>
             </div>

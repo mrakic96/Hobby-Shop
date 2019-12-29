@@ -7,7 +7,7 @@ font-size:70px;}
   position: fixed;
   z-index: 1;
   top: 150;
-  left: 200;
+  left: 120;
   overflow-x: hidden;
   padding-top: 20px;
 }
