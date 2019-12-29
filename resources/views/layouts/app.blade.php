@@ -26,7 +26,7 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-light bg-light shadow fixed-top">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                    <img src="{{ asset('images/hobbylogo.png') }}"style="height:50px">
@@ -40,7 +40,7 @@
         <div class="col-12">
             <div id="custom-search-input">
                 <div class="input-group">
-                    <input id="search" name="search" type="text" class="form-control" placeholder="Search" />
+                    <input id="search" name="search" type="text" class="form-control" placeholder="Pretraži..." />
                 </div>
             </div>
         </div>
@@ -84,21 +84,21 @@
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                <a class="nav-link" style="font-size:14px;" href="{{ route('login') }}">{{ __('Prijava') }}</a>
                             </li>
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a class="nav-link" style="font-size:14px;" href="{{ route('register') }}">{{ __('Registracija') }}</a>
                                 </li>
                             @endif
                         @else
                             <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" style="font-size:14px;" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <h6 class="dropdown-header">Options</h6>
+                                    <h5 style="font-size:16px;" class="dropdown-header">Opcije</h5>
                                     @can('manage-products')
                                     <a class="dropdown-item" href="{{ route('adminpanel.products.index') }}" target="_blank">
                                         Admin panel
@@ -122,7 +122,7 @@
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
+                                        {{ __('Odjava') }}
                                     </a>
                                 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
@@ -137,7 +137,7 @@
         </nav>
 
         <main class="py-4">
-            <div class="container">
+            <div class="container" style="margin-top:75px !important;">
             @include('partials.alerts')
             @yield('content')
             </div>

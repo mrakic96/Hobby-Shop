@@ -68,12 +68,12 @@
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
-                        <a href="{{ url('/home') }}" style="font-size:15px">Home</a>
+                        <a href="{{ url('/home') }}" style="font-size:15px">Korisnički panel</a>
                     @else
-                        <a href="{{ route('login') }}" style="font-size:15px">Login</a>
+                        <a href="{{ route('login') }}" style="font-size:15px">Prijava</a>
 
                         @if (Route::has('register'))
-                            <a href="{{ route('register') }}" style="font-size:15px">Register</a>
+                            <a href="{{ route('register') }}" style="font-size:15px">Registracija</a>
                         @endif
                     @endauth
                 </div>
