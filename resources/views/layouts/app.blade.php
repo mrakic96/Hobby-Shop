@@ -83,7 +83,7 @@
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
                             <li class="nav-item">
-                                <a class="nav-link" style="font-size:14px; margin-right:60px;" href="{{ route('cart') }}">{{ __('Košarica') }} <span></span></a>
+                            <a class="nav-link" style="font-size:14px; margin-right:50px;" href="{{ route('cart') }}">{{ __('Košarica') }} <span class="badge badge-secondary float-left">{{ Session::has('cart') ? Session::get('cart')->totalQty : '0' }}</span></a>
                             </li>
                         @guest
                             <li class="nav-item">

@@ -17,7 +17,9 @@ Route::get('/', function () {
     return view('welcome');
 })->name('welcome');
 
-Route::get('/cart', 'PagesController@cart')->name('cart');
+Route::get('/cart', 'PagesController@getCart')->name('cart');
+Route::get('/addToCart/{id}', 'PagesController@getAddToCart')->name('addToCart');
+
 Route::get('/products', 'PagesController@products')->name('products');
 Route::get('/products/{id}', 'PagesController@product')->name('single.product');
 Route::get('/olovke', 'PagesController@olovke')->name('olovke');
