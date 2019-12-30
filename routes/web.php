@@ -19,6 +19,8 @@ Route::get('/', function () {
 
 Route::get('/cart', 'PagesController@getCart')->middleware('can:only-logged-user-see')->name('cart');
 Route::get('/addToCart/{id}', 'PagesController@getAddToCart')->name('addToCart');
+Route::get('/reduce/{id}', 'PagesController@getReduceByOne')->name('productReduceByOne');
+Route::get('/remove/{id}', 'PagesController@getRemoveItem')->name('productRemove');
 
 Route::get('/products', 'PagesController@products')->name('products');
 Route::get('/products/{id}', 'PagesController@product')->name('single.product');

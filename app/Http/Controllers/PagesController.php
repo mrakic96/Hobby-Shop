@@ -29,6 +29,34 @@ class PagesController extends Controller
         return redirect()->route('products');
     }
 
+    public function getReduceByOne ($id) {
+        $oldCart = Session::has('cart') ? Session::get('cart') : null;
+        $cart = new Cart($oldCart);
+        $cart->reducebyOne($id);
+
+        if (count($cart->items) > 0) {
+            Session::put('cart', $cart);
+        } else {
+            Session::forget('cart');
+        }
+        
+        return redirect()->route('cart');
+    }
+
+    public function getRemoveItem ($id) {
+        $oldCart = Session::has('cart') ? Session::get('cart') : null;
+        $cart = new Cart($oldCart);
+        $cart->removeItem($id);
+
+        if (count($cart->items) > 0) {
+            Session::put('cart', $cart);
+        } else {
+            Session::forget('cart');
+        }
+
+        return redirect()->route('cart');
+    }
+
     public function products() {
         $products = Product::paginate(6);
         return view('products')->with('products', $products);
