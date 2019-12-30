@@ -17,7 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 })->name('welcome');
 
-Route::get('/cart', 'PagesController@getCart')->name('cart');
+Route::get('/cart', 'PagesController@getCart')->middleware('can:only-logged-user-see')->name('cart');
 Route::get('/addToCart/{id}', 'PagesController@getAddToCart')->name('addToCart');
 
 Route::get('/products', 'PagesController@products')->name('products');
