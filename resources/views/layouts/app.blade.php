@@ -82,6 +82,9 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
+                            <li class="nav-item">
+                                <a class="nav-link" style="font-size:14px; margin-right:60px;" href="{{ route('cart') }}">{{ __('Košarica') }} <span></span></a>
+                            </li>
                         @guest
                             <li class="nav-item">
                                 <a class="nav-link" style="font-size:14px;" href="{{ route('login') }}">{{ __('Prijava') }}</a>

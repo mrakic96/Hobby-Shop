@@ -8,6 +8,10 @@ use Illuminate\Http\Request;
 
 class PagesController extends Controller
 {
+    public function cart(){
+        return view('cart');
+    }
+
     public function products(){
         $products = Product::paginate(6);
         return view('products')->with('products', $products);
