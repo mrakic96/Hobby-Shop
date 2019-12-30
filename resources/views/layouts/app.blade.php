@@ -13,7 +13,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>Hobby Shop</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -82,9 +82,11 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
+                            @can('only-logged-user-see')
                             <li class="nav-item">
                             <a class="nav-link" style="font-size:14px; margin-right:50px;" href="{{ route('cart') }}">{{ __('Košarica') }} <span class="badge badge-secondary float-left">{{ Session::has('cart') ? Session::get('cart')->totalQty : '0' }}</span></a>
                             </li>
+                            @endcan
                         @guest
                             <li class="nav-item">
                                 <a class="nav-link" style="font-size:14px;" href="{{ route('login') }}">{{ __('Prijava') }}</a>

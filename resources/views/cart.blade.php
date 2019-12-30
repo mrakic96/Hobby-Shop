@@ -8,7 +8,7 @@
     <br>
     @if(Session::has('cart'))
     <br>
-    <hr>
+    <br>
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
@@ -55,21 +55,31 @@
     <br>
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <strong>Total: {{ $totalPrice }}</strong>
+            <strong>Ukupno: {{ $totalPrice }} KM</strong>
         </div>
     </div>
     <hr>
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <button type="button" class="btn btn-success">Checkout</button>
+            <button type="button" class="btn btn-success">Kupi</button>
         </div>
     </div>
     @else
+    <br>
+    <br>
     <div class="row justify-content-center">
         <div class="col-md-8">
             <h2>Košarica je prazna!</h2>
         </div>
     </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
     @endif
 </div>
 @endsection
