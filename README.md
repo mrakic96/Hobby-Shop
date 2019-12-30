@@ -14,6 +14,12 @@
 
 ## Admin panel
 
+- Credentials
+
+`admin@admin.com  password`
+`moderator@moderator.com  password`
+`user@user.com  password`
+
 #### User management
 
 1. Display users:
@@ -87,15 +93,27 @@
 #### 'products' view
 
 - All products from DB are displayed 
-- Category links
+- Category link
+- 'Add to cart' button not visible for guests
 
 #### 'olovke', 'kistovi' and 'platna' views
 
 - Products displayed by their category
+- 'Add to cart' button not visible for guests
 
 #### 'view_product' view
 
 - A single product details are displayed
+- 'Add to cart' button not visible for guests
+
+#### 'cart' view
+
+- Not visible for guests
+- Option to add products to cart
+- Option to increment and decrement single product amount
+- Option to remove a product from cart
+- Display a total sum a single product
+- Display a total sum of products
 
 **TO-DO**
 
@@ -104,15 +122,12 @@
 
 `//Cart`
 1. Create a cart view
-    - option to add products to cart
-    - option to increment and decrement single product amount
-    - option to remove a product from cart
     - option to empty cart
-    - display a total sum a single product
-    - display a total sum of products
 
 `//'checkout' view`
 1. Create a checkout view
     - logged in user is getting a checkout view after buying products
     - guest is redirected to /login after trying to buy products
+
+- Fix frontend
 
