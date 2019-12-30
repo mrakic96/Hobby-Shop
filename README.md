@@ -1,3 +1,8 @@
+- Fix frontend
+- Fix frontend
+- Fix frontend
+- Fix frontend
+
 # RWA Project (Laravel v6.2)
 
 **How to use this project on your machine**
