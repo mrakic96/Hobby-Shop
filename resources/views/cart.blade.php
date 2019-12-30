@@ -38,6 +38,7 @@
                                     <div class="btn-group">
                                         <button type="button" class="btn btn-primary btn-xs dropdown-toggle" data-toggle="dropdown">Mogućnosti <span class="caret"></span></button>
                                         <ul class="dropdown-menu">
+                                        <li style="padding: 10px;"><a class="text-primary" href="{{ route('productAddByOne', ['id' => $product['item']['id']]) }}">Dodaj još 1</a></li>
                                         <li style="padding: 10px;"><a class="text-primary" href="{{ route('productReduceByOne', ['id' => $product['item']['id']]) }}">Ukloni 1</a></li>
                                         <li style="padding: 10px;"><a class="text-primary" href="{{ route('productRemove', ['id' => $product['item']['id']]) }}">Ukloni sve</a></li>
                                         </ul>

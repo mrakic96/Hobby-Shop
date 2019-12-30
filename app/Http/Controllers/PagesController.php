@@ -29,6 +29,15 @@ class PagesController extends Controller
         return redirect()->route('products');
     }
 
+    public function getAddByOne ($id) {
+        $oldCart = Session::has('cart') ? Session::get('cart') : null;
+        $cart = new Cart($oldCart);
+        $cart->addByOne($id);
+        Session::put('cart', $cart);
+        
+        return redirect()->route('cart');
+    }
+
     public function getReduceByOne ($id) {
         $oldCart = Session::has('cart') ? Session::get('cart') : null;
         $cart = new Cart($oldCart);
@@ -39,7 +48,7 @@ class PagesController extends Controller
         } else {
             Session::forget('cart');
         }
-        
+
         return redirect()->route('cart');
     }
 
