@@ -17,7 +17,9 @@
 - Credentials
 
 `admin@admin.com  password`
+
 `moderator@moderator.com  password`
+
 `user@user.com  password`
 
 #### User management
@@ -121,8 +123,7 @@
 - display current category in `admin.products.edit`
 
 `//Cart`
-1. Create a cart view
-    - option to empty cart
+- option to empty cart
 
 `//'checkout' view`
 1. Create a checkout view
