@@ -18,6 +18,9 @@
                 font-weight: 200;
                 height: 100vh;
                 margin: 0;
+                background-image:url('{{ asset('images/background-image.jpg') }}');
+                background-repeat:round;
+                background-size:cover;
             }
 
             .full-height {
@@ -81,7 +84,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    <img src="{{ asset('images/hobbylogo.png') }}"style="height:180px; width:500px;">
+                    <a href="{{ url('/products') }}"><img src="{{ asset('images/hobbylogo.png') }}"style="height:140px; width:400px;"></a>
                 </div>
 
                 <div class="links">
