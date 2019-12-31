@@ -16,12 +16,12 @@
                         <br>
                     <p>{{Auth::user()->name}}, uspješno ste se ulogirali!</p>
                     <hr>
-                    <p>Želite li vidjeti naš izbor proizvoda? Odaberite <a class="text-secondary" href="{{route('products')}}">trgovinu</a>!</p>
-                    <p>Pogledajte i više informacija <a class="text-secondary" href="{{route('about')}}">o nama</a>.</p>
+                    <p>Želite li vidjeti naš izbor proizvoda? Odaberite <a class="text-primary" href="{{route('products')}}">trgovinu</a>!</p>
+                    <p>Pogledajte i više informacija <a class="text-primary" href="{{route('about')}}">o nama</a>.</p>
                     <p>Uživajte!</p>
                     <br>
                     @can('manage-products')
-                    <a href="{{route('adminpanel.users.index')}}" target="_blank"><button class="btn btn-secondary">Admin panel</button></a>
+                    <a href="{{route('adminpanel.users.index')}}" target="_blank"><button class="btn btn-primary">Admin panel</button></a>
                     @endcan
                 </div>
             </div>

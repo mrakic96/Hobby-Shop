@@ -37,6 +37,17 @@
 					<li><a href="{{ route('adminpanel.products.index') }}">Proizvodi</a></li>
 					<li><a href="{{ route('adminpanel.categories.index') }}">Kategorije</a></li>
 					<li><a href="{{ route('welcome') }}" target="_blank">Hobby Shop</a></li>
+					<hr>
+					<li><a href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Odjava') }}
+						</a>
+					</li>
+                                
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
 				</ul>
 			</nav>
 		</aside>	
