@@ -39,11 +39,6 @@
                                         <a href="{{ route('productAddByOne', ['id' => $product['item']['id']]) }}" style="margin:0px 5px 0px 0px;"><button type="button" class="btn btn-primary btn-xs"><span style="font-size:17px;">+</span></button></a>
                                         <a href="{{ route('productReduceByOne', ['id' => $product['item']['id']]) }}" style="margin:0px 5px 0px 5px;"><button type="button" class="btn btn-warning btn-xs"><span style="font-size:17px;">-</span></button></a>
                                         <a href="{{ route('productRemove', ['id' => $product['item']['id']]) }}" style="margin:0px 0px 0px 5px;"><button type="button" class="btn btn-danger btn-xs"><span style="font-size:13px;">Ukloni</span></button></a>
-                                        <ul class="dropdown-menu">
-                                        <li style="padding: 10px;"><a class="text-primary" href="{{ route('productAddByOne', ['id' => $product['item']['id']]) }}">Dodaj još 1</a></li>
-                                        <li style="padding: 10px;"><a class="text-primary" href="{{ route('productReduceByOne', ['id' => $product['item']['id']]) }}">Ukloni 1</a></li>
-                                        <li style="padding: 10px;"><a class="text-primary" href="{{ route('productRemove', ['id' => $product['item']['id']]) }}">Ukloni sve</a></li>
-                                        </ul>
                                     </div>
                                 </td>
                             </tr>
