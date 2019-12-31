@@ -9,6 +9,7 @@
 
 - Clone this project from github
 - Rename `.env.example` file to `.env` inside your project root and fill the database information.
+- !!IMPORTANT!! Cart sessions don't work if you don't put `SESSION_DRIVER` equal to `file` in your `.env` file.
 - Open the console and cd your project root directory
 - Run `composer install`
 - Run `php artisan key:generate` 
