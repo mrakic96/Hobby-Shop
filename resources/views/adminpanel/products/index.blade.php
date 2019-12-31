@@ -57,7 +57,7 @@
                     <table class="table">
                         <thead>
                           <tr>
-                            <th scope="col">#</th>
+                            <th scope="col">ID</th>
                             <th scope="col">Naziv</th>
                             <th scope="col">Cijena</th>
                             <th scope="col">Slika</th>

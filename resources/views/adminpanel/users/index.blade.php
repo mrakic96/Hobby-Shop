@@ -14,7 +14,7 @@
                     <table class="table">
                         <thead>
                           <tr>
-                            <th scope="col">#</th>
+                            <th scope="col">ID</th>
                             <th scope="col">Ime</th>
                             <th scope="col">Email</th>
                             <th scope="col">Uloge</th>

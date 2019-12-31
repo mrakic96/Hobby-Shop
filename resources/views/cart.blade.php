@@ -23,7 +23,7 @@
                             <th scope="col">Cijena</th>
                             <th scope="col">Slika</th>
                         @can('manage-products')
-                            <th scope="col">Akcije</th>
+                            <th scope="col">Opcije</th>
                         @endcan
                           </tr>
                         </thead>

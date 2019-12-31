@@ -19,7 +19,7 @@
       </div>
       <div class="col-md-8">
         <div class="card-body">
-          <h5 class="card-title">{{$product->name}}</h5>
+          <h5 class="card-title text-primary">{{$product->name}}</h5>
           <h6 class="card-title">Cijena: {{ $product-> price}} KM</h6>
           <hr>
           <p class="card-text">{{ $product->description }}</p>
