@@ -36,7 +36,9 @@
                                 <td><img class="card-img-top" src="{{ url('images', $product['item']['image']) }}" alt="Card image cap" style="height: 50px; width:60px;"></td>
                                 <td> 
                                     <div class="btn-group">
-                                        <button type="button" class="btn btn-primary btn-xs dropdown-toggle" data-toggle="dropdown">Mogućnosti <span class="caret"></span></button>
+                                        <a href="{{ route('productAddByOne', ['id' => $product['item']['id']]) }}" style="margin:0px 5px 0px 0px;"><button type="button" class="btn btn-primary btn-xs"><span style="font-size:17px;">+</span></button></a>
+                                        <a href="{{ route('productReduceByOne', ['id' => $product['item']['id']]) }}" style="margin:0px 5px 0px 5px;"><button type="button" class="btn btn-warning btn-xs"><span style="font-size:17px;">-</span></button></a>
+                                        <a href="{{ route('productRemove', ['id' => $product['item']['id']]) }}" style="margin:0px 0px 0px 5px;"><button type="button" class="btn btn-danger btn-xs"><span style="font-size:13px;">Ukloni</span></button></a>
                                         <ul class="dropdown-menu">
                                         <li style="padding: 10px;"><a class="text-primary" href="{{ route('productAddByOne', ['id' => $product['item']['id']]) }}">Dodaj još 1</a></li>
                                         <li style="padding: 10px;"><a class="text-primary" href="{{ route('productReduceByOne', ['id' => $product['item']['id']]) }}">Ukloni 1</a></li>
