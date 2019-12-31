@@ -22,7 +22,7 @@
                             <th scope="col">#</th>
                             <th scope="col">Naziv</th>
                         @can('edit-users')
-                            <th scope="col">Akcije</th>
+                            <th scope="col">Opcije</th>
                         @endcan
                           </tr>
                         </thead>

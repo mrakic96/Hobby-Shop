@@ -17,8 +17,8 @@
                             <th scope="col">#</th>
                             <th scope="col">Ime</th>
                             <th scope="col">Email</th>
-                            <th scope="col">Role</th>
-                            <th scope="col">Akcije</th>
+                            <th scope="col">Uloge</th>
+                            <th scope="col">Opcije</th>
                           </tr>
                         </thead>
                         <tbody>

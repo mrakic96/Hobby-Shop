@@ -22,11 +22,11 @@
 
 - Credentials
 
-`admin@admin.com  password`
+`admin@hobbyshop.com  password`
 
-`moderator@moderator.com  password`
+`moderator@hobbyshop.com  password`
 
-`user@user.com  password`
+`user@hobbyshop.com  password`
 
 #### User management
 

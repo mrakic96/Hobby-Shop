@@ -42,7 +42,7 @@
                         {{ method_field('PUT') }}
                         @can('edit-roles')
                         <div class="form-group row">
-                            <label for="roles" class="col-md-2 col-form-label text-md-right">Roles</label>
+                            <label for="roles" class="col-md-2 col-form-label text-md-right">Uloge</label>
 
                             <div class="col-md-6">
                                 @foreach ($roles as $role)
