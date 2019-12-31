@@ -46,7 +46,7 @@
         </div>
     </div>
 </div>
-<script>
+{{-- <script>
  $(document).ready(function() {
     $( "#search" ).autocomplete({
  
@@ -71,7 +71,7 @@
  });
 });
  
-</script> 
+</script>  --}}
 				<!-- search -->
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
