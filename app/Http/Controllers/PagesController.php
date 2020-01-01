@@ -27,7 +27,7 @@ class PagesController extends Controller
         $cart->add($product, $product->id);
 
         $request->session()->put('cart', $cart);
-        return redirect()->route('products');
+        return redirect()->route('cart');
     }
 
     public function getAddByOne ($id) {
@@ -73,7 +73,7 @@ class PagesController extends Controller
             return view('checkout');
         }
 
-        return route('login');
+        return redirect()->route('login');
     }
 
     public function products() {
