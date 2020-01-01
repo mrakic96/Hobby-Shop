@@ -69,11 +69,16 @@ class PagesController extends Controller
 
     public function getCheckout () {
         if(Gate::allows('only-logged-user-see')){
-            Session::forget('cart');
+            // Session::forget('cart');
             return view('checkout');
         }
 
         return redirect()->route('login');
+    }
+
+    public function getFinishedCheckout () {
+        Session::forget('cart');
+        return redirect()->route('products');
     }
 
     public function products() {
