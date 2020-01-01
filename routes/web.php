@@ -19,11 +19,13 @@ Route::get('/', function () {
 })->name('welcome');
 
 /*Shopping cart routes*/
-Route::get('/cart', 'PagesController@getCart')->middleware('can:only-logged-user-see')->name('cart');
+// Route::get('/cart', 'PagesController@getCart')->middleware('can:only-logged-user-see')->name('cart');
+Route::get('/cart', 'PagesController@getCart')->name('cart');
 Route::get('/addToCart/{id}', 'PagesController@getAddToCart')->name('addToCart');
 Route::get('/add/{id}', 'PagesController@getAddByOne')->name('productAddByOne');
 Route::get('/reduce/{id}', 'PagesController@getReduceByOne')->name('productReduceByOne');
 Route::get('/remove/{id}', 'PagesController@getRemoveItem')->name('productRemove');
+Route::get('/checkout', 'PagesController@getCheckout')->name('checkout');
 
 /*Product views routes*/
 Route::get('/products', 'PagesController@products')->name('products');

@@ -23,9 +23,9 @@
           <h6 class="card-title">Cijena: {{ $product-> price}} KM</h6>
           <hr>
           <p class="card-text">{{ $product->description }}</p>
-          @can('only-logged-user-see')
-            <a href="{{ route('addToCart', ['id' => $product->id]) }}"><button class="btn btn-primary">Dodaj u košaricu</button></a>
-          @endcan
+          {{-- @can('only-logged-user-see') --}}
+            <a href="{{ route('addToCart', ['id' => $product->id]) }}"><button class="btn btn-primary"><i class="fas fa-shopping-cart"></i> Dodaj u košaricu</button></a>
+          {{-- @endcan --}}
           <hr>
           <p class="card-text"><small class="text-muted">Zadnji put ažurirano: {{ $product->updated_at }}</small></p>
         </div>

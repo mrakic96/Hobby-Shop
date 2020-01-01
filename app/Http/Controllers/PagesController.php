@@ -6,6 +6,7 @@ use App\Product;
 use App\Cart;
 use Illuminate\Http\Request;
 use Session;
+use Gate;
 
 class PagesController extends Controller
 {
@@ -64,6 +65,15 @@ class PagesController extends Controller
         }
 
         return redirect()->route('cart');
+    }
+
+    public function getCheckout () {
+        if(Gate::allows('only-logged-user-see')){
+            Session::forget('cart');
+            return view('checkout');
+        }
+
+        return route('login');
     }
 
     public function products() {

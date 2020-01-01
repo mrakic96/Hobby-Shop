@@ -1,6 +1,20 @@
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
+    <style>
+        .preloader {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 9999;
+            background-image: url('{{ asset('preloader.gif') }}');
+            background-repeat: no-repeat; 
+            background-color: #FFF;
+            background-position: center;
+}
+    </style>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- Jquery and other for search -->
@@ -18,11 +32,19 @@
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
 
+    <script>
+	$(window).load(function() {
+        $('.preloader').fadeOut('slow');
+    });
+    </script>
+
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <!-- Styles -->
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
+
+    
 </head>
 <body>
     <div id="app">
@@ -82,11 +104,11 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
-                            @can('only-logged-user-see')
-                            <li class="nav-item">
-                            <a class="nav-link" style="font-size:14px; margin-right:50px;" href="{{ route('cart') }}">{{ __('Košarica') }} <span class="badge badge-secondary float-left">{{ Session::has('cart') ? Session::get('cart')->totalQty : '0' }}</span></a>
+                            {{-- @can('only-logged-user-see') --}}
+                            <li class="nav-item" style="width:180px;">
+                            <a class="nav-link" style="font-size:14px; margin-right:50px;" href="{{ route('cart') }}"><i class="fas fa-shopping-cart"></i> {{ __('Košarica') }} <span class="badge badge-secondary float-right">{{ Session::has('cart') ? Session::get('cart')->totalQty : '' }}</span></a>
                             </li>
-                            @endcan
+                            {{-- @endcan --}}
                         @guest
                             <li class="nav-item">
                                 <a class="nav-link" style="font-size:14px;" href="{{ route('login') }}">{{ __('Prijava') }}</a>
@@ -124,6 +146,9 @@
                                         Product Management (off)
                                     </a>
                                     @endcan
+                                    <a class="dropdown-item" href="{{ route('products') }}">
+                                       Trgovina
+                                    </a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
