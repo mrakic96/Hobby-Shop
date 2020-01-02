@@ -63,11 +63,12 @@
         <div class="col-12">
             <div id="custom-search-input">
                 <div class="input-group">
-                    <input type="text" name="query" id="query" style="border-radius:8px;" value="{{ request()-> input('query')}}" class="form-control" placeholder="Pretraga">
+                    <input type="text" name="query" id="query" style="border-radius:8px 0px 0px 8px;" value="{{ request()-> input('query')}}" class="form-control" placeholder="Pretraga">
+                    <a href="{{route('search')}}"><button class="btn btn-outline-secondary float-right" style="height:35px; border-left:0px; border-radius:0px 8px 8px 0px; border-color:#ced4da" value="{{ request()-> input('query')}}"><i class="fas fa-search" style="color:#ced4da"></i></button></a>
                 </div>
-            </div>
+            </div>    
         </div>
-    </div>
+    </div>  
 </div>
 </form>
 				<!-- search -->

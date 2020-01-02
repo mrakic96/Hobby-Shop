@@ -33,7 +33,7 @@
                         <tbody>
                         @foreach ($products as $product)
                             <tr>
-                            <th scope="row"><span class="badge badge-secondary">{{ $product['qty'] }}</span></th>
+                            <th scope="row"><span class="badge badge-primary">{{ $product['qty'] }}</span></th>
                                 <td><strong>{{ $product['item']['name'] }}</strong></td>
                                 <td><span class="label label-success">{{ $product['price'] }}</span> KM</td>
                                 <td><img class="card-img-top" src="{{ url('images', $product['item']['image']) }}" alt="Card image cap" style="height: 50px; width:60px;"></td>
