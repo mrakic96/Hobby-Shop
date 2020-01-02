@@ -1,7 +1,4 @@
-- Fix frontend
-- Fix frontend
-- Fix frontend
-- Fix frontend
+- Fix frontend!!
 
 # RWA Project (Laravel v6.2)
 
@@ -143,6 +140,4 @@
 - display current category in `admin.products.edit`
 
 
-
-- Fix frontend
 
