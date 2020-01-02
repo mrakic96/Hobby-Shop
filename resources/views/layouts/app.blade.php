@@ -9,7 +9,7 @@
             width: 100%;
             height: 100%;
             z-index: 9999;
-            background-image: url('{{ asset('preloader.gif') }}');
+            background-image: url('{{ asset('images/preloader.gif') }}');
             background-repeat: no-repeat; 
             background-color: #FFF;
             background-position: center;
