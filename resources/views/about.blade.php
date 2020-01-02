@@ -2,7 +2,31 @@
 
 @section('content')
     
-
+<div>
+  <br>
+  <ul class="nav nav-pills">
+    <li class="nav-item">
+      <a class="nav-link" href="{{ route('products') }}">Svi proizvodi</a>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Po kategorijama</a>
+      <div class="dropdown-menu" style="">
+        <a class="dropdown-item" href="{{ route('olovke') }}">Olovke</a>
+        <a class="dropdown-item" href="{{ route('kistovi') }}">Kistovi</a>
+        <a class="dropdown-item" href="{{ route('platna') }}">Platna</a>
+      </div>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link active" href="#">O nama</a>
+    </li>
+    @can('manage-products')
+    <li class="nav-item">
+    <a class="nav-link" href="{{ route('adminpanel.users.index') }}" target="_blank">Admin panel</a>
+    </li>
+    @endcan
+  </ul>
+</div>
+<br>
 <div class="bg-light">
     <div class="container py-5">
       <div class="row h-100 align-items-center py-5">

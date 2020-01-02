@@ -1,16 +1,19 @@
 @extends('layouts.app')
-@extends('layouts.kategorije')
 
 @section('content')
 
 <div class="container">
-    <br>
-    <br>
     @if(Session::has('cart'))
     <br>
     <br>
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-12">
+        <a href="{{ route('products') }}"><button type="button" class="btn btn-primary float-left"><i class="fas fa-arrow-left"></i> Nazad u trgovinu</button></a>
+        </div>
+    </div>
+    <br>
+    <div class="row justify-content-center">
+        <div class="col-md-12">
             <div class="card">
                 <br>
                 <div class="card-body">
@@ -52,38 +55,31 @@
     </div>
     <br>
     <div class="row justify-content-center">
-        <div class="col-md-8">
-            <strong>Ukupno: {{ $totalPrice }} KM</strong>
+        <div class="col-md-12">
+            <strong class="float-right">Ukupno: {{ $totalPrice }} KM</strong>
         </div>
     </div>
     <hr>
     <div class="row justify-content-center">
-        <div class="col-md-8">
-        <a href="{{ route('checkout') }}"><button type="button" class="btn btn-success">Kupi</button></a>
+        <div class="col-md-12">
+        <a class="float-right" href="{{ route('checkout') }}"><button type="button" class="btn btn-success">Kupi</button></a>
         </div>
     </div>
     <hr>
     <br>
     <br>
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-        <a href="{{ route('products') }}"><button type="button" class="btn btn-primary"><i class="fas fa-arrow-left"></i> Nazad u trgovinu</button></a>
-        </div>
-    </div>
     @else
     <br>
     <br>
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <h2>Košarica je prazna!</h2>
-        </div>
-    </div>
     <br>
     <br>
-    <div class="row justify-content-center">
-        <div class="col-md-8">
+    <div class="alert alert-light">
+        Vaša košarica je <strong> prazna</strong>! Vratite se nazad kako bi odabrali proizvode.
+      </div>
+    <br>
+    <br>
+    <div class="col-md-8">
         <a href="{{ route('products') }}"><button type="button" class="btn btn-primary"><i class="fas fa-arrow-left"></i> Nazad u trgovinu</button></a>
-        </div>
     </div>
     <br>
     <br>

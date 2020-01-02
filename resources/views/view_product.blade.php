@@ -1,18 +1,38 @@
 @extends('layouts.app')
-@extends('layouts.kategorije')
 
 @section('content')
 <br>
-<br>
+<ul class="nav nav-pills">
+  <li class="nav-item">
+    <a class="nav-link" href="{{ route('products') }}">Svi proizvodi</a>
+  </li>
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Po kategorijama</a>
+    <div class="dropdown-menu" style="">
+      <a class="dropdown-item" href="{{ route('olovke') }}">Olovke</a>
+      <a class="dropdown-item" href="{{ route('kistovi') }}">Kistovi</a>
+      <a class="dropdown-item" href="{{ route('platna') }}">Platna</a>
+    </div>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="{{ route('about') }}">O nama</a>
+  </li>
+  @can('manage-products')
+  <li class="nav-item">
+  <a class="nav-link" href="{{ route('adminpanel.users.index') }}" target="_blank">Admin panel</a>
+  </li>
+  @endcan
+</ul>
 <br>
 <br>
     @cannot('only-logged-user-see')
-      <div class="alert alert-dismissible alert-info" style="width:650px; margin-left:80px;">
+      <div class="alert alert-dismissible alert-info" style="width:850px;" >
         <button type="button" class="close" data-dismiss="alert">&times;</button>
           Da biste kupili naše proizvode, morali bi se <a href="{{ route('login') }}" class="alert-link">prijaviti</a> ili <a href="{{ route('register') }}" class="alert-link">registrirati</a> ukoliko nemate račun.
       </div>
+      <br>
     @endcannot
-<div class="card border-secondary mb-3" style="top:20px; left: 80px; margin-bottom:136px !important; max-width: 1000px; max-height:300px">
+<div class="card border-secondary mb-3" style="top:20px; margin-bottom:136px !important; max-width: 1000px; max-height:300px">
     <div class="row no-gutters">
       <div class="col-md-4">
         <img src="{{ url('images', $product->image) }}" class="card-img" alt="Card image cap" style="height: 280px;">
