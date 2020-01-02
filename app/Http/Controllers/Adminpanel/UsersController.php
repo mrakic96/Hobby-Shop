@@ -63,9 +63,9 @@ class UsersController extends Controller
         $user->email = $request->email;
 
         if($user->save()){
-            $request->session()->flash('success', $user->name. ' has been updated');
+            $request->session()->flash('success','Korisnik "'. $user->name. '" je ažuriran.');
         }else{
-            $request->session()->flash('error', 'There was an error updating user');
+            $request->session()->flash('error', 'Došlo je do greške pri ažuraciji.');
         }
 
         return redirect()->route('adminpanel.users.index');

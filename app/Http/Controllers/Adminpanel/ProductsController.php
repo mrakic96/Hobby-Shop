@@ -119,9 +119,9 @@ class ProductsController extends Controller
 
         // $product->save();
         if($product->save()){
-            $request->session()->flash('success', $product->name. ' has been updated');
+            $request->session()->flash('success','Proizvod "'. $product->name. '" je ažuriran.');
         }else{
-            $request->session()->flash('error', 'There was an error updating product');
+            $request->session()->flash('error', 'Došlo je do greške pri ažuraciji proizvoda.');
         }
 
         return redirect()->route('adminpanel.products.index');

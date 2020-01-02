@@ -4482,6 +4482,8 @@ a.thumbnail.active {
 }
 
 .alert-success {
+  margin-left:204px;
+  margin-top: 25px;
   background-color: #dff0d8;
   border-color: #d6e9c6;
   color: #3c763d;

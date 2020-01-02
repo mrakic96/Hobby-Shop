@@ -63,7 +63,7 @@
         <div class="col-12">
             <div id="custom-search-input">
                 <div class="input-group">
-                    <input type="text" name="query" id="query" value="{{ request()-> input('query')}}" class="form-control" placeholder="Pretraga">
+                    <input type="text" name="query" id="query" style="border-radius:8px;" value="{{ request()-> input('query')}}" class="form-control" placeholder="Pretraga">
                 </div>
             </div>
         </div>
@@ -157,13 +157,13 @@
         <div class="row mb-5">
           <div class="col-md">
             <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">Hobby Shop</h2>
+              <h3 class="ftco-heading-2">Hobby Shop</h3>
               <p>Neki opis trgovine i dodatne informacije o trgovini</p>
             </div>
           </div>
           <div class="col-md">
             <div class="ftco-footer-widget mb-4 ml-md-5">
-              <h2 class="ftco-heading-2">Izbornik</h2>
+              <h3 class="ftco-heading-2">Izbornik</h3>
               <ul class="list-unstyled">
                 <li><a href="{{ url('/products') }}" class="py-2 d-block text-muted">Trgovina</a></li>
                 <li><a href="#" class="py-2 d-block text-muted">Košarica</a></li>
@@ -173,7 +173,7 @@
           </div>
           <div class="col-md-4">
              <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">Dodatno</h2>
+              <h3 class="ftco-heading-2">Dodatno</h3>
               <div class="d-flex">
                   <ul class="list-unstyled mr-l-5 pr-l-3 mr-4">
                     <li><a href="{{ asset('download/vizija.docx') }}" download class="py-2 d-block text-muted">Vizija projekta</a></li>
@@ -181,18 +181,18 @@
                     
                   </ul>           
               </div>
-                    <a href="https://github.com/mrakic96/Hobby-Shop" target="_blank"><i class="fab fa-github"style='font-size:35px;margin-left:38px;margin-top:40px;'></i></a>
+                    <a class="text-primary" href="https://github.com/mrakic96/Hobby-Shop" target="_blank"><i class="fab fa-github"style='font-size:35px;margin-left:38px;margin-top:40px;'></i></a>
             </div>
           </div>
           <div class="col-md">
             <div class="ftco-footer-widget mb-4">
-                <h2 class="ftco-heading-2">Kontakt</h2>
+                <h3 class="ftco-heading-2">Kontakt</h3>
                 <div class="block-23 mb-3">
 <ul class="fa-ul">
-  <li><span class="fa-li"><i class="fa fa-phone"style='font-size:15px'></i></span>+000 111 222</li>
-  <li><span class="fa-li"><i class="fas fa-home"style='font-size:15px'></i></span>FSRE Mostar</li>
-  <li><span class="fa-li"><i class="fas fa-envelope"style='font-size:15px'></i></span>aviskic@gmail.com</li>
-  <li><span class="fa-li"><i class="fas fa-envelope"style='font-size:15px'></i></span>matej.rakic96@gmail.com</li>
+  <li><span class="fa-li"><i class="fa fa-phone text-primary"style='font-size:15px'></i></span>+000 111 222</li>
+  <li><span class="fa-li"><i class="fas fa-home text-primary"style='font-size:15px'></i></span>FSRE Mostar</li>
+  <li><span class="fa-li"><i class="fas fa-envelope text-primary"style='font-size:15px'></i></span>aviskic@gmail.com</li>
+  <li><span class="fa-li"><i class="fas fa-envelope text-primary"style='font-size:15px'></i></span>matej.rakic96@gmail.com</li>
 </ul>
                 </div>
             </div>

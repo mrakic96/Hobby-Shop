@@ -79,7 +79,7 @@ class CategoriesController extends Controller
         $category->name = $request->name;
 
         if($category->save()){
-            $request->session()->flash('success', $category->name. ' has been updated');
+            $request->session()->flash('success','Kategorija "'. $category->name. '" je ažurirana.');
         }else{
             $request->session()->flash('error', 'There was an error updating product');
         }
