@@ -9,11 +9,11 @@
             width: 100%;
             height: 100%;
             z-index: 9999;
-            background-image: url('{{ asset('images/preloader.gif') }}');
+            background-image: url('{{ asset('images/preloader3.gif') }}');
             background-repeat: no-repeat; 
-            background-color: #FFF;
+            background-color: #F8F5F0;
             background-position: center;
-}
+            }  
     </style>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
