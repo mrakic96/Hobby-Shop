@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>Hobby Shop</title>
-
+<link rel="shortcut icon" type="image/x-icon" href="{{ asset('images/ikonastranice.ico') }}"/>
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 

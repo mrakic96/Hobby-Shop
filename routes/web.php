@@ -39,8 +39,7 @@ Route::get('/platna', 'PagesController@platna')->name('platna');
 Route::get('/about', 'PagesController@about')->name('about');
 
 // SEARCH
-Route::get('search', 'AutoCompleteController@index');
- Route::get('autocomplete', 'AutoCompleteController@search');
+Route::get('/search', 'PagesController@search')->name('search');
 
 // AUTH
 

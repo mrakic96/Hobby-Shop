@@ -17,10 +17,10 @@
     </style>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('images/ikonastranice.ico') }}"/>
 	<!-- Jquery and other for search -->
-	  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+ <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.1/bootstrap3-typeahead.min.js"></script>
     <!-- Icons -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script src='https://kit.fontawesome.com/a076d05399.js'></script>
@@ -57,43 +57,19 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
 				<!-- search -->
-				<div class="container">
+  <form action="{{route('search')}}" methog="GET" class="search-form">
+<div class="container">
     <div class="row">
         <div class="col-12">
             <div id="custom-search-input">
                 <div class="input-group">
-                    <input id="search" name="search" type="text" class="form-control" placeholder="Pretraži..." />
-                </div>
+    <input type="text" name="query" id="query" value="{{ request()-> input('query')}}" class="search-box" placeholder="Pretraga"></i>
+          </div>
             </div>
         </div>
     </div>
 </div>
-{{-- <script>
- $(document).ready(function() {
-    $( "#search" ).autocomplete({
- 
-        source: function(request, response) {
-            $.ajax({
-            url: "{{url('autocomplete')}}",
-            data: {
-                    term : request.term
-             },
-            dataType: "json",
-            success: function(data){
-               var resp = $.map(data,function(obj){
-                    //console.log(obj.city_name);
-                    return obj.name;
-               }); 
- 
-               response(resp);
-            }
-        });
-    },
-    minLength: 1
- });
-});
- 
-</script>  --}}
+  </form>
 				<!-- search -->
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
@@ -183,11 +159,6 @@
             <div class="ftco-footer-widget mb-4">
               <h2 class="ftco-heading-2">Hobby Shop</h2>
               <p>Neki opis trgovine i dodatne informacije o trgovini</p>
-              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
-                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
-              </ul>
             </div>
           </div>
           <div class="col-md">

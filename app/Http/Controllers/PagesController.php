@@ -110,5 +110,15 @@ class PagesController extends Controller
         
         return view('about');
     }
-   
+   //SEARCH
+public function search(Request $request)
+{
+    //ako zelis min slova odkomentiraj
+    //$request->validate(['query'=>'required|min:3',]);
+    $query = $request->input('query');
+    $products = Product::where('name', 'like', "%$query%")
+                        ->orWhere('description', 'like', "%$query%")
+                        -> paginate(10);
+    return view ('search-results')->with('products', $products);
+}
 }
