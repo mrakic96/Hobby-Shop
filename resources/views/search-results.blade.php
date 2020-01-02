@@ -26,11 +26,11 @@
     @endcan
   </ul>
     <div class="row justify-content-center">
-        <div class="col">
+        <div class="col-md-12">
           <br>
           <h1>Rezultati</h1>
           <p>{{$products->count()}} rezultat(a) za '{{ request()->input('query')}}'</p>
-
+          <div class="card">
           <div class="card-body">
                     
                     <table class="table">
@@ -42,7 +42,7 @@
                             <th scope="col">Slika</th>
                             @can('manage-products')
                             <th scope="col">Opcije</th>
-                        @endcan
+                            @endcan
                           </tr>
                         </thead>
                         <tbody>
@@ -53,17 +53,15 @@
                                 <td>{{ $product-> description}}</td>
                                 <td><img class="card-img-top" src="{{ url('images', $product->image) }}" alt="Card image cap" style="height: 40px; width: 40px;"></td>
                                 @can('manage-products')
-                                                                <td> 
-                                    <a href="{{ route('adminpanel.products.edit', $product->id) }}">
-                                        <button type="button" class="btn btn-primary float-lg-left">Izmjena</button>
-                                    </a>
-                                </td>
                                 <td> 
+                                    <a href="{{ route('adminpanel.products.edit', $product->id) }}">
+                                        <button type="button" class="btn btn-primary float-lg-left"  style="margin-right:10px;">Izmjena</button>
+                                    </a>
                                     <form action="{{ route('adminpanel.products.destroy', $product) }}" method="POST" class="float-left">
-                                     @csrf
-                                     {{ method_field('DELETE') }}
-                                    <button type="submit" class="btn btn-warning">Izbriši</button>
-                                    </form>
+                                      @csrf
+                                      {{ method_field('DELETE') }}
+                                     <button type="submit" class="btn btn-warning">Izbriši</button>
+                                     </form>
                                 </td>
                                 @endcan
                             </tr>
@@ -72,6 +70,7 @@
                         </tbody>
                       </table>
                 </div>
+              </div>
         </div>
     </div>
     <br>
