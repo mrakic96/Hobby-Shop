@@ -63,7 +63,7 @@
         <div class="col-12">
             <div id="custom-search-input">
                 <div class="input-group">
-                    <input type="text" name="query" id="query" value="{{ request()-> input('query')}}" class="search-box" placeholder="Pretraga"></i>
+                    <input type="text" name="query" id="query" value="{{ request()-> input('query')}}" class="form-control" placeholder="Pretraga">
                 </div>
             </div>
         </div>
