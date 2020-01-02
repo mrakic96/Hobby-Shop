@@ -71,6 +71,11 @@
     @else
     <br>
     <br>
+    <div class="row justify-content-center">
+        <div class="col-md-12">
+            <a href="{{ route('products') }}"><button type="button" class="btn btn-primary float-left"><i class="fas fa-arrow-left"></i> Nazad u trgovinu</button></a>
+        </div>
+    </div>
     <br>
     <br>
     <div class="alert alert-light">
@@ -78,9 +83,7 @@
       </div>
     <br>
     <br>
-    <div class="col-md-8">
-        <a href="{{ route('products') }}"><button type="button" class="btn btn-primary"><i class="fas fa-arrow-left"></i> Nazad u trgovinu</button></a>
-    </div>
+    
     <br>
     <br>
     <br>
