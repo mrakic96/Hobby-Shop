@@ -19,6 +19,7 @@
                             <th scope="col">Email</th>
                             <th scope="col">Uloge</th>
                             <th scope="col">Opcije</th>
+                            <th></th>
                           </tr>
                         </thead>
                         <tbody>

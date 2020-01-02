@@ -102,6 +102,7 @@
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                     <h5 style="font-size:16px;" class="dropdown-header">Opcije</h5>
+                                    <hr style="margin:0px 15px 0px 15px;">
                                     @can('manage-products')
                                     <a class="dropdown-item" href="{{ route('adminpanel.products.index') }}" target="_blank">
                                         Admin panel
@@ -125,6 +126,7 @@
                                     <a class="dropdown-item" href="{{ route('products') }}">
                                        Trgovina
                                     </a>
+                                    <hr style="margin:0px 15px 0px 15px;">
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">

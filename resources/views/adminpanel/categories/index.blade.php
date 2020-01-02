@@ -8,7 +8,7 @@
         <a href="{{ route('adminpanel.categories.create') }}"><button type="button" class="btn btn-primary float-lg-left" style="margin:0px 0px 0px 205px">Nova kategorija</button></a>
     </div>
     <br>
-    <hr>
+    <hr style="margin-left:200px;">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card" style="margin:0px 0px 0px 200px">

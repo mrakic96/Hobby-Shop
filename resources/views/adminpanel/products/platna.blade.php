@@ -64,6 +64,7 @@
                         @can('manage-products')
                             <th scope="col">Opcije</th>
                         @endcan
+                            <th></th>
                           </tr>
                         </thead>
                         <tbody>

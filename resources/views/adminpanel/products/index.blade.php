@@ -45,7 +45,7 @@
             </div>
         </div>
     <br>
-    <hr>
+    <hr style="margin-left:200px;">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card" style="margin:0px 0px 0px 200px">
@@ -63,6 +63,7 @@
                             <th scope="col">Slika</th>
                         @can('manage-products')
                             <th scope="col">Opcije</th>
+                            <th></th>
                         @endcan
                           </tr>
                         </thead>
