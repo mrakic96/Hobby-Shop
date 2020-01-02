@@ -57,19 +57,19 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
 				<!-- search -->
-  <form action="{{route('search')}}" methog="GET" class="search-form">
+<form action="{{route('search')}}" methog="GET" class="search-form">
 <div class="container">
     <div class="row">
         <div class="col-12">
             <div id="custom-search-input">
                 <div class="input-group">
-    <input type="text" name="query" id="query" value="{{ request()-> input('query')}}" class="search-box" placeholder="Pretraga"></i>
-          </div>
+                    <input type="text" name="query" id="query" value="{{ request()-> input('query')}}" class="search-box" placeholder="Pretraga"></i>
+                </div>
             </div>
         </div>
     </div>
 </div>
-  </form>
+</form>
 				<!-- search -->
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->

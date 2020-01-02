@@ -27,17 +27,11 @@
   </ul>
     <div class="row justify-content-center">
         <div class="col">
-          @cannot('only-logged-user-see')
-          
           <br>
-          <div class="alert alert-dismissible alert-info" style="width:650px;">
-            <button type="button" class="close" data-dismiss="alert">&times;</button>
-          Da biste kupili naše proizvode, morali bi se <a href="{{ route('login') }}" class="alert-link">prijaviti</a> ili <a href="{{ route('register') }}" class="alert-link">registrirati</a> ukoliko nemate račun.
-          </div>
-          @endcannot
           <h1>Rezultati</h1>
           <p>{{$products->count()}} rezultat(a) za '{{ request()->input('query')}}'</p>
-                         <div class="card-body">
+
+          <div class="card-body">
                     
                     <table class="table">
                         <thead>
@@ -57,7 +51,7 @@
                                 <td><a class="text-primary" href="/products/{{$product->id}}">{{$product->name}}</a></td>
                                 <td>{{ $product-> price}} KM</td>
                                 <td>{{ $product-> description}}</td>
-                                <td><img class="card-img-top" src="{{ url('images', $product->image) }}" alt="Card image cap" style="height: 30px; width: 60px;"></td>
+                                <td><img class="card-img-top" src="{{ url('images', $product->image) }}" alt="Card image cap" style="height: 40px; width: 40px;"></td>
                                 @can('manage-products')
                                                                 <td> 
                                     <a href="{{ route('adminpanel.products.edit', $product->id) }}">
