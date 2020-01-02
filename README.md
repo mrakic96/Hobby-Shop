@@ -114,6 +114,14 @@
 - A single product details are displayed
 - 'Add to cart' button not visible for guests
 
+#### 'search-results' view
+
+- This view is displayed after a user or a guest hits search button
+
+#### 'about' view
+
+- basic info
+
 #### 'cart' view
 
 - Not visible for guests
@@ -123,18 +131,18 @@
 - Display a total sum a single product
 - Display a total sum of products
 
+#### 'checkout' view
+
+- logged in user is getting a checkout view after buying products
+- guest is redirected to 'login' after trying to buy products
+
+
 **TO-DO**
 
 `//Product management`
 - display current category in `admin.products.edit`
 
-`//Cart`
-- option to empty cart
 
-`//'checkout' view`
-1. Create a checkout view
-    - logged in user is getting a checkout view after buying products
-    - guest is redirected to /login after trying to buy products
 
 - Fix frontend
 
