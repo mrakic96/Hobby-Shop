@@ -6,14 +6,16 @@
         <div class="col-md-8">
             <br>
                   <!-- search -->
-      <form action="{{route('adminpanel.users.search')}}" methog="GET" class="search-form">
+<form action="{{route('adminpanel.users.search')}}" methog="GET" class="search-form">
 <div class="container">
     <div class="row">
         <div class="col-12">
+            <br>
        <div id="custom-search-input">
                 <div class="input-group">
-        <input type="text" name="query" id="query" style="border-radius:8px 0px 0px 8px; margin:0px 0px 0px 205px;" value="{{ request()-> input('query')}}" class="form-control" placeholder="Pretraga">
-           </div>
+                    <input type="text" name="query" id="query" style="width: 250px;border-radius:8px 0px 0px 8px; margin:0px 0px 0px 205px;" value="{{ request()-> input('query')}}" class="form-control" placeholder="Pretraga">
+                    <a href="{{route('search')}}"><button class="btn btn-outline-secondary" style="border-left:0px; margin-bottom:0px; height:54px; border-radius:0px 8px 8px 0px; border-color:#ced4da" value="{{ request()-> input('query')}}"><i class="fas fa-search" style="color:#ced4da"></i></button></a>
+                </div>
         </div>
           </div>
     </div>  

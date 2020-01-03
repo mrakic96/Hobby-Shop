@@ -14,6 +14,9 @@
 	<link href="{{ asset('css/adminpanel/animate.css') }}" rel="stylesheet">
 	<!-- Icomoon Icon Fonts-->
 	<link href="{{ asset('css/adminpanel/icomoon.css') }}" rel="stylesheet">
+	<!-- Icons -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src='https://kit.fontawesome.com/a076d05399.js'></script>
 	<!-- Bootstrap  -->
 	<link href="{{ asset('css/adminpanel/bootstrap.css') }}" rel="stylesheet">
 	<!-- Flexslider  -->
