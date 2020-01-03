@@ -56,7 +56,7 @@
         <div class="col-lg-5 px-5 mx-auto"><img src="https://res.cloudinary.com/mhmd/image/upload/v1556834136/img-2_vdgqgn.jpg" alt="" class="img-fluid mb-4 mb-lg-0"></div>
         <div class="col-lg-6"><i class="fa fa-leaf fa-2x mb-3 text-primary"></i>
           <h2 class="font-weight-light">Vizija projekta i DB schema</h2>
-          <p class="font-italic text-muted mb-4">Pored github repozitorija, naš projekt ima viziju i schemu MySQL baze koje možete preuzeti klikom na gumbove ispod.</p><a href="{{ asset('download/vizija.docx') }}" download class="btn btn-light px-5 rounded-pill shadow-sm">Preuzmite viziju</a><a href="{{ asset('download/Hobby_Shop_MySql_Schema.zip') }}" download class="btn btn-light px-5 rounded-pill shadow-sm" style="margin-left:15px;">Preuzmite schemu</a>
+          <p class="font-italic text-muted mb-4">Pored github repozitorija, naš projekt ima viziju i schemu MySQL baze koje možete preuzeti klikom na gumbove ispod.</p><a href="{{ asset('download/vizija.pdf') }}" download class="btn btn-light px-5 rounded-pill shadow-sm">Preuzmite viziju</a><a href="{{ asset('download/Hobby_Shop_MySql_Schema.zip') }}" download class="btn btn-light px-5 rounded-pill shadow-sm" style="margin-left:15px;">Preuzmite schemu</a>
         </div>
       </div>
     </div>
