@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\User;
 use App\Category;
 use App\Product;
 use App\Cart;
@@ -14,6 +15,26 @@ class PagesController extends Controller
     public function getProfile() {
 
         return view('profile');
+    }
+
+    // Izmjena korisničkih info
+    public function getEditProfile(User $user) {  
+
+        return view('edit-profile')->with('user', $user);
+    }
+
+    // Ažuracija korisnika
+    public function getUpdateProfile(Request $request, User $user) {   
+        $user->name = $request->name;
+        $user->email = $request->email;
+
+        if($user->save()){
+            $request->session()->flash('success','Korisnik "'. $user->name. '" je ažuriran.');
+        }else{
+            $request->session()->flash('error', 'Došlo je do greške pri ažuraciji.');
+        }
+
+        return redirect()->route('profile');
     }
 
     // Košarica
@@ -145,5 +166,5 @@ class PagesController extends Controller
     $products= Product::search($query)->paginate(10);                    
     return view ('search-results')->with('products', $products);
     }
-    
+
 }

@@ -37,6 +37,8 @@ Route::get('/platna', 'PagesController@platna')->name('platna');
 
 /*User profile*/
 Route::get('/profile', 'PagesController@getProfile')->name('profile');
+Route::get('/profile/{id}', 'PagesController@getEditProfile')->name('edit-profile');
+Route::put('/profile/{user}', 'PagesController@getUpdateProfile')->name('update-profile');
 
 /*About view route*/
 Route::get('/about', 'PagesController@about')->name('about');

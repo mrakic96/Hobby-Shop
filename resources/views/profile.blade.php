@@ -8,10 +8,11 @@
                 <div class="card-body">
                   <h5 class="card-title">Korisnički profil</h5>
                   <hr>
+                  <br>
                   <h6 class="card-title">Ime: {{Auth::user()->name}}</h6>
                   <h6 class="card-title">E-mail: {{ Auth::user()-> email}} </h6>
                   <br>
-                  <a href=""><button type="button" class="btn btn-primary float-left">Izmjena</button></a>
+                  <a href="{{ route('edit-profile', Auth::user()->id) }}"><button type="button" class="btn btn-primary float-left">Izmjena</button></a>
                   <br>
                   <br>
                   <hr>
