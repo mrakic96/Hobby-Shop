@@ -36,9 +36,9 @@ Route::get('/kistovi', 'PagesController@kistovi')->name('kistovi');
 Route::get('/platna', 'PagesController@platna')->name('platna');
 
 /*User profile*/
-Route::get('/profile', 'PagesController@getProfile')->name('profile');
-Route::get('/profile/{id}', 'PagesController@getEditProfile')->name('edit-profile');
-Route::put('/profile/{user}', 'PagesController@getUpdateProfile')->name('update-profile');
+Route::get('/profile', 'PagesController@getProfile')->middleware('can:only-logged-user-see')->name('profile');
+Route::get('/profile/{id}', 'PagesController@getEditProfile')->middleware('can:only-logged-user-see')->name('edit-profile');
+Route::put('/profile/{user}', 'PagesController@getUpdateProfile')->middleware('can:only-logged-user-see')->name('update-profile');
 
 /*About view route*/
 Route::get('/about', 'PagesController@about')->name('about');
