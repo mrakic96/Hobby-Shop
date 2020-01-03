@@ -179,7 +179,7 @@
               <h3 class="ftco-heading-2">Dodatno</h3>
               <div class="d-flex">
                   <ul class="list-unstyled mr-l-5 pr-l-3 mr-4">
-                    <li><a href="{{ asset('download/vizija.pdf') }}" download class="py-2 d-block text-muted">Vizija projekta</a></li>
+                    <li><a href="{{ asset('download/Vizija.pdf') }}" download class="py-2 d-block text-muted">Vizija projekta</a></li>
                     <li><a href="https://github.com/mrakic96/Hobby-Shop" target="_blank" class="py-2 d-block text-muted">Github repozitorij</a></li>
                     
                   </ul>           
