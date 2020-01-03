@@ -97,4 +97,14 @@ class CategoriesController extends Controller
     {
         //
     }
+        public function search(Request $request)
+{
+    //ako zelis min slova odkomentiraj
+    //$request->validate(['query'=>'required|min:3',]);
+    $query = $request->input('query');
+    $categories = Category::where('name', 'like', "%$query%")
+                       -> paginate(10);
+                   
+    return view ('adminpanel.categories.search')->with('categories', $categories);
+}
 }

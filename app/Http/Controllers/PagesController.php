@@ -116,9 +116,13 @@ public function search(Request $request)
     //ako zelis min slova odkomentiraj
     //$request->validate(['query'=>'required|min:3',]);
     $query = $request->input('query');
-    $products = Product::where('name', 'like', "%$query%")
-                        ->orWhere('description', 'like', "%$query%")
-                        -> paginate(10);
+    //search bez package ostavio da bi mogao copy na admin panel
+  //  $products = Product::where('name', 'like', "%$query%")
+  //                      ->orWhere('details', 'like', "%$query%")
+  //                     -> paginate(10);
+
+
+    $products= Product::search($query)->paginate(10);                    
     return view ('search-results')->with('products', $products);
 }
 }

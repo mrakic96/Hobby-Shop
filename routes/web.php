@@ -51,6 +51,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 /*Manage users routes*/
 Route::namespace('Adminpanel')->prefix('adminpanel')->name('adminpanel.')->middleware('can:manage-users')->group(function(){
+    Route::get('/users/search', 'UsersController@search')->name('users.search');
     Route::resource('/users', 'UsersController', ['except' => ['show', 'create', 'store']]);
 });
 
@@ -59,11 +60,13 @@ Route::namespace('Adminpanel')->prefix('adminpanel')->name('adminpanel.')->middl
     Route::get('/products/olovke', 'ProductsController@olovke')->name('products.olovke');
     Route::get('/products/kistovi', 'ProductsController@kistovi')->name('products.kistovi');
     Route::get('/products/platna', 'ProductsController@platna')->name('products.platna');
+    Route::get('/products/search', 'ProductsController@search')->name('products.search');
     Route::resource('/products', 'ProductsController');
 });
 
 /*Manage categories routes*/
 Route::namespace('Adminpanel')->prefix('adminpanel')->name('adminpanel.')->middleware('can:manage-products')->group(function(){
+    Route::get('/categories/search', 'CategoriesController@search')->name('categories.search');
     Route::resource('/categories', 'CategoriesController');
 });
 

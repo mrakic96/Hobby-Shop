@@ -87,4 +87,15 @@ class UsersController extends Controller
 
         return redirect()->route('adminpanel.users.index');
     }
+    //search
+    public function search(Request $request)
+{
+    //ako zelis min slova odkomentiraj
+    //$request->validate(['query'=>'required|min:3',]);
+    $query = $request->input('query');
+    $users = User::where('name', 'like', "%$query%")
+                       -> paginate(10);
+                   
+    return view ('adminpanel.users.search')->with('users', $users);
+}
 }

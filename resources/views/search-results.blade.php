@@ -38,6 +38,7 @@
                           <tr>
                             <th scope="col">Naziv</th>
                             <th scope="col">Cijena</th>
+                            <th scope="col">Detalji</th>
                             <th scope="col">Opis</th>
                             <th scope="col">Slika</th>
                             @can('manage-products')
@@ -49,6 +50,7 @@
                         @foreach ($products as $product)
                             <tr>              
                                 <td><a class="text-primary" href="/products/{{$product->id}}">{{$product->name}}</a></td>
+                                <td>{{ $product-> details}}</td>
                                 <td>{{ $product-> price}} KM</td>
                                 <td>{{ $product-> description}}</td>
                                 <td><img class="card-img-top" src="{{ url('images', $product->image) }}" alt="Card image cap" style="height: 40px; width: 40px;"></td>

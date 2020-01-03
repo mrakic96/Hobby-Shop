@@ -35,6 +35,21 @@
     <br>
     <br>
     <div class="row justify-content-center">
+            <!-- search -->
+      <form action="{{route('adminpanel.products.search')}}" methog="GET" class="search-form">
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+       <div id="custom-search-input">
+                <div class="input-group">
+        <input type="text" name="query" id="query" style="border-radius:8px 0px 0px 8px; margin:0px 0px 0px 205px;" value="{{ request()-> input('query')}}" class="form-control" placeholder="Pretraga">
+           </div>
+        </div>
+          </div>
+    </div>  
+</div>
+</form>
+<!-- search -->
         <a href="{{ route('adminpanel.products.create') }}"><button type="button" class="btn btn-primary float-lg-left" style="margin:0px 0px 0px 205px">Novi proizvod</button></a>
         <div class="dropdown1">
             <button class="btn btn-primary float-lg-left">Po kategorijama</button>
