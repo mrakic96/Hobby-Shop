@@ -1,4 +1,10 @@
-- Fix frontend!!
+**TO-DO**
+
+`//Product management`
+- display current category in `admin.products.edit`
+
+
+- Fix frontend
 
 # RWA Project (Laravel v6.2)
 
@@ -95,6 +101,14 @@
 
 ## Application
 
+#### 'profile' view
+
+- Info about user that is currently logged in
+
+#### 'edit-profile' view
+
+- Option to edit user info
+
 #### 'products' view
 
 - All products from DB are displayed 
@@ -133,11 +147,6 @@
 - logged in user is getting a checkout view after buying products
 - guest is redirected to 'login' after trying to buy products
 
-
-**TO-DO**
-
-`//Product management`
-- display current category in `admin.products.edit`
 
 
 
