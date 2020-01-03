@@ -35,6 +35,9 @@ Route::get('/olovke', 'PagesController@olovke')->name('olovke');
 Route::get('/kistovi', 'PagesController@kistovi')->name('kistovi');
 Route::get('/platna', 'PagesController@platna')->name('platna');
 
+/*User profile*/
+Route::get('/profile', 'PagesController@getProfile')->name('profile');
+
 /*About view route*/
 Route::get('/about', 'PagesController@about')->name('about');
 

@@ -127,6 +127,9 @@
                                     <a class="dropdown-item" href="{{ route('products') }}">
                                        Trgovina
                                     </a>
+                                    <a class="dropdown-item" href="{{ route('profile', Auth::user()->id) }}">
+                                        Korisnički profil
+                                     </a>
                                     <hr style="margin:0px 15px 0px 15px;">
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
