@@ -1,10 +1,11 @@
 **TO-DO**
 
+- Fix frontend
+- Create products in ProductsTableSeeder
+
 `//Product management`
 - display current category in `admin.products.edit`
 
-
-- Fix frontend
 
 # RWA Project (Laravel v6.2)
 
