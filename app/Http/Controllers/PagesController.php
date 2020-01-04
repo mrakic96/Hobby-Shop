@@ -137,7 +137,7 @@ class PagesController extends Controller
     // Ispis po kategoriji 'olovke'
     public function olovke() {
         $products = Product::where('category_id', 1)->paginate(6);
-        return view('olovke')->with('products', $products);
+        return view('sortbycategory/olovke')->with('products', $products);
     }
     public function olovkelow() {
         $products = Product::where('category_id', 1)->orderBy('price')->paginate(6);
@@ -152,7 +152,7 @@ class PagesController extends Controller
     // Ispis po kategoriji 'kistovi'
     public function kistovi() {
         $products = Product::where('category_id', 2)->paginate(6);
-        return view('kistovi')->with('products', $products);
+        return view('sortbycategory/kistovi')->with('products', $products);
     }
     public function kistovilow() {
         $products = Product::where('category_id', 2)->orderBy('price')->paginate(6);
@@ -165,7 +165,7 @@ class PagesController extends Controller
     // Ispis po kategoriji 'platna'
     public function platna() {
         $products = Product::where('category_id', 3)->paginate(6);
-        return view('platna')->with('products', $products);
+        return view('sortbycategory/platna')->with('products', $products);
     }
     public function platnalow() {
         $products = Product::where('category_id', 3)->orderBy('price')->paginate(6);
