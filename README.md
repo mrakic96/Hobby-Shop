@@ -113,18 +113,18 @@
 #### 'products' view
 
 - All products from DB are displayed 
-- Category link
-- 'Add to cart' button not visible for guests
 
-#### 'olovke', 'kistovi' and 'platna' views
+#### '/sortbycategory/xxxx' views
 
 - Products displayed by their category
-- 'Add to cart' button not visible for guests
+
+#### '/sortbyprice/xxxx' views
+
+- Products displayed by their price (asc or desc)
 
 #### 'view_product' view
 
 - A single product details are displayed
-- 'Add to cart' button not visible for guests
 
 #### 'search-results' view
 
@@ -136,7 +136,6 @@
 
 #### 'cart' view
 
-- Not visible for guests
 - Option to add products to cart
 - Option to increment and decrement single product amount
 - Option to remove a product from cart
