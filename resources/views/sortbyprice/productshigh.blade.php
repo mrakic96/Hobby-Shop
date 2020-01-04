@@ -6,12 +6,12 @@
   <br>
   <ul class="nav nav-pills">
     <li class="nav-item">
-      <a class="nav-link" href="{{ route('products') }}">Svi proizvodi</a>
+      <a class="nav-link active" href="#">Svi proizvodi</a>
     </li>
     <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle active" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Po kategorijama</a>
+      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Po kategorijama</a>
       <div class="dropdown-menu" style="">
-        <a class="dropdown-item active" href="#">Olovke</a>
+        <a class="dropdown-item" href="{{ route('olovke') }}">Olovke</a>
         <a class="dropdown-item" href="{{ route('kistovi') }}">Kistovi</a>
         <a class="dropdown-item" href="{{ route('platna') }}">Platna</a>
       </div>
@@ -24,22 +24,22 @@
     <a class="nav-link" href="{{ route('adminpanel.users.index') }}" target="_blank">Admin panel</a>
     </li>
     @endcan
-        <div style="width: 250px;border-radius:8px 0px 0px 8px; margin:10px 0px 0px 300px;">
+    <div style="width: 250px;border-radius:8px 0px 0px 8px; margin:10px 0px 0px 300px;">
           <strong>Cijena: </strong>
-          <a href="{{ route('olovkelow') }}">Od manje</a> |
-          <a href="{{ route('olovkehigh',) }}">Od veće</a>
+          <a href="{{ route('productslow') }}">Od manje</a> |
+          <a href="{{ route('productshigh',) }}">Od veće</a>
 
      </div>
   </ul>
     <div class="row justify-content-center">
         <div class="col">
           @cannot('only-logged-user-see')
+          
           <br>
-          {{-- <br>
           <div class="alert alert-dismissible alert-info" style="width:650px;">
             <button type="button" class="close" data-dismiss="alert">&times;</button>
           Da biste kupili naše proizvode, morali bi se <a href="{{ route('login') }}" class="alert-link">prijaviti</a> ili <a href="{{ route('register') }}" class="alert-link">registrirati</a> ukoliko nemate račun.
-          </div> --}}
+          </div>
           @endcannot
             @foreach ($products as $product)
             <div class="card border-secondary float-left" style="width: 18rem; margin: 50px 50px 10px 0px">

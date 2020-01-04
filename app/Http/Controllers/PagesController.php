@@ -120,7 +120,14 @@ class PagesController extends Controller
         $products = Product::paginate(6);
         return view('products')->with('products', $products);
     }
-
+    public function productslow() {
+        $products = Product::orderBy('price')->paginate(6);
+        return view('sortbyprice/productslow')->with('products', $products);
+    }
+    public function productshigh() {
+        $products = Product::orderBy('price', 'desc')->paginate(6);
+        return view('sortbyprice/productshigh')->with('products', $products);
+    }
     // Jedan odabrani proizvod
     public function product($id) {
         $product = Product::find($id);
@@ -132,19 +139,42 @@ class PagesController extends Controller
         $products = Product::where('category_id', 1)->paginate(6);
         return view('olovke')->with('products', $products);
     }
+    public function olovkelow() {
+        $products = Product::where('category_id', 1)->orderBy('price')->paginate(6);
+        return view('sortbyprice/olovkelow')->with('products', $products);
+    }
+    public function olovkehigh() {
+        $products = Product::where('category_id', 1)->orderBy('price', 'desc')->paginate(6);
+        return view('sortbyprice/olovkehigh')->with('products', $products);
+    }
+
 
     // Ispis po kategoriji 'kistovi'
     public function kistovi() {
         $products = Product::where('category_id', 2)->paginate(6);
         return view('kistovi')->with('products', $products);
     }
-
+    public function kistovilow() {
+        $products = Product::where('category_id', 2)->orderBy('price')->paginate(6);
+        return view('sortbyprice/kistovilow')->with('products', $products);
+    }
+    public function kistovihigh() {
+        $products = Product::where('category_id', 2)->orderBy('price', 'desc')->paginate(6);
+        return view('sortbyprice/kistovihigh')->with('products', $products);
+    }
     // Ispis po kategoriji 'platna'
     public function platna() {
         $products = Product::where('category_id', 3)->paginate(6);
         return view('platna')->with('products', $products);
     }
-
+    public function platnalow() {
+        $products = Product::where('category_id', 3)->orderBy('price')->paginate(6);
+        return view('sortbyprice/platnalow')->with('products', $products);
+    }
+    public function platnahigh() {
+        $products = Product::where('category_id', 3)->orderBy('price', 'desc')->paginate(6);
+        return view('sortbyprice/platnahigh')->with('products', $products);
+    }
     // About view
     public function about() {
         

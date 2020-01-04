@@ -30,10 +30,18 @@ Route::get('/finished-checkout', 'PagesController@getFinishedCheckout')->name('f
 
 /*Product views routes*/
 Route::get('/products', 'PagesController@products')->name('products');
+Route::get('/sortbyprice/productshigh', 'PagesController@productshigh')->name('productshigh');
+Route::get('/sortbyprice/productslow', 'PagesController@productslow')->name('productslow');
 Route::get('/products/{id}', 'PagesController@product')->name('single.product');
 Route::get('/olovke', 'PagesController@olovke')->name('olovke');
+Route::get('/sortbyprice/olovkelow', 'PagesController@olovkelow')->name('olovkelow');
+Route::get('/sortbyprice/olovkehigh', 'PagesController@olovkehigh')->name('olovkehigh');
 Route::get('/kistovi', 'PagesController@kistovi')->name('kistovi');
+Route::get('/sortbyprice/kistovilow', 'PagesController@kistovilow')->name('kistovilow');
+Route::get('/sortbyprice/kistovihigh', 'PagesController@kistovihigh')->name('kistovihigh');
 Route::get('/platna', 'PagesController@platna')->name('platna');
+Route::get('/sortbyprice/platnalow', 'PagesController@platnalow')->name('platnalow');
+Route::get('/sortbyprice/platnahigh', 'PagesController@platnahigh')->name('platnahigh');
 
 /*User profile*/
 Route::get('/profile', 'PagesController@getProfile')->middleware('can:only-logged-user-see')->name('profile');
