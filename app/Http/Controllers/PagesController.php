@@ -1,15 +1,17 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\User;
-use App\Category;
-use App\Product;
 use App\Cart;
-use Illuminate\Http\Request;
-use Session;
+use App\Category;
+use App\Mail\OrderPlaced;
+use App\Product;
+use App\User;
 use Gate;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Mail;
+use Session;
 
 class PagesController extends Controller
 {
@@ -142,6 +144,7 @@ class PagesController extends Controller
     // Zaboravi session nakog checkouta
     public function getFinishedCheckout () {
         Session::forget('cart');
+        Mail::send(new OrderPlaced);
         return redirect()->route('products');
     }
 
