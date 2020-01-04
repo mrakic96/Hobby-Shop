@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\User;
 use App\Category;
+use App\Mail\OrderPlaced;
 use App\Product;
 use App\Cart;
 use Illuminate\Http\Request;
@@ -10,6 +11,9 @@ use Session;
 use Gate;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Mail;
+Use Stripe\Stripe;
+use Stripe\Charge;
 
 class PagesController extends Controller
 {
@@ -131,18 +135,48 @@ class PagesController extends Controller
 
     // Checkout view
     public function getCheckout () {
+        if (!Session::has('cart')) {
+            return view('cart');
+        }
+        
         if(Gate::allows('only-logged-user-see')){
-            // Session::forget('cart');
-            return view('checkout');
+            $oldCart = Session::get('cart');
+            $cart = new Cart($oldCart);
+            $total = $cart->totalPrice;
+
+            return view('checkout', ['total' => $total]);
         }
 
         return redirect()->route('login');
     }
 
-    // Zaboravi session nakog checkouta
-    public function getFinishedCheckout () {
-        Session::forget('cart');
-        return redirect()->route('products');
+    // Zavrseno placanje 
+    public function postCheckout(Request $request) {
+        if (!Session::has('cart')) {
+            return redirect()->route('cart');
+        }
+
+        if(Gate::allows('only-logged-user-see')){
+            $oldCart = Session::get('cart');
+            $cart = new Cart($oldCart);
+            
+            \Stripe\Stripe::setApiKey('sk_test_OzEplIVGPXw8M23zij5kqmO500SDsgLfs3');
+            
+            try {
+                \Stripe\Charge::create([
+                    'amount' => $cart->totalPrice * 100,
+                    'currency' => 'bam',
+                    'source' => "tok_mastercard",
+                    'description' => 'Hobby Shop - uplata novca',
+                  ]);
+            } catch (\Exception $e) {
+                return redirect()->route('checkout')->with('error', $e->getMessage());
+            }
+
+            Session::forget('cart');
+            Mail::send(new OrderPlaced);
+            return redirect()->route('products')-> with('success', 'Kupovina uspješna!');
+        }
     }
 
     // Svi proizvodi

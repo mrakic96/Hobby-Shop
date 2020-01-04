@@ -26,7 +26,7 @@ Route::get('/add/{id}', 'PagesController@getAddByOne')->name('productAddByOne');
 Route::get('/reduce/{id}', 'PagesController@getReduceByOne')->name('productReduceByOne');
 Route::get('/remove/{id}', 'PagesController@getRemoveItem')->name('productRemove');
 Route::get('/checkout', 'PagesController@getCheckout')->name('checkout');
-Route::get('/finished-checkout', 'PagesController@getFinishedCheckout')->name('finishedCheckout');
+Route::post('/checkout', 'PagesController@postCheckout')->name('checkout');
 
 /*Product views routes*/
 Route::get('/products', 'PagesController@products')->name('products');

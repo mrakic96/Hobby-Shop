@@ -44,7 +44,6 @@
     <!-- Styles -->
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
 
-    
 </head>
 <body>
     <div id="app">
@@ -152,6 +151,7 @@
             <div class="container" style="margin-top:75px !important;">
             @include('partials.alerts')
             @yield('content')
+            @yield('scripts')
             </div>
         </main>
     </div>
