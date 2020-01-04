@@ -102,7 +102,7 @@
 
 ## Application
 
-<!-- User profile -->
+`<!-- User profile -->`
 
 #### 'profile' view
 
@@ -116,7 +116,7 @@
 
 - Option to change user password
 
-<!-- Products -->
+`<!-- Products -->`
 
 #### 'products' view
 
@@ -138,13 +138,13 @@
 
 - This view is displayed after a user or a guest hits search button
 
-<!-- About us -->
+`<!-- About us -->`
 
 #### 'about' view
 
 - basic info
 
-<!-- Shopping cart -->
+`<!-- Shopping cart -->`
 
 #### 'cart' view
 
