@@ -24,12 +24,13 @@
     <a class="nav-link" href="{{ route('adminpanel.users.index') }}" target="_blank">Admin panel</a>
     </li>
     @endcan
-        <div style="width: 250px;border-radius:8px 0px 0px 8px; margin:10px 0px 0px 300px;">
-          <strong>Cijena: </strong>
-          <a href="{{ route('olovkelow') }}">Od manje</a> |
-          <a href="{{ route('olovkehigh',) }}">Od veće</a>
-
-     </div>
+    <li class="nav-item dropdown" style="margin-left:255px;">
+      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Sortiraj po cijeni</a>
+      <div class="dropdown-menu">
+          <a class="dropdown-item" href="{{ route('olovkelow') }}">Od manje</a>
+          <a class="dropdown-item" href="{{ route('olovkehigh') }}">Od veće</a>
+      </div>
+    </li>
   </ul>
     <div class="row justify-content-center">
         <div class="col">
