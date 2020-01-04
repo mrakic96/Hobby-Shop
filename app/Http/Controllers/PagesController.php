@@ -8,6 +8,8 @@ use App\Cart;
 use Illuminate\Http\Request;
 use Session;
 use Gate;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 class PagesController extends Controller
 {
@@ -35,6 +37,34 @@ class PagesController extends Controller
         }
 
         return redirect()->route('profile');
+    }
+
+    //Promjena lozinke
+    public function getChangePassword () {
+
+        return view('change-password');
+    }
+
+    //Ažuriranje nove lozinke
+    public function getUpdatePassword (Request $request) {
+        
+        $this->validate($request, [
+            'oldpassword' => 'required',
+            'password' => 'required|confirmed'
+        ]);
+
+        $hashedPassword = Auth::user()->password;
+        if(Hash::check($request->oldpassword, $hashedPassword)) {
+            
+            $user = User::find(Auth::id());
+            $user->password = Hash::make($request->password);
+            
+            if($user->save()){
+                Auth::logout();
+                $request->session()->flash('success','Lozinka je uspješno promijenjena. Molimo vas da se ulogirate sa novom lozinkom.');
+                return redirect()->route('login');
+            }
+        } 
     }
 
     // Košarica
