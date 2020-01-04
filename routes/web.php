@@ -48,7 +48,7 @@ Route::get('/profile', 'PagesController@getProfile')->middleware('can:only-logge
 Route::get('/profile/{id}', 'PagesController@getEditProfile')->middleware('can:only-logged-user-see')->name('edit-profile');
 Route::put('/profile/{user}', 'PagesController@getUpdateProfile')->middleware('can:only-logged-user-see')->name('update-profile');
 Route::get('/change-password', 'PagesController@getChangePassword')->middleware('can:only-logged-user-see')->name('change-password');
-Route::post('/profile', 'PagesController@getUpdatePassword')->middleware('can:only-logged-user-see')->name('update-password');
+Route::post('/change-password', 'PagesController@getUpdatePassword')->middleware('can:only-logged-user-see')->name('update-password');
 
 /*About view route*/
 Route::get('/about', 'PagesController@about')->name('about');

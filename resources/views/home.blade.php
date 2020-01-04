@@ -10,7 +10,7 @@
     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Po kategorijama</a>
     <div class="dropdown-menu" style="">
       <a class="dropdown-item" href="{{ route('olovke') }}">Olovke</a>
-      <a class="dropdown-item active" href="#">Kistovi</a>
+      <a class="dropdown-item" href="{{ route('kistovi') }}">Kistovi</a>
       <a class="dropdown-item" href="{{ route('platna') }}">Platna</a>
     </div>
   </li>

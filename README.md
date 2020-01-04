@@ -7,13 +7,13 @@
 - display current category in `admin.products.edit`
 
 
-# RWA Project (Laravel v6.2)
+# RWA Project (Laravel v6.x)
 
 **How to use this project on your machine**
 
 - Clone this project from github
 - Rename `.env.example` file to `.env` inside your project root and fill the database information.
-- !!IMPORTANT!! Cart sessions don't work if you don't put `SESSION_DRIVER` equal to `file` in your `.env` file.
+- Cart sessions don't work if you don't put `SESSION_DRIVER` equal to `file` in your `.env` file.
 - Open the console and cd your project root directory
 - Run `composer install`
 - Run `php artisan key:generate` 
@@ -102,6 +102,8 @@
 
 ## Application
 
+<!-- User profile -->
+
 #### 'profile' view
 
 - Info about user that is currently logged in
@@ -113,6 +115,8 @@
 #### 'change-password' view
 
 - Option to change user password
+
+<!-- Products -->
 
 #### 'products' view
 
@@ -134,9 +138,13 @@
 
 - This view is displayed after a user or a guest hits search button
 
+<!-- About us -->
+
 #### 'about' view
 
 - basic info
+
+<!-- Shopping cart -->
 
 #### 'cart' view
 
