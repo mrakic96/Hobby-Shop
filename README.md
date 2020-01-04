@@ -110,6 +110,10 @@
 
 - Option to edit user info
 
+#### 'change-password' view
+
+- Option to change user password
+
 #### 'products' view
 
 - All products from DB are displayed 
