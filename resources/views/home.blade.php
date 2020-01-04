@@ -35,7 +35,7 @@
                         </div>
                     @endif
                         <br>
-                    <p>{{Auth::user()->name}}, uspješno ste se ulogirali!</p>
+                    <p>{{Auth::user()->name}}, uspješno ste se ulogirali! Pogledajte vaš <a class="text-primary" href="{{route('profile')}}">korisnički profil</a>.</p>
                     <hr>
                     <p>Želite li vidjeti naš izbor proizvoda? Odaberite <a class="text-primary" href="{{route('products')}}">trgovinu</a>!</p>
                     <p>Pogledajte i više informacija <a class="text-primary" href="{{route('about')}}">o nama</a>.</p>
