@@ -185,7 +185,6 @@ class PagesController extends Controller
 
                 $order = new Order();
                 $order->cart = serialize($cart);
-                // $order->user_id = auth()->user()->id;
                 $order->billing_name = $request->name;
                 $order->billing_email = $request->email;
                 $order->billing_address = $request->address;
@@ -193,18 +192,6 @@ class PagesController extends Controller
                 $order->billing_total = $cart->totalPrice;
 
                 Auth::user()->orders()->save($order);
-
-            // $order = Order::create([
-            // 'user_id' => auth()->user() ? auth()->user()->id : null,
-            // 'billing_email' => $request->email,
-            // 'billing_name' => $request->name,
-            // 'cart' => serialize($cart),            
-            // 'billing_address' => $request->address,
-            // 'billing_city' => $request->city,
-            // 'billing_total' => $cart->totalPrice,
-            // ]);
-
-            //pohrana
             } catch (\Exception $e) {
                 return redirect()->route('checkout')->with('error', $e->getMessage());
             }
