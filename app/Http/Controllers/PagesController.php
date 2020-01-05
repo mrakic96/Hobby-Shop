@@ -170,6 +170,9 @@ class PagesController extends Controller
                     'amount' => $cart->totalPrice * 100,
                     'currency' => 'bam',
                     'metadata' => [
+                        'AccountID' => auth()->user()->id,
+                        'AccountName' => auth()->user()->name,
+                        'AccountEmail' => auth()->user()->email,
                         'name' => $request->input('name'),
                         'email' => $request->input('email'),
                         'city' => $request->input('city'),
@@ -182,8 +185,8 @@ class PagesController extends Controller
 
             $order = Order::create([
             'user_id' => auth()->user() ? auth()->user()->id : null,
-            'billing_email' => auth()->user() ? auth()->user()->email : null,
-            'billing_name' => auth()->user() ? auth()->user()->name : null,
+            'billing_email' => $request->email,
+            'billing_name' => $request->name,
             'cart' => serialize($cart),            
             'billing_address' => $request->address,
             'billing_city' => $request->city,
