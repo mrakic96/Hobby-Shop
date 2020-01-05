@@ -22,6 +22,12 @@
 - Run `php artisan db:seed` to run seeders
 - Run `php artisan serve`
 
+**Sidenote**
+- Stripe is used for our checkout form
+- To finish test checkouts you need to set your Stripe account keys to `STRIPE_KEY` and `STRIPE_SECRET` in `.env` file
+- Put your STRIPE_SECRET key in `js/checkout.js` on line 2 for card input to be displayed
+- [Stripe keys info](https://stripe.com/docs/keys)
+
 ## Admin panel
 
 - Credentials
@@ -108,6 +114,10 @@
 
 - Info about user that is currently logged in
 
+#### 'purchases' view
+
+- Display all user orders/transactions
+
 #### 'edit-profile' view
 
 - Option to edit user info
@@ -142,7 +152,7 @@
 
 #### 'about' view
 
-- basic info
+- Basic info
 
 `<!-- Shopping cart -->`
 
@@ -156,8 +166,9 @@
 
 #### 'checkout' view
 
-- logged in user is getting a checkout view after buying products
-- guest is redirected to 'login' after trying to buy products
+- User is getting a checkout view after buying products
+- Displayed form with input fields
+- Guest is redirected to 'login' after trying to buy products
 
 
 
