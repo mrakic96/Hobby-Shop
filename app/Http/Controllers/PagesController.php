@@ -57,7 +57,7 @@ class PagesController extends Controller
     }
 
     //Promjena lozinke
-    public function getChangePassword () {
+    public function postChangePassword () {
 
         return view('change-password');
     }
