@@ -183,15 +183,26 @@ class PagesController extends Controller
                   ]);
                 //pohrana
 
-            $order = Order::create([
-            'user_id' => auth()->user() ? auth()->user()->id : null,
-            'billing_email' => $request->email,
-            'billing_name' => $request->name,
-            'cart' => serialize($cart),            
-            'billing_address' => $request->address,
-            'billing_city' => $request->city,
-            'billing_total' => $cart->totalPrice,
-            ]);
+                $order = new Order();
+                $order->cart = serialize($cart);
+                // $order->user_id = auth()->user()->id;
+                $order->billing_name = $request->name;
+                $order->billing_email = $request->email;
+                $order->billing_address = $request->address;
+                $order->billing_city = $request->city;
+                $order->billing_total = $cart->totalPrice;
+
+                Auth::user()->orders()->save($order);
+
+            // $order = Order::create([
+            // 'user_id' => auth()->user() ? auth()->user()->id : null,
+            // 'billing_email' => $request->email,
+            // 'billing_name' => $request->name,
+            // 'cart' => serialize($cart),            
+            // 'billing_address' => $request->address,
+            // 'billing_city' => $request->city,
+            // 'billing_total' => $cart->totalPrice,
+            // ]);
 
             //pohrana
             } catch (\Exception $e) {
@@ -202,7 +213,7 @@ class PagesController extends Controller
             Session::forget('cart');           
     
             
-            return redirect()->route('products')-> with('success', 'Kupovina uspješna!');
+            return redirect()->route('products')-> with('success', 'Kupovina uspješna!'); 
         }
     }
         protected function addToOrdersTables($request, $error)
