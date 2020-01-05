@@ -67,7 +67,7 @@ class PagesController extends Controller
         
         $this->validate($request, [
             'oldpassword' => 'required',
-            'password' => 'required|confirmed'
+            'password' => 'required|confirmed|min:8'
         ]);
 
         $hashedPassword = Auth::user()->password;
