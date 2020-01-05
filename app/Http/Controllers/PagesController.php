@@ -196,7 +196,7 @@ class PagesController extends Controller
                 return redirect()->route('checkout')->with('error', $e->getMessage());
             }
             
-            Mail::send(new OrderPlaced);
+            Mail::send(new OrderPlaced($order));
             Session::forget('cart');           
     
             

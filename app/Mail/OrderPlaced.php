@@ -1,5 +1,6 @@
 <?php
 namespace App\Mail;
+use App\Order;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
@@ -8,15 +9,15 @@ class OrderPlaced extends Mailable
 {
     use Queueable, SerializesModels;
    
-    
+    public $order;
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct(Order $order)
     {
-        
+        $this->order = $order;
     }
     /**
      * Build the message.
@@ -25,8 +26,8 @@ class OrderPlaced extends Mailable
      */
     public function build()
     {
-        return $this->from('admin@hobbyshop.com', 'Admin')
-                    ->to('nesto@nesto.com', 'nesto')
+        return $this->from('admin@hobbyshop.com', 'HobbyShop')
+                    ->to($this->order->billing_email, $this->order->billing_name)
                     ->subject('Vaša narudžba')    
                     ->markdown('emails.orders');
     }
