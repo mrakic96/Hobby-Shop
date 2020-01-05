@@ -43,7 +43,7 @@ class PagesController extends Controller
     }
 
     // Ažuracija korisnika
-    public function getUpdateProfile(Request $request, User $user) {   
+    public function putUpdateProfile(Request $request, User $user) {   
         $user->name = $request->name;
         $user->email = $request->email;
 

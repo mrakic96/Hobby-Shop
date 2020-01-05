@@ -47,7 +47,7 @@ Route::get('/sortbyprice/platnahigh', 'PagesController@platnahigh')->name('platn
 Route::get('/profile', 'PagesController@getProfile')->middleware('can:only-logged-user-see')->name('profile');
 Route::get('/purchases', 'PagesController@getPurchases')->middleware('can:only-logged-user-see')->name('purchases');
 Route::get('/profile/{id}', 'PagesController@getEditProfile')->middleware('can:only-logged-user-see')->name('edit-profile');
-Route::put('/profile/{user}', 'PagesController@getUpdateProfile')->middleware('can:only-logged-user-see')->name('update-profile');
+Route::put('/profile/{user}', 'PagesController@putUpdateProfile')->middleware('can:only-logged-user-see')->name('update-profile');
 Route::get('/change-password', 'PagesController@getChangePassword')->middleware('can:only-logged-user-see')->name('change-password');
 Route::post('/change-password', 'PagesController@getUpdatePassword')->middleware('can:only-logged-user-see')->name('update-password');
 
