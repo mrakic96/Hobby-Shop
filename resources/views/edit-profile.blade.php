@@ -4,6 +4,11 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
+        <a href="{{ route('profile') }}"><button type="button" class="btn btn-primary float-left" style="margin-top:25px;"><i class="fas fa-arrow-left"></i> Nazad na profil</button></a>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-md-8">
             <div class="card" style="top:60px;">
             <div class="card-header">Promjena podataka:</div>
 
@@ -42,7 +47,7 @@
                         @csrf
                         @method('PUT')
                         <br>
-                        <button type="submit" class="btn btn-primary">
+                        <button type="submit" class="btn btn-success">
                             Potvrdi
                         </button>
                     </form>

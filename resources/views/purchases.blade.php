@@ -1,6 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
+<div class="row">
+    <div class="col-md-8">
+    <a href="{{ route('profile') }}"><button type="button" class="btn btn-primary float-left" style="margin-top:25px;"><i class="fas fa-arrow-left"></i> Nazad na profil</button></a>
+    </div>
+</div>
+<br>
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <br>

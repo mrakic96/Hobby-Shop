@@ -57,13 +57,13 @@ class PagesController extends Controller
     }
 
     //Promjena lozinke
-    public function postChangePassword () {
+    public function getChangePassword () {
 
         return view('change-password');
     }
 
     //Ažuriranje nove lozinke
-    public function getUpdatePassword (Request $request) {
+    public function postUpdatePassword (Request $request) {
         
         $this->validate($request, [
             'oldpassword' => 'required',
