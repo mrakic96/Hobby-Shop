@@ -19,8 +19,15 @@
                                 <input id="name" type="text" class="StripeElement"  name="name" placeholder="Ime" required>
                             </div>
                             <div class="col" style="margin-top:20px">
-                                    <br>
                                 <input id="email" type="email" class="StripeElement" name="email" placeholder="Email" required>
+                            </div>
+                            <div class="col" style="margin-top:20px">
+                                
+                                <input id="city" name="city" placeholder="Grad" required>
+                            </div>
+                            <div class="col" style="margin-top:20px">
+                                
+                                <input id="address" name="address" placeholder="Adresa" required>
                             </div>
                         </div>                    
                         <div class="form-rows">

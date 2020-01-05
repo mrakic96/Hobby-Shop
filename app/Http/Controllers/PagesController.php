@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 use App\Cart;
 use App\Category;
 use App\Mail\OrderPlaced;
+use App\Order;
+use App\OrderProduct;
 use App\Product;
 use App\User;
 use Gate;
@@ -11,9 +13,9 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Mail;
-use Stripe\Stripe;
-use Stripe\Charge;
 use Session;
+use Stripe\Charge;
+use Stripe\Stripe;
 
 
 class PagesController extends Controller
@@ -169,21 +171,52 @@ class PagesController extends Controller
                     'currency' => 'bam',
                     'metadata' => [
                         'name' => $request->input('name'),
+                        'email' => $request->input('email'),
+                        'city' => $request->input('city'),
+                        'address' => $request->input('address')
                     ],
                     'source' => 'tok_amex',
-                    'receipt_email' => $request->input('email'),
                     'description' => 'Hobby Shop - uplata novca',
                   ]);
+                //pohrana
+
+            $order = Order::create([
+            'user_id' => auth()->user() ? auth()->user()->id : null,
+            'billing_email' => auth()->user() ? auth()->user()->email : null,
+            'billing_name' => auth()->user() ? auth()->user()->name : null,
+            'cart' => serialize($cart),            
+            'billing_address' => $request->address,
+            'billing_city' => $request->city,
+            'billing_total' => $cart->totalPrice,
+            ]);
+
+            //pohrana
             } catch (\Exception $e) {
                 return redirect()->route('checkout')->with('error', $e->getMessage());
             }
-
-            Session::forget('cart');
+            
             Mail::send(new OrderPlaced);
+            Session::forget('cart');           
+    
+            
             return redirect()->route('products')-> with('success', 'Kupovina uspješna!');
         }
     }
+        protected function addToOrdersTables($request, $error)
+    {
+                    $order = Order::create([
+            'user_id' => auth()->user() ? auth()->user()->id : null,
+            'billing_email' => $request->email,
+            'billing_name' => $request->name,
+            'billing_address' => $request->address,
+            'billing_city' => $request->city,
+            'billing_postalcode' => $request->postalcode,
+            'billing_total' => 100,
+            ]);
 
+
+            return $order;
+    }
     // Svi proizvodi
     public function products() {
         $products = Product::paginate(6);
