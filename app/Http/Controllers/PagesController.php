@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 use App\Cart;
 use App\Category;
 use App\Mail\OrderPlaced;
+use App\Order;
+use App\OrderProduct;
 use App\Product;
 use App\User;
 use Gate;
@@ -11,9 +13,9 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Mail;
-use Stripe\Stripe;
-use Stripe\Charge;
 use Session;
+use Stripe\Charge;
+use Stripe\Stripe;
 
 
 class PagesController extends Controller
@@ -175,6 +177,25 @@ class PagesController extends Controller
             }
 
             Session::forget('cart');
+            //pohrana u tabele za narudžbu
+            $order = Order::create([
+            'user_id' => auth()->user() ? auth()->user()->id : null,
+            'billing_email' => $request->email,
+            'billing_name' => $request->name,
+            'billing_address' => $request->address,
+            'billing_city' => $request->city,
+            'billing_postalcode' => $request->postalcode,
+            'billing_total' => $cart->totalPrice * 100,
+            ]);
+     //       foreach (Cart::content() as $item) {
+     //       OrderProduct::create([
+     //           'order_id' => $order->id,
+      //          'product_id' => $item->model->id,
+      //          'quantity' => $item->qty,
+      //      ]);
+      //  }
+     //   return $order;
+    
             Mail::send(new OrderPlaced);
             return redirect()->route('products')-> with('success', 'Kupovina uspješna!');
         }

@@ -7,6 +7,6 @@
 	<title>Email</title>
 </head>
 <body>
-	Ovo je email narudzbe
+nesto
 </body>
 </html>
