@@ -15,18 +15,18 @@
                     <div class="card-body" style="background-color:#F8F5F0">
                         <div class="form-row inline">
                             <div class="col">
-                                <label for="name">
-                                    Ime
+                                <label for="city">
+                                    Grad
                                 </label>
                                     <br>
-                                <input id="name" name="name" required>
+                                <input id="city" name="city" required>
                             </div>
-                            <div class="col" style="margin-top:20px">
-                                <label for="email">
-                                    Email 
+                            <div class="col">
+                                <label for="address">
+                                    Adresa
                                 </label>
                                     <br>
-                                <input id="email" name="email" type="email" required>
+                                <input id="address" name="address" required>
                             </div>
                         </div>                    
                         <div class="form-rows">

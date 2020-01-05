@@ -7,6 +7,8 @@ use Illuminate\Queue\SerializesModels;
 class OrderPlaced extends Mailable
 {
     use Queueable, SerializesModels;
+   
+    
     /**
      * Create a new message instance.
      *
@@ -14,7 +16,7 @@ class OrderPlaced extends Mailable
      */
     public function __construct()
     {
-        //
+        
     }
     /**
      * Build the message.
@@ -23,9 +25,9 @@ class OrderPlaced extends Mailable
      */
     public function build()
     {
-        return $this->from('admin@admin.com', 'Admin')
-                    ->to('user@user.com', 'User')
+        return $this->from('admin@hobbyshop.com', 'Admin')
+                    ->to('nesto@nesto.com', 'nesto')
                     ->subject('Vaša narudžba')    
-                    ->view('emails.orders');
+                    ->markdown('emails.orders');
     }
 }

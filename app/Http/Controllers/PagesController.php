@@ -172,35 +172,45 @@ class PagesController extends Controller
                     'source' => "tok_mastercard",
                     'description' => 'Hobby Shop - uplata novca',
                   ]);
+                //pohrana
+
+            $order = Order::create([
+            'user_id' => auth()->user() ? auth()->user()->id : null,
+            'billing_email' => auth()->user() ? auth()->user()->email : null,
+            'billing_name' => auth()->user() ? auth()->user()->name : null,
+            'cart' => serialize($cart),            
+            'billing_address' => $request->address,
+            'billing_city' => $request->city,
+            'billing_total' => $cart->totalPrice,
+            ]);
+
+            //pohrana
             } catch (\Exception $e) {
                 return redirect()->route('checkout')->with('error', $e->getMessage());
             }
-
-            Session::forget('cart');
-            //pohrana u tabele za narudžbu
-            $order = Order::create([
+            
+            Mail::send(new OrderPlaced);
+            Session::forget('cart');           
+    
+            
+            return redirect()->route('products')-> with('success', 'Kupovina uspješna!');
+        }
+    }
+        protected function addToOrdersTables($request, $error)
+    {
+                    $order = Order::create([
             'user_id' => auth()->user() ? auth()->user()->id : null,
             'billing_email' => $request->email,
             'billing_name' => $request->name,
             'billing_address' => $request->address,
             'billing_city' => $request->city,
             'billing_postalcode' => $request->postalcode,
-            'billing_total' => $cart->totalPrice * 100,
+            'billing_total' => 100,
             ]);
-     //       foreach (Cart::content() as $item) {
-     //       OrderProduct::create([
-     //           'order_id' => $order->id,
-      //          'product_id' => $item->model->id,
-      //          'quantity' => $item->qty,
-      //      ]);
-      //  }
-     //   return $order;
-    
-            Mail::send(new OrderPlaced);
-            return redirect()->route('products')-> with('success', 'Kupovina uspješna!');
-        }
-    }
 
+
+            return $order;
+    }
     // Svi proizvodi
     public function products() {
         $products = Product::paginate(6);
