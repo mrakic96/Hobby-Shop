@@ -161,13 +161,17 @@ class PagesController extends Controller
             $oldCart = Session::get('cart');
             $cart = new Cart($oldCart);
             
-            \Stripe\Stripe::setApiKey('sk_test_OzEplIVGPXw8M23zij5kqmO500SDsgLfs3');
+            \Stripe\Stripe::setApiKey(env('STRIPE_SECRET'));
             
             try {
-                \Stripe\Charge::create([
+                $foo = \Stripe\Charge::create([
                     'amount' => $cart->totalPrice * 100,
                     'currency' => 'bam',
-                    'source' => "tok_mastercard",
+                    'metadata' => [
+                        'name' => $request->input('name'),
+                    ],
+                    'source' => 'tok_amex',
+                    'receipt_email' => $request->input('email'),
                     'description' => 'Hobby Shop - uplata novca',
                   ]);
             } catch (\Exception $e) {

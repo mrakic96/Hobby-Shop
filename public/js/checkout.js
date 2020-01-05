@@ -1,3 +1,4 @@
+(function(){
 var stripe = Stripe('pk_test_dVKWB9R7keGbYFu2gsnZALpG00TBWqyLBL');
 var elements = stripe.elements();
 
@@ -45,3 +46,4 @@ function stripeTokenHandler(token) {
     // Submit the form
     form.submit();
   }
+})();

@@ -11,22 +11,16 @@
                 <div class="card-header" style="background-color:#F8F5F0">
                 {{ Auth::user()->name }}, hvala Vam što kupujete kod nas! <br><br> Ukupno za platiti: <strong class="text-success">{{ $total }} KM</strong>
                 </div>
-                <form action="{{url('/checkout')}}" method="POST" id="payment-form">
+            <form action="{{url('/checkout')}}" method="POST" id="payment-form">
                     <div class="card-body" style="background-color:#F8F5F0">
                         <div class="form-row inline">
                             <div class="col">
-                                <label for="name">
-                                    Ime
-                                </label>
                                     <br>
-                                <input id="name" name="name" required>
+                                <input id="name" type="text" class="StripeElement"  name="name" placeholder="Ime" required>
                             </div>
                             <div class="col" style="margin-top:20px">
-                                <label for="email">
-                                    Email 
-                                </label>
                                     <br>
-                                <input id="email" name="email" type="email" required>
+                                <input id="email" type="email" class="StripeElement" name="email" placeholder="Email" required>
                             </div>
                         </div>                    
                         <div class="form-rows">
