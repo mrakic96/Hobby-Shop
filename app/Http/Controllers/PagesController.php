@@ -26,6 +26,16 @@ class PagesController extends Controller
         return view('profile');
     }
 
+    //Lista narudži
+    public function getPurchases(){
+        $orders = Auth::user()->orders;
+        $orders->transform(function($order, $key) {
+            $order->cart = unserialize($order->cart);
+            return $order;
+        });
+        return view('purchases', ['orders' => $orders]);
+    }
+
     // Izmjena korisničkih info
     public function getEditProfile(User $user) {  
 
@@ -203,21 +213,7 @@ class PagesController extends Controller
             return redirect()->route('products')-> with('success', 'Kupovina uspješna!'); 
         }
     }
-        protected function addToOrdersTables($request, $error)
-    {
-                    $order = Order::create([
-            'user_id' => auth()->user() ? auth()->user()->id : null,
-            'billing_email' => $request->email,
-            'billing_name' => $request->name,
-            'billing_address' => $request->address,
-            'billing_city' => $request->city,
-            'billing_postalcode' => $request->postalcode,
-            'billing_total' => 100,
-            ]);
 
-
-            return $order;
-    }
     // Svi proizvodi
     public function products() {
         $products = Product::paginate(6);

@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container">   
-        <div class="card border-secondary mb-3" style="top:60px; left:250px; margin-bottom:136px !important; max-width: 500px; max-height:300px">
+        <div class="card border-secondary mb-3" style="top:60px; left:250px; margin-bottom:136px !important; max-width: 500px; max-height:500px">
             <div class="row no-gutters">
               <div class="col-md-8">
                 <div class="card-body">
@@ -14,6 +14,10 @@
                   <br>
                   <a href="{{ route('edit-profile', Auth::user()->id) }}"><button type="button" class="btn btn-primary float-left">Uredi ime i email</button></a>
                   <a href="{{ route('change-password')}}"><button type="button" class="btn btn-danger float-left" style="margin-left:15px;">Promijeni lozinku</button></a>
+                  <a href="{{ route('purchases')}}"><button type="button" class="btn btn-primary float-left" style="margin-top:15px;">Transakcije</button></a>
+                  <br>
+                  <br>
+                  <br>
                   <br>
                   <br>
                   <hr>
