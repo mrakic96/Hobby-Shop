@@ -8,6 +8,7 @@
             <hr>
             @foreach ($orders as $order)
             <br>
+            <span class="text-muted"> ID transakcije: {{ $order->id }} </span>
             <div class="panel panel-default">
                 <div class="panel-body">
                     <ul class="list-group">
