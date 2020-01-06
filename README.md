@@ -28,6 +28,11 @@
 - Put your STRIPE_SECRET key in `js/checkout.js` on line 2 for card input to be displayed
 - [Stripe keys info](https://stripe.com/docs/keys)
 
+- Our mail configs are set to mailgun to test post-purchase mail affirmations
+- We use [mailgun](https://mail.com/) api keys in our `.env` file
+- Fields to fill in: `MAIL_USERNAME`, `MAIL_PASSWORD`, `MAILGUN_DOMAIN`, `MAILGUN_SECRET`
+- Transactions in your checkout will be made if you use mails that you provided to mailgun
+
 ## Admin panel
 
 - Credentials
@@ -105,6 +110,23 @@
 3. Add new category:
     - `Both admin and moderator can add a new category with:`
     - name
+
+#### Transaction management
+
+1. Display transactions:
+    - `Both admin and moderator can see:`
+    - id
+    - billing_total
+    - purchased item quantity
+    - user_id
+    - billing_name
+    - billing_address
+    - billing_city
+    - `Admin can see:`
+    - Delete button
+
+2. Delete a transaction:
+    - Admin can delete a transaction
 
 ## Application
 
