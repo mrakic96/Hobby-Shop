@@ -21,12 +21,12 @@ Quantity: {{ $product->pivot->quantity }} <br>
 
 Možete dobiti više informacija na našoj stranici.
 
-@component('mail::button', ['url' => config('app.url'), 'color' => 'green'])
+@component('mail::button', ['url' => config('app.url'), 'color' => 'blue'])
 Idi na stranicu
 @endcomponent
 
 Hvala na vašem povjerenju.
 
-Regards,<br>
-{{ config('app.name') }}
+Sve najbolje,<br>
+Hobby Shop
 @endcomponent
