@@ -31,8 +31,7 @@
 - Our mail configs are set to mailgun to test post-purchase mail affirmations
 - We use [mailgun](https://mail.com/) api keys in our `.env` file
 - Fields to fill in: `MAIL_USERNAME`, `MAIL_PASSWORD`, `MAILGUN_DOMAIN`, `MAILGUN_SECRET`
-- We have added our emails to mailgun: `aviskic@gmail.com`, `matej.rakic96@gmail.com`
-- Transactions will be made if the emails above are used in checkout forms and environment settings are set accordingly
+- Transactions in your checkout will be made if you use mails that you provided to mailgun
 
 ## Admin panel
 
