@@ -9,188 +9,185 @@
 
 # RWA Project (Laravel v6.x)
 
-**How to use this project on your machine**
+**Kako koristiti ovaj projekt**
 
-- Clone this project from github
-- Rename `.env.example` file to `.env` inside your project root and fill the database information.
-- Cart sessions don't work if you don't put `SESSION_DRIVER` equal to `file` in your `.env` file.
-- Open the console and cd your project root directory
-- Run `composer install`
-- Run `php artisan key:generate` 
-- Before you migrate you should create a database with the name set in your `.env` file
-- Run `php artisan migrate`
-- Run `php artisan db:seed` to run seeders
-- Run `php artisan serve`
+- Klonirajte ga sa githuba
+- Preimenujte `.env.example` datoteku u `.env` u vašem root projectu i popunite podatke za bazu podataka.
+- U terminalu upišite `composer install`
+- Nakon toga `php artisan key:generate` 
+- `php artisan migrate`
+- `php artisan db:seed` da se pošalju seederi
+- Pokrenite aplikaciju sa `php artisan serve`
 
-**Sidenote**
-- Stripe is used for our checkout form
-- To finish test checkouts you need to set your Stripe account keys to `STRIPE_KEY` and `STRIPE_SECRET` in `.env` file
-- Put your STRIPE_SECRET key in `js/checkout.js` on line 2 for card input to be displayed
-- [Stripe keys info](https://stripe.com/docs/keys)
+**Važno**
+- Za našu checkout formu koristimo Stripe
+- Kako bi završili testni checkout postavite ključeve sa vašeg Stripe računa na `STRIPE_KEY` i `STRIPE_SECRET` u `.env` datoteci
+- Stavite vaš STRIPE_SECRET ključ u `js/checkout.js` na liniji 2 kako bi se prikazalo input polje za karticu
+- [Informacije za Stripe ključeve](https://stripe.com/docs/keys)
 
-- Our mail configs are set to mailgun to test post-purchase mail affirmations
-- We use [mailgun](https://mail.com/) api keys in our `.env` file
-- Fields to fill in: `MAIL_USERNAME`, `MAIL_PASSWORD`, `MAILGUN_DOMAIN`, `MAILGUN_SECRET`
-- Transactions in your checkout will be made if you use mails that you provided to mailgun
+- Naše mail konfiguracije su postavljene na Mailgun kako bi testirali potvrde nakon završene kupovine
+- Koristimo [mailgun](https://mail.com/) api ključeve u našoj `.env` datoteci
+- Polja za popuniti: `MAIL_USERNAME`, `MAIL_PASSWORD`, `MAILGUN_DOMAIN`, `MAILGUN_SECRET`
+- Transakcije na checkout formi će se završiti kada unesete mail koji ste proslijedili mailgunu
 
-## Admin panel
-
-- Credentials
-
+**Email/password credentials**
 `admin@hobbyshop.com  password`
 
 `moderator@hobbyshop.com  password`
 
 `user@hobbyshop.com  password`
 
+
+## Admin panel
+
 #### User management
 
-1. Display users:
-    - `Both admin and moderator can see:`
+1. Izlistani korisnici:
+    - `Admin i moderator mogu vidjeti:`
     - id
-    - name
+    - ime
     - email
-    - role
-    - action button/s
+    - ulogu
+    - button za uređivanje
 
-2. Edit user details:
-    - `Admin has permission to edit:`
+2. Uređivanje korisničkih informacija:
+    - `Admin može urediti:`
     - email
-    - name
-    - assigned roles
-    - `Moderator has permission to edit:`
+    - ime
+    - dodijeliti uloge
+    - `Moderator može urediti:`
     - email
-    - name
-3. Delete a user:
-    - `Admin can delete a user.`
-    - `Moderator *can't* delete a user.`
+    - ime
+
+3. Brisanje korisnika:
+    - `Admin je jedini koji može izbrisati korisnika.`
 
 
 #### Product management
 
-1. Display products:
-    - `Both admin and moderator can see:`
+1. Izlistani proizvodi:
+    - `Admin i moderator mogu vidjeti:`
     - id
-    - name
-    - price
-    - image
-    - action buttons
+    - ime
+    - cijena
+    - slika
+    - button 
 
-2. Edit product details:
-    - `Both admin and moderator have permission to edit:`
-    - name
-    - details
-    - description
-    - price
+2. Uređivanje informacija proizvoda:
+    - `Admin i moderator mogu urediti:`
+    - ime
+    - detalji
+    - opis
+    - cijena
 
-3. Delete a product:
-    - `Both admin and moderator can delete a product.`
+3. Brisanje proizvoda:
+    - `Admin i moderator mogu izbrisati proizvod.`
 
-4. Add a new product:
-    - `Both admin and moderator can add a new product with:`
-    - name
-    - details
-    - description
-    - price
-    - category
-    - image
+4. Kreiranje novog proizvoda:
+    - `Admin i moderator mogu kreirati novi proizvoda sa:`
+    - ime
+    - detalji
+    - opis
+    - cijena
+    - kategorija
+    - slika
 
 #### Category management
 
-1. Display categories:
-    - `Both admin and moderator can see:`
+1. Izlistane kategorije:
+    - `Admin i moderator mogu vidjeti:`
     - id
-    - name
-    - action button
+    - ime
+    - button
 
-2. Edit category name:
-    - `Both admin and moderator can edit:`
-    - name
+2. Uredi ime kategorije:
+    - `Admin i moderator mogu urediti:`
+    - ime
 
-3. Add new category:
-    - `Both admin and moderator can add a new category with:`
-    - name
+3. Kreiranje nove kategorije:
+    - `Admin i moderator mogu kreirati novu kategoriju sa:`
+    - ime
 
 #### Transaction management
 
-1. Display transactions:
-    - `Both admin and moderator can see:`
+1. Izlistane transakcije:
+    - `Admin i moderator mogu vidjeti:`
     - id
     - billing_total
-    - purchased item quantity
+    - količinu kupljenih proizvoda
     - user_id
     - billing_name
     - billing_address
     - billing_city
-    - `Admin can see:`
-    - Delete button
+    - `Admin može vidjeti:`
+    - Button za brisanje
 
-2. Delete a transaction:
-    - Admin can delete a transaction
+2. Brisanje transakcije:
+    - `Admin može izbrisati transakciju`
 
 ## Application
 
-`<!-- User profile -->`
+`<!-- Korisnički profil -->`
 
 #### 'profile' view
 
-- Info about user that is currently logged in
+- Informacije o trenutno ulogiranom korisniku
 
 #### 'purchases' view
 
-- Display all user orders/transactions
+- Korisničke transakcije
 
 #### 'edit-profile' view
 
-- Option to edit user info
+- Opcija za uređivanje korisničkih informacija
 
 #### 'change-password' view
 
-- Option to change user password
+- Opcija za mijenjanje korisničke lozinke
 
-`<!-- Products -->`
+`<!-- Proizvodi -->`
 
 #### 'products' view
 
-- All products from DB are displayed 
+- Izlistani svi proizvodi iz baze podataka 
 
 #### '/sortbycategory/xxxx' views
 
-- Products displayed by their category
+- Proizvodi prikazani po kategorijama
 
 #### '/sortbyprice/xxxx' views
 
-- Products displayed by their price (asc or desc)
+- Proizvodi prikazani po cijeni (od manje, od veće)
 
 #### 'view_product' view
 
-- A single product details are displayed
+- Prikaz jednog proizvoda
 
 #### 'search-results' view
 
-- This view is displayed after a user or a guest hits search button
+- View se prikazuje nakon što gost/korisnik pretraži proizvode
 
-`<!-- About us -->`
+`<!-- O nama -->`
 
 #### 'about' view
 
-- Basic info
+- Osnovne informacije
 
-`<!-- Shopping cart -->`
+`<!-- Košarica -->`
 
 #### 'cart' view
 
-- Option to add products to cart
-- Option to increment and decrement single product amount
-- Option to remove a product from cart
-- Display a total sum a single product
-- Display a total sum of products
+- Dodavanje proizvoda u košaricu
+- Povećavanje i smanjivanje količine
+- Brisanje proizvoda iz košarice
+- Ukupna cijena proizvoda
+- Ukupna cijena cijele košarice
 
 #### 'checkout' view
 
-- User is getting a checkout view after buying products
-- Displayed form with input fields
-- Guest is redirected to 'login' after trying to buy products
+- Checkout view se dobije nakon što korisnik pokuša kupiti proizvode
+- Prikazana forma za unos podataka kupca
+- Guest se redirecta na login ako pokuša kupiti odabrane proizvode
 
 
 
