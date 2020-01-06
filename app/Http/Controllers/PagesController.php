@@ -205,7 +205,8 @@ class PagesController extends Controller
             } catch (\Exception $e) {
                 return redirect()->route('checkout')->with('error', $e->getMessage());
             }
-            $order->cart=unserialize($order->cart);
+
+            $order->cart = unserialize($order->cart);
             Mail::send(new OrderPlaced($order));
             Session::forget('cart');           
     

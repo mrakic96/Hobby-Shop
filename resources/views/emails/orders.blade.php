@@ -17,6 +17,7 @@ Hvala na vašoj narudžbi.
 Ime: {{ $item['item']['name'] }} <br>
 Cijena: {{ $item['price'] }} KM <br>
 Količina: {{ $item['qty'] }} <br>
+<br>
 @endforeach 
 
 Možete dobiti više informacija na našoj stranici.

@@ -86,6 +86,11 @@ Route::namespace('Adminpanel')->prefix('adminpanel')->name('adminpanel.')->middl
     Route::resource('/categories', 'CategoriesController');
 });
 
+/*Manage transactions routes*/
+Route::namespace('Adminpanel')->prefix('adminpanel')->name('adminpanel.')->middleware('can:manage-products')->group(function(){
+    Route::get('/orders', 'OrdersController@index')->name('orders.index');
+    Route::delete('/orders/{order}', 'OrdersController@destroy')->name('orders.destroy');
+});
 // OLD ADMIN PANEL ROUTES
 
 Route::namespace('Admin')->prefix('admin')->name('admin.')->middleware('can:manage-users')->group(function(){

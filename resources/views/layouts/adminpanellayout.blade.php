@@ -39,6 +39,7 @@
 					<li><a href="{{ route('adminpanel.users.index') }}">Korisnici</a></li>
 					<li><a href="{{ route('adminpanel.products.index') }}">Proizvodi</a></li>
 					<li><a href="{{ route('adminpanel.categories.index') }}">Kategorije</a></li>
+					<li><a href="{{ route('adminpanel.orders.index') }}">Transakcije</a></li>
 					<li><a href="{{ route('welcome') }}" target="_blank">Hobby Shop</a></li>
 					<hr>
 					<li><a href="{{ route('logout') }}"

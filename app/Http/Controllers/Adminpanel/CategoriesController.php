@@ -17,6 +17,7 @@ class CategoriesController extends Controller
     {
         $this->middleware ('auth');
     }
+    
     public function index()
     {
         $categories = Category::all();
