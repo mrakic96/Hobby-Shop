@@ -13,11 +13,11 @@ Hvala na vašoj narudžbi.
 
 **Proizvodi**
 
-{{-- @foreach ($order->products as $product)
-Name: {{ $product->name }} <br>
-Price: ${{ round($product->price / 100, 2)}} <br>
-Quantity: {{ $product->pivot->quantity }} <br>
-@endforeach --}}
+@foreach ($order->cart->items as $item)
+Ime: {{ $item['item']['name'] }} <br>
+Cijena: {{ $item['price'] }} KM <br>
+Količina: {{ $item['qty'] }} <br>
+@endforeach 
 
 Možete dobiti više informacija na našoj stranici.
 
