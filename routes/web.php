@@ -89,6 +89,7 @@ Route::namespace('Adminpanel')->prefix('adminpanel')->name('adminpanel.')->middl
 /*Manage transactions routes*/
 Route::namespace('Adminpanel')->prefix('adminpanel')->name('adminpanel.')->middleware('can:manage-products')->group(function(){
     Route::get('/orders', 'OrdersController@index')->name('orders.index');
+    Route::get('/orders/search', 'OrdersController@search')->name('orders.search');
     Route::delete('/orders/{order}', 'OrdersController@destroy')->name('orders.destroy');
 });
 // OLD ADMIN PANEL ROUTES

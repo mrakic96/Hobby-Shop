@@ -24,7 +24,7 @@ class OrdersController extends Controller
 
     public function index()
     {
-        $orders = Order::paginate(6);
+        $orders = Order::paginate(10);
         $orders->transform(function($order, $key) {
             $order->cart = unserialize($order->cart);
             return $order;
@@ -51,14 +51,18 @@ class OrdersController extends Controller
         //ako zelis min slova odkomentiraj
         //$request->validate(['query'=>'required|min:3',]);
         $query = $request->input('query');
-        //search bez package ostavio da bi mogao copy na admin panel
-    //  $products = Product::where('name', 'like', "%$query%")
-    //                      ->orWhere('details', 'like', "%$query%")
-    //                     -> paginate(10);
+       $orders = Order::where('billing_name', 'like', "%$query%")
+                        ->orWhere('id', 'like', "%$query%")
+                        -> paginate(10);
+      $orders->transform(function($order, $key) {
+            $order->cart = unserialize($order->cart);
+            return $order;
+        });  
+     
 
 
-    $products= Product::search($query)->paginate(10);                    
-    return view ('adminpanel.products.search')->with('products', $products);
+                       
+    return view ('adminpanel.orders.search')->with('orders', $orders);
     }
 
     
