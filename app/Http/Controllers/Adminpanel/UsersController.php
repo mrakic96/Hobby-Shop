@@ -23,6 +23,7 @@ class UsersController extends Controller
     public function index()
     {
         $users = User::paginate(6);
+        $users->withPath('');
         return view('adminpanel.users.index')->with('users', $users);
     }
 
@@ -93,8 +94,9 @@ class UsersController extends Controller
     //ako zelis min slova odkomentiraj
     //$request->validate(['query'=>'required|min:3',]);
     $query = $request->input('query');
-    $users = User::where('name', 'like', "%$query%")
+    $users = User::where('name', 'like', "%$query%") 
                        -> paginate(10);
+    $users->withPath('');
                    
     return view ('adminpanel.users.search')->with('users', $users);
 }

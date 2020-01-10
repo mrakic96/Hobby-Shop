@@ -23,21 +23,25 @@ class ProductsController extends Controller
     public function index()
     {
         $products = Product::paginate(6);
+        $products->withPath('');
         return view('adminpanel.products.index')->with('products', $products);
     }
 
     public function olovke(){
         $products = Product::where('category_id', 1)->paginate(6);
+        $products->withPath('');
         return view('adminpanel.products.olovke')->with('products', $products);
     }
 
     public function kistovi(){
         $products = Product::where('category_id', 2)->paginate(6);
+        $products->withPath('');
         return view('adminpanel.products.kistovi')->with('products', $products);
     }
 
     public function platna(){
         $products = Product::where('category_id', 3)->paginate(6);
+        $products->withPath('');
         return view('adminpanel.products.platna')->with('products', $products);
     }
     /**
@@ -154,7 +158,8 @@ class ProductsController extends Controller
     //                     -> paginate(10);
 
 
-    $products= Product::search($query)->paginate(10);                    
+    $products= Product::search($query)->paginate(10);
+    $products->withPath('');                    
     return view ('adminpanel.products.search')->with('products', $products);
     }
 

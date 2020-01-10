@@ -218,14 +218,17 @@ class PagesController extends Controller
     // Svi proizvodi
     public function products() {
         $products = Product::paginate(6);
+        $products->withPath('');
         return view('products')->with('products', $products);
     }
     public function productslow() {
         $products = Product::orderBy('price')->paginate(6);
+        $products->withPath('');
         return view('sortbyprice/productslow')->with('products', $products);
     }
     public function productshigh() {
         $products = Product::orderBy('price', 'desc')->paginate(6);
+        $products->withPath('');
         return view('sortbyprice/productshigh')->with('products', $products);
     }
     // Jedan odabrani proizvod
@@ -237,14 +240,17 @@ class PagesController extends Controller
     // Ispis po kategoriji 'olovke'
     public function olovke() {
         $products = Product::where('category_id', 1)->paginate(6);
+        $products->withPath('');
         return view('sortbycategory/olovke')->with('products', $products);
     }
     public function olovkelow() {
         $products = Product::where('category_id', 1)->orderBy('price')->paginate(6);
+        $products->withPath('');
         return view('sortbyprice/olovkelow')->with('products', $products);
     }
     public function olovkehigh() {
         $products = Product::where('category_id', 1)->orderBy('price', 'desc')->paginate(6);
+        $products->withPath('');
         return view('sortbyprice/olovkehigh')->with('products', $products);
     }
 
@@ -252,27 +258,33 @@ class PagesController extends Controller
     // Ispis po kategoriji 'kistovi'
     public function kistovi() {
         $products = Product::where('category_id', 2)->paginate(6);
+        $products->withPath('');
         return view('sortbycategory/kistovi')->with('products', $products);
     }
     public function kistovilow() {
         $products = Product::where('category_id', 2)->orderBy('price')->paginate(6);
+        $products->withPath('');
         return view('sortbyprice/kistovilow')->with('products', $products);
     }
     public function kistovihigh() {
         $products = Product::where('category_id', 2)->orderBy('price', 'desc')->paginate(6);
+        $products->withPath('');
         return view('sortbyprice/kistovihigh')->with('products', $products);
     }
     // Ispis po kategoriji 'platna'
     public function platna() {
         $products = Product::where('category_id', 3)->paginate(6);
+        $products->withPath('');
         return view('sortbycategory/platna')->with('products', $products);
     }
     public function platnalow() {
         $products = Product::where('category_id', 3)->orderBy('price')->paginate(6);
+        $products->withPath('');
         return view('sortbyprice/platnalow')->with('products', $products);
     }
     public function platnahigh() {
         $products = Product::where('category_id', 3)->orderBy('price', 'desc')->paginate(6);
+        $products->withPath('');
         return view('sortbyprice/platnahigh')->with('products', $products);
     }
     // About view
@@ -293,7 +305,8 @@ class PagesController extends Controller
   //                     -> paginate(10);
 
 
-    $products= Product::search($query)->paginate(10);                    
+    $products= Product::search($query)->paginate(10);
+    $products->withPath('');                    
     return view ('search-results')->with('products', $products);
     }
 
