@@ -51,18 +51,16 @@ class OrdersController extends Controller
 
         //ako zelis min slova odkomentiraj
         //$request->validate(['query'=>'required|min:3',]);
-        $query = $request->input('query');
+       $query = $request->input('query');
        $orders = Order::where('billing_name', 'like', "%$query%")
                         ->orWhere('id', 'like', "%$query%")
-                        -> paginate(10);
-      $orders->transform(function($order, $key) {
+                        ->paginate(10);
+        $orders->withPath('');                    
+        $orders->transform(function($order, $key) {
             $order->cart = unserialize($order->cart);
             return $order;
         });  
-     
-
-
-                       
+                
     return view ('adminpanel.orders.search')->with('orders', $orders);
     }
 
