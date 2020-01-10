@@ -25,6 +25,7 @@ class OrdersController extends Controller
     public function index()
     {
         $orders = Order::paginate(10);
+        $orders->withPath('');
         $orders->transform(function($order, $key) {
             $order->cart = unserialize($order->cart);
             return $order;

@@ -105,7 +105,7 @@ class CategoriesController extends Controller
     $query = $request->input('query');
     $categories = Category::where('name', 'like', "%$query%")
                        -> paginate(10);
-                   
+    $categories->withPath('');               
     return view ('adminpanel.categories.search')->with('categories', $categories);
 }
 }
