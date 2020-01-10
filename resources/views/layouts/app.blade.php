@@ -108,21 +108,6 @@
                                         Admin panel
                                     </a>
                                     @endcan
-                                    @can('manage-users')
-                                        <a class="dropdown-item disabled" href="{{ route('admin.users.index') }}">
-                                            User Management (off)
-                                        </a>
-                                    @endcan
-                                    @can('manage-products')
-                                    <a class="dropdown-item disabled" href="{{ route('admin.categories.index') }}">
-                                        Category Management (off)
-                                    </a>
-                                    @endcan
-                                    @can('manage-products')
-                                    <a class="dropdown-item disabled" href="{{ route('admin.products.index') }}">
-                                        Product Management (off)
-                                    </a>
-                                    @endcan
                                     <a class="dropdown-item" href="{{ route('products') }}">
                                        Trgovina
                                     </a>
