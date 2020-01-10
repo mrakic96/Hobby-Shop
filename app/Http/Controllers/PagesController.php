@@ -205,12 +205,15 @@ class PagesController extends Controller
             } catch (\Exception $e) {
                 return redirect()->route('checkout')->with('error', $e->getMessage());
             }
-
+            
+            if($request->input('email')=="matej.rakic96@gmail.com" or $request->input('email')=="aviskic@gmail.com") { 
+            
             $order->cart = unserialize($order->cart);
             Mail::send(new OrderPlaced($order));
+            }
+
             Session::forget('cart');           
-    
-            
+     
             return redirect()->route('products')-> with('success', 'Kupovina uspješna!'); 
         }
     }
