@@ -1,13 +1,6 @@
-**TO-DO**
-
-- Fix frontend
-- Create products in ProductsTableSeeder
-
-`//Product management`
-- display current category in `admin.products.edit`
-
-
 # RWA Project (Laravel v6.x)
+
+- [Deployani RWA Project](http://studenti.sum.ba/projekti/fsre/2019/g16)
 
 **Kako koristiti ovaj projekt**
 
@@ -28,15 +21,7 @@
 - Naše mail konfiguracije su postavljene na Mailgun kako bi testirali potvrde nakon završene kupovine
 - Koristimo [mailgun](https://mail.com/) api ključeve u našoj `.env` datoteci
 - Polja za popuniti: `MAIL_USERNAME`, `MAIL_PASSWORD`, `MAILGUN_DOMAIN`, `MAILGUN_SECRET`
-- Transakcije na checkout formi će se završiti kada unesete mail koji ste proslijedili mailgunu
-
-**Email/password credentials**
-`admin@hobbyshop.com  password`
-
-`moderator@hobbyshop.com  password`
-
-`user@hobbyshop.com  password`
-
+- Transakcija ce proći i u slučaju da se u formu unese mail koji nije proslijeđen mailgunu
 
 ## Admin panel
 

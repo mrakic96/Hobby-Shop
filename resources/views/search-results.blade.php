@@ -49,7 +49,7 @@
                         <tbody>
                         @foreach ($products as $product)
                             <tr>              
-                                <td><a class="text-primary" href="/products/{{$product->id}}">{{$product->name}}</a></td>
+                                <td><a class="text-primary" href="{{url('products/'.$product->id)}}">{{$product->name}}</a></td>
                                 <td>{{ $product-> details}}</td>
                                 <td>{{ $product-> price}} KM</td>
                                 <td>{{ $product-> description}}</td>
