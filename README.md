@@ -1,5 +1,7 @@
 # RWA Project (Laravel v6.x)
 
+- [Deployani RWA Project](http://studenti.sum.ba/projekti/fsre/2019/g16)
+
 **Kako koristiti ovaj projekt**
 
 - Klonirajte ga sa githuba
