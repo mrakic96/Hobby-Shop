@@ -75,7 +75,7 @@
 	<script src="{{ asset('js/adminpanel/jquery.flexslider-min.js') }}" defer></script>
 	
 	<!-- MAIN JS -->
-	<script src="js/main.js"></script>
+	<script src="{{ asset('js/adminpanel/main.js') }}" defer></script> 
 
 	</body>
 </html>

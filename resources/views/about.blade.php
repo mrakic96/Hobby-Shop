@@ -56,7 +56,7 @@
         <div class="col-lg-5 px-5 mx-auto"><img src="https://res.cloudinary.com/mhmd/image/upload/v1556834136/img-2_vdgqgn.jpg" alt="" class="img-fluid mb-4 mb-lg-0"></div>
         <div class="col-lg-6"><i class="fa fa-leaf fa-2x mb-3 text-primary"></i>
           <h2 class="font-weight-light">Vizija projekta i DB schema</h2>
-          <p class="font-italic text-muted mb-4">Pored github repozitorija, naš projekt ima viziju i schemu MySQL baze koje možete preuzeti klikom na gumbove ispod.</p><a href="{{ asset('download/Vizija.pdf') }}" download class="btn btn-light px-5 rounded-pill shadow-sm">Preuzmite viziju</a><a href="{{ asset('download/Hobby_Shop_MySql_Schema.zip') }}" download class="btn btn-light px-5 rounded-pill shadow-sm" style="margin-left:15px;">Preuzmite schemu</a>
+          <p class="font-italic text-muted mb-4">Pored github repozitorija, naš projekt ima viziju i schemu MySQL baze koje možete preuzeti klikom na gumbove ispod.</p><a href="{{ asset('download/Vizija.pdf') }}" download class="btn btn-light px-5 rounded-pill shadow-sm">Preuzmite viziju</a><a href="{{ asset('download/Hobby_Shop_MySql_Schema.zip') }}" download class="btn btn-light px-5 rounded-pill shadow-sm" style="margin-left:15px;">Preuzmite schemu</a><a href="{{ asset('download/rjecnik.pdf') }}" download class="btn btn-light px-5 rounded-pill shadow-sm">Rjecnik</a>
         </div>
       </div>
     </div>
@@ -105,7 +105,7 @@
         <!-- Team item-->
         <div class="col-xl-3 col-sm-6 mb-5">
           <div class="bg-white rounded shadow-sm py-5 px-4"><img src="https://res.cloudinary.com/mhmd/image/upload/v1556834133/avatar-2_f8dowd.png" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
-            <h5 class="mb-0">Anton Viskić</h5><span class="small text-uppercase text-muted">1608/RR</span>
+            <h5 class="mb-0">Anton Viskić</h5>
             {{-- <ul class="social mb-0 list-inline mt-3">
               <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-facebook-f"></i></a></li>
               <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-twitter"></i></a></li>
