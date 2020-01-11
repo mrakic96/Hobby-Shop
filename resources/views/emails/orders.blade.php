@@ -22,7 +22,7 @@ Količina: {{ $item['qty'] }} <br>
 
 Možete dobiti više informacija na našoj stranici.
 
-@component('mail::button', ['url' => config('app.url'), 'color' => 'blue'])
+@component('mail::button', ['url' => 'studenti.sum.ba/projekti/fsre/2019/g16', 'color' => 'blue'])
 Idi na stranicu
 @endcomponent
 
