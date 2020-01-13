@@ -30,7 +30,10 @@
             {{ Form::label('price', 'Cijena') }}
             {{ Form::number('price', null, ['class' => 'form-control','step' => '0.01']) }}
         </div>
-
+        <div class="form-group">
+            {{ Form::label('stock', 'Količina') }}
+            {{ Form::number('stock', null, ['class' => 'form-control','step' => '1']) }}
+        </div>
         <div class="form-group">
             {{ Form::label('category_id', 'Kategorija') }}
             {{ Form::select('category_id', $categories, null, ['class' => 'form-control', 'placeholder' => 'Odaberi']) }}

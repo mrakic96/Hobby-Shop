@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Mail;
 use Session;
 use Stripe\Charge;
 use Stripe\Stripe;
+use Illuminate\Support\Facades\DB;
 
 
 class PagesController extends Controller
@@ -191,6 +192,9 @@ class PagesController extends Controller
                     'source' => 'tok_amex',
                     'description' => 'Hobby Shop - uplata novca',
                   ]);
+                
+
+            
                 //pohrana
 
                 $order = new Order();
@@ -202,6 +206,7 @@ class PagesController extends Controller
                 $order->billing_total = $cart->totalPrice;
 
                 Auth::user()->orders()->save($order);
+
             } catch (\Exception $e) {
                 return redirect()->route('checkout')->with('error', $e->getMessage());
             }
@@ -209,7 +214,13 @@ class PagesController extends Controller
             if($request->input('email')=="matej.rakic96@gmail.com" or $request->input('email')=="aviskic@gmail.com") { 
             
             $order->cart = unserialize($order->cart);
+             foreach ($order->cart->items as $item){
+                $affected = DB::table('products')
+                            ->where('name', $item['item']['name'])
+                            ->decrement('stock', $item['qty']);
+            }
             Mail::send(new OrderPlaced($order));
+           
             }
 
             Session::forget('cart');           

@@ -120,6 +120,7 @@ class ProductsController extends Controller
         $product->details = $request->details;
         $product->price = $request->price;
         $product->description = $request->description;
+        $product->stock = $request->stock;
         // $product->category_id = $request->category_id;
         
 

@@ -29,7 +29,7 @@ class Product extends Model
         ],
     ];
 	
-    protected $fillable = ['name', 'details','image', 'price', 'description', 'category_id'];
+    protected $fillable = ['name', 'details','image', 'price', 'description', 'category_id', 'stock'];
 
     public function category(){
 

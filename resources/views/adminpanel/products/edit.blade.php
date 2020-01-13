@@ -85,6 +85,19 @@
                                 @enderror
                             </div>
                         </div>
+                        <div class="form-group row">
+                            <label for="stock" class="col-md-2 col-form-label text-md-right">Količina</label>
+
+                            <div class="col-md-6">
+                                <input id="stock" type="number" step="1" class="form-control @error('stock') is-invalid @enderror" name="stock" value="{{ $product->stock }}" required autofocus>
+
+                                @error('stock')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
                         {{-- CHANGE CATEGORY --}}
                         {{-- {{ $product -> category_id }}
                         <div class="form-group row">

@@ -77,6 +77,7 @@
                             <th scope="col">ID</th>
                             <th scope="col">Naziv</th>
                             <th scope="col">Cijena</th>
+                            <th scope="col">Količina</th>
                             <th scope="col">Slika</th>
                         @can('manage-products')
                             <th scope="col">Opcije</th>
@@ -90,6 +91,7 @@
                             <th scope="row">{{ $product->id }}</th>
                                 <td>{{ $product-> name}}</td>
                                 <td>Cijena: {{ $product-> price}} KM</td>
+                                <td>{{ $product-> stock}}</td>
                                 <td><img class="card-img-top" src="{{ url('images', $product->image) }}" alt="Card image cap" style="height: 50px;"></td>
                                 <td> 
                                     <a href="{{ route('adminpanel.products.edit', $product->id) }}">
