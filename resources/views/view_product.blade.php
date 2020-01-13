@@ -44,7 +44,12 @@
           <hr>
           <p class="card-text">{{ $product->description }}</p>
           {{-- @can('only-logged-user-see') --}}
+          @if($product->stock > 0)
             <a href="{{ route('addToCart', ['id' => $product->id]) }}"><button class="btn btn-primary"><i class="fas fa-shopping-cart"></i> Dodaj u košaricu</button></a>
+          @endif
+            @if($product->stock == 0)
+            <h5>Nije dostupno</h5>
+            @endif
           {{-- @endcan --}}
           <hr>
           <p class="card-text"><small class="text-muted">Zadnji put ažurirano: {{ $product->updated_at }}</small></p>
