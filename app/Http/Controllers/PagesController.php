@@ -207,6 +207,7 @@ class PagesController extends Controller
 
                 Auth::user()->orders()->save($order);
                 $order->cart = unserialize($order->cart);
+                //Smanjivanje količine nakon kupnje
                 foreach ($order->cart->items as $item){
                 $affected = DB::table('products')
                             ->where('name', $item['item']['name'])
