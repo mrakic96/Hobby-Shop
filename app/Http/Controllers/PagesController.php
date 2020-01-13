@@ -206,19 +206,20 @@ class PagesController extends Controller
                 $order->billing_total = $cart->totalPrice;
 
                 Auth::user()->orders()->save($order);
-
+                $order->cart = unserialize($order->cart);
+                foreach ($order->cart->items as $item){
+                $affected = DB::table('products')
+                            ->where('name', $item['item']['name'])
+                            ->decrement('stock', $item['qty']);
+            }
             } catch (\Exception $e) {
                 return redirect()->route('checkout')->with('error', $e->getMessage());
             }
             
             if($request->input('email')=="matej.rakic96@gmail.com" or $request->input('email')=="aviskic@gmail.com") { 
             
-            $order->cart = unserialize($order->cart);
-             foreach ($order->cart->items as $item){
-                $affected = DB::table('products')
-                            ->where('name', $item['item']['name'])
-                            ->decrement('stock', $item['qty']);
-            }
+            
+
             Mail::send(new OrderPlaced($order));
            
             }
