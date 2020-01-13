@@ -218,10 +218,7 @@ class PagesController extends Controller
             
             if($request->input('email')=="matej.rakic96@gmail.com" or $request->input('email')=="aviskic@gmail.com") { 
             
-            
-
             Mail::send(new OrderPlaced($order));
-           
             }
 
             Session::forget('cart');           

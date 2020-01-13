@@ -55,7 +55,7 @@
                     <a href="{{ route('addToCart', ['id' => $product->id]) }}"><button class="btn btn-primary"><i class="fas fa-shopping-cart"></i> Dodaj u košaricu</button></a>
                   @endif
                    @if($product->stock == 0)
-                  <h5>Nije dostupno</h5>
+                   <button class="btn btn-secondary" disabled><i class="fas fa-shopping-cart"></i> Nije dostupno</button>
                   @endif
                   {{-- @endcan --}}
                 </div>
