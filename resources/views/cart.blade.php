@@ -72,7 +72,7 @@
     @if($product['stock'] < $product['qty'])
     <div class="row justify-content-center">
         <div class="col-md-12">
-        <h4 class="float-right">Nemamo toliko proizvoda</h4>
+        <h5 class="float-right">Nemamo toliko proizvoda, <br> molimo vas da smanjite količinu <br> kako bi nastavili sa kupovinom.</h5>
         </div>
     </div>
     @endif
