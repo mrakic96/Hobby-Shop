@@ -84,7 +84,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    <a href="{{ url('/products') }}"><img src="{{ asset('images/hobbylogo.png') }}"style="height:140px; width:400px;"></a>
+                    <a href="{{ url('/products') }}"><img src="{{ asset('images/hobbylogo.png') }}"style="height:140px; max-width:400px;min-width:200px; width:100%;"></a>
                 </div>
 
                 <div class="links">
