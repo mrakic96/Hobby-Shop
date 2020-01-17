@@ -24,7 +24,7 @@
     <a class="nav-link" href="{{ route('adminpanel.users.index') }}" target="_blank">Admin panel</a>
     </li>
     @endcan
-    <li class="nav-item dropdown" style="margin-left:255px;">
+    <li class="nav-item dropdown" style="margin:auto;">
       <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Sortiraj po cijeni</a>
       <div class="dropdown-menu">
           <a class="dropdown-item active" href="{{ route('olovkelow') }}">Od manje</a>
