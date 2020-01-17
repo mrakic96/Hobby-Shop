@@ -49,9 +49,5 @@
         {!! Form::close() !!}
     </div>
 </div>
-<div>
-    <p>MAYBE A FOOTER</p>
-    <p>PLACEHOLDER</p>
-</div>
 
 @endsection
