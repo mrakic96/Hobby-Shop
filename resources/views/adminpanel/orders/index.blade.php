@@ -74,7 +74,7 @@
     </div>
 </div>
 <div class="row">
-    <div class="col-12 d-flex justify-content-center pt4" style="margin-left:370px;">
+    <div class="col-12 d-flex justify-content-center pt4" style="margin-left:50px;">
       {{ $orders->links() }}
     </div>
 </div>
