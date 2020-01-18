@@ -25,13 +25,6 @@
 </ul>
 <br>
 <br>
-    @cannot('only-logged-user-see')
-      <div class="alert alert-dismissible alert-info" style="width:850px;" >
-        <button type="button" class="close" data-dismiss="alert">&times;</button>
-          Da biste kupili naše proizvode, morali bi se <a href="{{ route('login') }}" class="alert-link">prijaviti</a> ili <a href="{{ route('register') }}" class="alert-link">registrirati</a> ukoliko nemate račun.
-      </div>
-      <br>
-    @endcannot
 <div class="card border-secondary mb-3" style="top:20px; margin-bottom:136px !important; max-width: 1000px; max-height:300px">
     <div class="row no-gutters">
       <div class="col-md-4">
