@@ -1,8 +1,6 @@
 <style>
     .dropdown1 {
       position: relative;
-      top: 20px;
-      left:205px;
       /* display: inline-block; */
     }
     
@@ -42,7 +40,7 @@
         <div class="col-12">
        <div id="custom-search-input">
                 <div class="input-group">
-                    <input type="text" name="query" id="query" style="width: 250px;border-radius:8px 0px 0px 8px; margin:0px 0px 0px 205px;" value="{{ request()-> input('query')}}" class="form-control" placeholder="Pretraga">
+                    <input type="text" name="query" id="query" style="width: 250px;border-radius:8px 0px 0px 8px;" value="{{ request()-> input('query')}}" class="form-control" placeholder="Pretraga">
                     <a href="{{route('search')}}"><button class="btn btn-outline-secondary" style="border-left:0px; margin-bottom:0px; height:54px; border-radius:0px 8px 8px 0px; border-color:#ced4da" value="{{ request()-> input('query')}}"><i class="fas fa-search" style="color:#ced4da"></i></button></a>
            </div>
         </div>
@@ -51,7 +49,7 @@
 </div>
 </form>
 <!-- search -->
-        <a href="{{ route('adminpanel.products.create') }}"><button type="button" class="btn btn-primary float-lg-left" style="margin:0px 0px 0px 205px">Novi proizvod</button></a>
+        <a href="{{ route('adminpanel.products.create') }}"><button type="button" class="btn btn-primary float-lg-left">Novi proizvod</button></a>
         <div class="dropdown1">
             <button class="btn btn-primary float-lg-left">Po kategorijama</button>
             <div class="dropdown-content1">
@@ -64,7 +62,7 @@
     <hr>
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card" style="margin:0px 0px 0px 200px">
+            <div class="card">
                 <div class="card-header" style="font-size:26px;">Kistovi</div>
                 <br>
 
@@ -116,7 +114,7 @@
 </div>
 <br>
 <div class="row">
-    <div class="col-12 d-flex justify-content-center pt4" style="margin-left:270px;">
+    <div class="col-12 d-flex justify-content-center pt4" style="margin-left:50px;">
       {{ $products->links() }}
     </div>
   </div>

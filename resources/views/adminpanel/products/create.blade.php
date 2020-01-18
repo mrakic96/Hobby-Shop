@@ -5,7 +5,7 @@
 
 
 <div class="row">
-    <div class="col-md-8 col-md-offset-3">
+    <div class="col-md-8 col-md-offset-0">
         <br>
         <br>
         <h3>Novi proizvod</h3>
