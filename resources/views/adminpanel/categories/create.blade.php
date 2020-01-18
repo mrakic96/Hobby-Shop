@@ -4,7 +4,7 @@
 
 
 <div class="row">
-    <div class="col-md-6 col-md-offset-3">
+    <div class="col-md-6 col-md-offset-0">
         <br>
         <br>
         <br>
