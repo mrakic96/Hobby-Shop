@@ -14,6 +14,13 @@
             background-color: #F8F5F0;
             background-position: center;
             }  
+            @media screen and (max-width: 640px) {
+    table {
+        overflow-x: auto;
+        display: block;
+    }
+}
+
     </style>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
