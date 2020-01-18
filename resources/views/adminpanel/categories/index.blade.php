@@ -12,7 +12,7 @@
         <div class="col-12">
        <div id="custom-search-input">
                 <div class="input-group">
-                    <input type="text" name="query" id="query" style="width: 200px;border-radius:8px 0px 0px 8px; margin:0px 0px 0px 205px;" value="{{ request()-> input('query')}}" class="form-control" placeholder="Pretraga">
+                    <input type="text" name="query" id="query" style="width: 200px;border-radius:8px 0px 0px 8px;" value="{{ request()-> input('query')}}" class="form-control" placeholder="Pretraga">
                     <a href="{{route('search')}}"><button class="btn btn-outline-secondary" style="border-left:0px; margin-bottom:0px; height:54px; border-radius:0px 8px 8px 0px; border-color:#ced4da" value="{{ request()-> input('query')}}"><i class="fas fa-search" style="color:#ced4da"></i></button></a>
            </div>
         </div>
@@ -22,13 +22,13 @@
 </div>
 </form>
 <!-- search -->
-        <a href="{{ route('adminpanel.categories.create') }}"><button type="button" class="btn btn-primary float-lg-left" style="margin:0px 0px 0px 205px;">Nova kategorija</button></a>
+        <a href="{{ route('adminpanel.categories.create') }}"><button type="button" class="btn btn-primary float-lg-left">Nova kategorija</button></a>
     </div>
     <br>
     <hr style="margin-left:200px;">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card" style="margin:0px 0px 0px 200px">
+            <div class="card">
                 <div class="card-header" style="font-size:26px;">Kategorije</div>
                 <br>
                 <div class="card-body">
