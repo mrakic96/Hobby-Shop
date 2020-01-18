@@ -37,7 +37,7 @@
           @cannot('only-logged-user-see')
           
           <br>
-          <div class="alert alert-dismissible alert-info" style="width:650px;">
+          <div class="alert alert-dismissible alert-info" >
             <button type="button" class="close" data-dismiss="alert">&times;</button>
           Da biste kupili naše proizvode, morali bi se <a href="{{ route('login') }}" class="alert-link">prijaviti</a> ili <a href="{{ route('register') }}" class="alert-link">registrirati</a> ukoliko nemate račun.
           </div>
