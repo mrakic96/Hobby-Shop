@@ -26,7 +26,14 @@
 
 	<!-- Modernizr JS -->
 	<script src="{{ asset('js/adminpanel/modernizr-2.6.2.min.js') }}" defer></script>
-
+	<style>
+@media screen and (max-width: 640px) {
+	table {
+		overflow-x: auto;
+		display: block;
+	}
+}
+</style>
 	</head>
 	<body>
 	<div id="fh5co-page">
