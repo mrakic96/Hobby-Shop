@@ -88,8 +88,11 @@
                 </div>
 
                 <div class="links">
-                    <a href="{{ url('/products') }}">Proizvodi</a>
+                    <a href="{{ url('/products') }}">Trgovina</a>
                     <a href="{{ url('/about') }}">O nama</a>
+                    @can('only-logged-user-see')
+                    <a href="{{ route('profile') }}">Moj profil</a>
+                    @endcan
                 </div>
             </div>
         </div>
