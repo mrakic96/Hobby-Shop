@@ -25,7 +25,7 @@
 </ul>
 <br>
 <br>
-<div class="card border-secondary mb-3" style="top:20px; margin-bottom:136px !important; max-width: 1000px; max-height:300px">
+<div class="card border-secondary mb-3" style="top:20px; margin-bottom:136px !important; max-width: 1000px;">
     <div class="row no-gutters">
       <div class="col-md-4">
         <img src="{{ url('images', $product->image) }}" class="card-img" alt="Card image cap" style="height: 280px;">
