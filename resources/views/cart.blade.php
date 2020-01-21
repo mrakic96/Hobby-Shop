@@ -93,8 +93,9 @@
     <br>
     <br>
     <div class="alert alert-light">
-        Vaša košarica je <strong> prazna</strong>! Vratite se nazad kako bi odabrali proizvode.
-      </div>
+        <h4 class="alert-heading">Vaša košarica je prazna!</h4>
+        <p class="mb-0">Vratite se nazad kako bi odabrali proizvode.</p>
+    </div>
     <br>
     <br>
     
