@@ -36,6 +36,12 @@
           <p class="lead text-muted">
             Hobby Shop je aplikacija namijenjena za online kupovinu. <br>
             Na izradi ovog projekta su sudjelovali Anton Viskić i Matej Rakić.
+            Matej Rakić - backend i frontend (50%) <br>
+            Anton Viskić - backend i frontend (50%)
+            <br>
+            Želimo zahvaliti demonstratoru Robertu Roziću koji nam je uvelike pomogao pri deploymentu projekta na server!
+            <br>
+            Također želimo zahvaliti bratu kolege Rakića; mag.ing.comp. Nikoli Rakiću, koji nam je dao smjernice za izradu projekta, npr. implementacija količine pojedinog proizvoda.
           </p>
         </div>
         <div class="col-lg-6 d-none d-lg-block"><img src="https://res.cloudinary.com/mhmd/image/upload/v1556834136/illus_kftyh4.png" alt="" class="img-fluid"></div>
