@@ -1,8 +1,8 @@
 @extends('layouts.app')
 @section('content')
 <div class="container">
-  <div class="preloader">
-  </div>
+  {{-- <div class="preloader">
+  </div> --}}
   <br>
   <ul class="nav nav-pills">
     <li class="nav-item">
